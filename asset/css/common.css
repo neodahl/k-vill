@@ -737,6 +737,7 @@ button[class^=btn-].kakao::before {
   border: 0.125rem solid #3182f7;
   background-color: #fff;
   margin-inline-end: 0.5rem;
+  flex: 0 0 auto;
 }
 .radio .icon::before {
   content: "";

@@ -536,6 +536,7 @@ button[class^="btn-"] {
 		border: rem(2px) solid $primary1;
 		background-color: #fff;
 		margin-inline-end: rem(8px);
+		flex: 0 0 auto;
 		&::before {
 			content: "";
 			display: inline-block;
