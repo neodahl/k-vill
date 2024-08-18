@@ -238,7 +238,7 @@ body {
 .app-body {
   position: relative;
   max-width: 34.375rem;
-  min-height: 100vh;
+  min-height: 100dvh;
   margin: 0 auto;
   overflow-x: hidden;
 }
@@ -252,28 +252,28 @@ body {
   padding-top: 5rem;
 }
 .app-body.app-header-activated .full-wrapper {
-  height: calc(100vh - 5rem);
+  height: calc(100dvh - 5rem);
 }
 .app-body.app-header-activated .full-wrapper.type-overflow {
   height: auto;
-  min-height: calc(100vh - 5rem);
+  min-height: calc(100dvh - 5rem);
 }
 .app-body.app-gnb-activated {
-  padding-bottom: 4.375rem;
+  padding-bottom: 5.625rem;
 }
 .app-body.app-gnb-activated .full-wrapper {
-  height: calc(100vh - 4.375rem);
+  height: calc(100dvh - 5.625rem);
 }
 .app-body.app-gnb-activated .full-wrapper.type-overflow {
   height: auto;
-  min-height: calc(100vh - 4.375rem);
+  min-height: calc(100dvh - 5.625rem);
 }
 .app-body.app-header-activated.app-gnb-activated .full-wrapper {
-  height: calc(100vh - 9.375rem);
+  height: calc(100dvh - 9.375rem);
 }
 .app-body.app-header-activated.app-gnb-activated .full-wrapper.type-overflow {
   height: auto;
-  min-height: calc(100vh - 9.375rem);
+  min-height: calc(100dvh - 9.375rem);
 }
 .app-body *::-webkit-scrollbar {
   width: 0.5rem; /* 세로 스크롤바 너비 */
@@ -319,11 +319,11 @@ body {
 .full-wrapper {
   display: flex;
   flex-flow: column nowrap;
-  height: 100vh;
+  height: 100dvh;
 }
 .full-wrapper.type-overflow {
   height: auto;
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 .full-wrapper .full-title {
   margin-bottom: 1.25rem;
@@ -523,10 +523,10 @@ mark[class^=mark-][class*=-lg],
 a[class^=btn-][class*=-lg],
 button[class^=btn-][class*=-lg] {
   min-width: 7.5rem;
-  height: 3.5625rem;
+  height: 3.125rem;
   padding: 0 1.25rem;
   border-radius: 0.625rem;
-  font-size: 1.3125rem;
+  font-size: 1.125rem;
   font-weight: 500;
 }
 mark[class^=mark-][class*=-full],
@@ -603,8 +603,8 @@ button[class^=btn-].kakao::before {
   left: 1.875rem;
   content: "";
   display: inline-block;
-  width: 2.125rem;
-  height: 1.9375rem;
+  width: 1.75rem;
+  height: 1.625rem;
   background: url("../img/icon/svg/ico-KakaoTalk.svg") center center no-repeat;
   background-size: 100%;
 }

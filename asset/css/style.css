@@ -30,7 +30,7 @@
   margin-bottom: 1.625rem;
 }
 .full-middle-container .img-box .logo {
-  width: 5.625rem;
+  width: 5rem;
 }
 .full-middle-container .img-box .logo-txt {
   width: 12.5rem;
@@ -44,11 +44,11 @@
 }
 .full-middle-container .txt-box .title {
   margin-bottom: 0.625rem;
-  font-size: 1.875rem;
+  font-size: 1.3125rem;
   font-weight: 600;
 }
 .full-middle-container .txt-box p {
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   font-weight: 400;
 }
 
@@ -76,7 +76,7 @@
   text-align: center;
 }
 .sign-in-wrapper > .header .logo {
-  width: 7.5rem;
+  width: 9.375rem;
 }
 .sign-in-wrapper > .header .title {
   margin-top: 1.25rem;
@@ -117,7 +117,7 @@
   text-align: center;
 }
 .sign-in-wrapper .link-container > a {
-  font-size: 1.125rem;
+  font-size: 0.875rem;
   color: #13173a;
 }
 .sign-in-wrapper .link-container .pipe {
@@ -135,12 +135,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+}
+.sign-in-wrapper .sns-container > a:nth-child(n+2) {
+  margin-top: 0.5em;
 }
 .sign-in-wrapper .sns-container > a img {
-  width: 3.75rem;
+  width: 3.125rem;
 }
 .sign-in-wrapper .sns-container > a span {
-  width: 70%;
+  width: 80%;
   display: inline-flex;
   align-items: center;
 }
@@ -173,7 +177,7 @@
   text-align: center;
 }
 .footer-link-container a {
-  font-size: 1.125rem;
+  font-size: 0.875rem;
   color: #6c7584;
 }
 .footer-link-container a:nth-child(n+2) {
@@ -390,7 +394,7 @@
   position: absolute;
   top: 0.625rem;
   right: 0;
-  width: 4.375rem;
+  width: 5.625rem;
   transform: rotate(-28deg);
 }
 .bill-summary .monthly-bills-container {

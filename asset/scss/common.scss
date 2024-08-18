@@ -41,7 +41,7 @@ body {
 .app-body {
 	position: relative;
 	max-width: rem($AppBodyMaxWidth);
-	min-height: 100vh;
+	min-height: 100dvh;
 	margin: 0 auto;
 	// overflow: hidden; 사용하면 안됨
 	overflow-x: hidden;
@@ -52,33 +52,31 @@ body {
 		background-color: #f3f4f6;
 	}
 	&.app-header-activated {
-		padding-top: rem(
-			80px
-		); // lnb의 height 값에 약간의 padding 값을 더해서 나온 결과 값.
+		padding-top: rem(80px); // lnb의 height 값 + padding 값
 		.full-wrapper {
-			height: calc(100vh - rem(80px));
+			height: calc(100dvh - rem(80px));
 			&.type-overflow {
 				height: auto;
-				min-height: calc(100vh - rem(80px));
+				min-height: calc(100dvh - rem(80px));
 			}
 		}
 	}
 	&.app-gnb-activated {
-		padding-bottom: rem(70px); // gnb의 height 값.
+		padding-bottom: rem(90px); // gnb의 height + 약간의 padding 값
 		.full-wrapper {
-			height: calc(100vh - rem(70px));
+			height: calc(100dvh - rem(90px));
 			&.type-overflow {
 				height: auto;
-				min-height: calc(100vh - rem(70px));
+				min-height: calc(100dvh - rem(90px));
 			}
 		}
 	}
 	&.app-header-activated.app-gnb-activated {
 		.full-wrapper {
-			height: calc(100vh - rem(80px + 70px));
+			height: calc(100dvh - rem(80px + 70px));
 			&.type-overflow {
 				height: auto;
-				min-height: calc(100vh - rem(80px + 70px));
+				min-height: calc(100dvh - rem(80px + 70px));
 			}
 		}
 	}
@@ -128,10 +126,10 @@ body {
 	// 스크롤 없는 전체 페이지를 나타낼 때 사용.
 	display: flex;
 	flex-flow: column nowrap;
-	height: 100vh;
+	height: 100dvh;
 	&.type-overflow {
 		height: auto;
-		min-height: 100vh;
+		min-height: 100dvh;
 	}
 	.full-title {
 		margin-bottom: rem(20px);
@@ -333,10 +331,10 @@ button[class^="btn-"] {
 	&[class*="-lg"] {
 		// large
 		min-width: rem(120px); // 임시 값
-		height: rem(57px);
+		height: rem(50px);
 		padding: rem(0 20px);
 		border-radius: rem(10px);
-		font-size: rem(21px);
+		font-size: rem(18px);
 		font-weight: 500;
 	}
 	&[class*="-full"] {
@@ -394,8 +392,8 @@ button[class^="btn-"] {
 			left: rem(30px);
 			content: "";
 			display: inline-block;
-			width: rem(34px);
-			height: rem(31px);
+			width: rem(28px);
+			height: rem(26px);
 			// margin-right: rem(8px);
 			background: url("../img/icon/svg/ico-KakaoTalk.svg") center center
 				no-repeat;

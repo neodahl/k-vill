@@ -35,7 +35,7 @@
 	.img-box {
 		margin-bottom: rem(26px);
 		.logo {
-			width: rem(90px);
+			width: rem(80px);
 		}
 		.logo-txt {
 			width: rem(200px);
@@ -49,11 +49,11 @@
 		text-align: center;
 		.title {
 			margin-bottom: rem(10px);
-			font-size: rem(30px);
+			font-size: rem(21px);
 			font-weight: 600;
 		}
 		p {
-			font-size: rem(15px);
+			font-size: rem(14px);
 			font-weight: 400;
 		}
 	}
@@ -83,7 +83,7 @@
 		margin-bottom: rem(30px);
 		text-align: center;
 		.logo {
-			width: rem(120px);
+			width: rem(150px);
 		}
 		.title {
 			margin-top: rem(20px);
@@ -126,7 +126,7 @@
 		margin-top: rem(25px);
 		text-align: center;
 		> a {
-			font-size: rem(18px);
+			font-size: rem(14px);
 			color: #13173a;
 		}
 		.pipe {
@@ -146,11 +146,15 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			width: 100%;
+			&:nth-child(n + 2) {
+				margin-top: 0.5em;
+			}
 			img {
-				width: rem(60px);
+				width: rem(50px);
 			}
 			span {
-				width: 70%; // 글자수 고려시 필요
+				width: 80%; // 글자수 고려시 필요
 				display: inline-flex;
 				align-items: center;
 				&::before {
@@ -184,7 +188,7 @@
 	margin-bottom: rem(20px);
 	text-align: center;
 	a {
-		font-size: rem(18px);
+		font-size: rem(14px);
 		color: $font2;
 		&:nth-child(n + 2) {
 			margin-inline-start: 1em;
@@ -408,7 +412,7 @@
 			position: absolute;
 			top: rem(10px);
 			right: 0;
-			width: rem(70px);
+			width: rem(90px);
 			transform: rotate(-28deg);
 		}
 	}
