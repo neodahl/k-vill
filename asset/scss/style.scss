@@ -598,6 +598,8 @@
 		}
 		dd {
 			flex: 1 0 auto;
+			pointer-events: none; // HM100
+			text-decoration: none; // HM100
 		}
 	}
 	.tel {

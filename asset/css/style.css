@@ -559,6 +559,8 @@
 }
 .office-info dl dd {
   flex: 1 0 auto;
+  pointer-events: none;
+  text-decoration: none;
 }
 .office-info .tel {
   display: inline-block;
