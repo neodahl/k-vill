@@ -872,7 +872,7 @@
 }
 
 .MN-top-menus ~ .full-bottom-container {
-  margin-bottom: 1.25rem;
+  padding-bottom: 0;
 }
 
 /* All Menu - MN101, MN103 */
