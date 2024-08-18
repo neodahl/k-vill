@@ -210,6 +210,9 @@
 .form-container > .row-contaienr > .input-container {
   flex-basis: 20%;
 }
+.form-container > .row-contaienr.column-2 > * {
+  flex-basis: calc((100% - 0.625rem) / 2);
+}
 .form-container .radio.type3 label {
   font-size: 1.125rem;
 }

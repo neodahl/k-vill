@@ -211,14 +211,21 @@
 		}
 	}
 	& > .row-contaienr {
+		$rowContainerGap: rem(10px);
 		display: flex;
 		flex-flow: row wrap;
-		gap: rem(10px);
+		gap: $rowContainerGap;
+
 		> * {
 			flex: 1 0 auto;
 		}
 		> .input-container {
 			flex-basis: 20%; // 임시 비율(RD101 대응)
+		}
+		&.column-2 {
+			> * {
+				flex-basis: calc((100% - $rowContainerGap) / 2);
+			}
 		}
 	}
 	.radio.type3 {
