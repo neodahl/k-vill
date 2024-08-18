@@ -353,7 +353,7 @@ body {
   flex-flow: column wrap;
   justify-content: flex-end;
   margin-top: 1.875rem;
-  margin-bottom: 3.125rem;
+  padding-bottom: 3.125rem;
 }
 .full-wrapper .full-bottom-container [class*=btn-]:not(:first-of-type) {
   margin-top: 0.625rem;

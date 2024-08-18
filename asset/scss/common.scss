@@ -155,7 +155,7 @@ body {
 		flex-flow: column wrap;
 		justify-content: flex-end;
 		margin-top: rem(30px); // MN101 확인
-		margin-bottom: rem(50px);
+		padding-bottom: rem(50px);
 		[class*="btn-"]:not(:first-of-type) {
 			margin-top: rem(10px);
 		}
