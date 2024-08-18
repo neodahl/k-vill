@@ -418,8 +418,8 @@
 		.payment-state {
 			position: absolute;
 			top: rem(10px);
-			right: 0;
-			width: rem(90px);
+			right: rem(-10px);
+			width: rem(96px);
 			transform: rotate(-28deg);
 		}
 	}
@@ -587,9 +587,9 @@
 		flex-flow: row wrap;
 		gap: rem(4px);
 		font-size: rem(13px);
+		letter-spacing: -0.046em;
 		color: $font2;
 		text-shadow: rem(1px 1px 0) #fff, rem(-1px -1px 0) #fff;
-		letter-spacing: -0.046em;
 		&:nth-of-type(n + 2) {
 			margin-top: rem(4px);
 		}
@@ -598,8 +598,6 @@
 		}
 		dd {
 			flex: 1 0 auto;
-			pointer-events: none; // HM100
-			text-decoration: none; // HM100
 		}
 	}
 	.tel {

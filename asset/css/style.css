@@ -396,8 +396,8 @@
 .bill-summary .summary-header .payment-state {
   position: absolute;
   top: 0.625rem;
-  right: 0;
-  width: 5.625rem;
+  right: -0.625rem;
+  width: 6rem;
   transform: rotate(-28deg);
 }
 .bill-summary .monthly-bills-container {
@@ -547,9 +547,9 @@
   flex-flow: row wrap;
   gap: 0.25rem;
   font-size: 0.8125rem;
+  letter-spacing: -0.046em;
   color: #6c7584;
   text-shadow: 0.0625rem 0.0625rem 0 #fff, -0.0625rem -0.0625rem 0 #fff;
-  letter-spacing: -0.046em;
 }
 .office-info dl:nth-of-type(n + 2) {
   margin-top: 0.25rem;
@@ -559,8 +559,6 @@
 }
 .office-info dl dd {
   flex: 1 0 auto;
-  pointer-events: none;
-  text-decoration: none;
 }
 .office-info .tel {
   display: inline-block;
