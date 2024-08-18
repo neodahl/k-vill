@@ -128,6 +128,10 @@ a {
   color: inherit;
 }
 
+b {
+  text-decoration: none;
+}
+
 input {
   margin: 0;
   border: none;
