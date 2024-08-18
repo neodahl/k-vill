@@ -1,0 +1,1521 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+	<head>
+		<title>UI 가이드</title>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+		/>
+		<link rel="stylesheet" href="../asset/css/lib/flatpickr.min.css" />
+		<link rel="stylesheet" href="../asset/css/common.css" />
+		<link rel="stylesheet" href="../asset/css/style.css" />
+		<style type="text/css">
+			.ui-component-section {
+				border-top: 4px solid #6a6a6a;
+				padding: 3em 1em 2em;
+				line-height: 1.5;
+			}
+			.ui-component-section:nth-child(n + 2) {
+				margin-top: 14em;
+			}
+			.ui-section-title {
+				font-size: 2.5em;
+				margin-bottom: 1em;
+				text-indent: -16px;
+			}
+			.ui-section-title + .ui-desc {
+				margin-top: -1.5em;
+			}
+			.ui-desc {
+				margin: 0.5em 0 2em;
+				font-weight: 300 !important;
+			}
+			.ui-link {
+				color: dodgerblue;
+				text-decoration: underline;
+			}
+			.ui-color {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 1em;
+			}
+			.ui-color dt {
+				flex: 1 1 20%;
+				font-size: 1.5rem;
+			}
+			.ui-color dd {
+				flex: 1 1 55%;
+			}
+			.ui-colorchip {
+				display: inline-block;
+				width: 36px;
+				height: 36px;
+				border-radius: 5px;
+				box-shadow: 1px 1px 4px #777;
+			}
+			.ui-buttons-container [class*="btn-"][class*="-full"] {
+				margin-top: 1em;
+			}
+			.ui-gap {
+				height: 1em;
+			}
+			.ui-gap.thick {
+				height: 5em;
+			}
+			hr.ui {
+				margin: 5em 0 1.5em;
+				border-top: 1px solid #ccc;
+			}
+			h4.ui {
+				text-indent: -6px;
+				font-size: 1.4em;
+				font-weight: 600;
+				margin-bottom: 1em;
+			}
+			hr.ui-space {
+				display: block;
+				margin: 1em 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="site-body">
+			<!-- [Start] App View-->
+			<div class="app-body bg-white">
+				<!-- [Start] App - Top-->
+				<div class="app-top"></div>
+				<!-- [End] App - Top-->
+				<!-- [Start] App - Contents-->
+				<div class="app-main">
+					<div class="contents">
+						<section class="ui-component-section">
+							<h3 class="ui-section-title">UI Guide</h3>
+							<p class="ui-desc">
+								UI 스타일은 기본적으로
+								<b>"kebab-case"</b>
+								로 클래스를 작성되었습니다. 간혹,
+								<b>"camelCase"</b>
+								를 사용한 스타일이 있다면 이는 퍼블리싱 스크립트와 연동되는
+								클래스임을 암시합니다.
+								<br />
+								개발용 클래스가 필요하다면, 명확한 구분을 위해
+								<b>반드시</b>
+								<b style="color: red">"PascalCase"</b>
+								로 사용해주시길 바랍니다.
+							</p>
+						</section>
+						<section class="ui-component-section">
+							<h3 class="ui-section-title">Typograpy</h3>
+							<p class="ui-desc">
+								웹폰트는
+								<a
+									class="ui-link"
+									href="https://cactus.tistory.com/306"
+									target="_blank"
+								>
+									Pretendard
+								</a>
+								를 사용합니다.
+								<br />
+								<i>
+									현재 타이포그래피는 font-size, font-weight 없이 색상에 대한
+									가이드만 제공됩니다.
+								</i>
+							</p>
+							<p class="success">
+								긍정적인 문자색 클래스: 'success' 를 사용해주세요.
+							</p>
+							<p class="danger">
+								부정적인 문자색 클래스: 'danger' 를 사용해주세요.
+							</p>
+							<p class="warning">
+								주의관련 문자색 클래스: 'warning' 을 사용해주세요.
+							</p>
+							<p class="notify">
+								알림관련 문자색 클래스: 'notify' 를 사용해주세요.
+							</p>
+						</section>
+						<section class="ui-component-section">
+							<h3 class="ui-section-title">Colors</h3>
+							<p class="ui-desc"></p>
+							<dl class="ui-color">
+								<dt>primary1</dt>
+								<dd>
+									<div
+										class="ui-colorchip"
+										style="background-color: #3182f7"
+									></div>
+								</dd>
+								<dt>font1</dt>
+								<dd>
+									<div
+										class="ui-colorchip"
+										style="background-color: #181f29"
+									></div>
+								</dd>
+								<dt>font2</dt>
+								<dd>
+									<div
+										class="ui-colorchip"
+										style="background-color: #6c7584"
+									></div>
+								</dd>
+								<dt>font3</dt>
+								<dd>
+									<div
+										class="ui-colorchip"
+										style="background-color: #848484"
+									></div>
+								</dd>
+							</dl>
+						</section>
+						<section class="ui-component-section">
+							<h3 class="ui-section-title">Buttons</h3>
+							<p class="ui-desc">
+								필요에 따라
+								<b>"button"</b>
+								또는
+								<b>"a"</b>
+								태그에 CSS class를 조합하여 사용합니다.
+								<br />
+								클래스의 시작은 반드시
+								<b>"btn-"</b>
+								로 시작해야하며,
+								<br />
+								<b>사이즈</b>
+								에 따라.
+								<b>"-sm, -md, -lg"</b>
+								추가 (전체 너비는
+								<b>"-full"</b>
+								)
+								<br />
+								<b>타입</b>
+								에 따라
+								<b>"-bg, -line"</b>
+								을 추가
+								<br />
+								<b>색상</b>
+								에 따라
+								<b>"-primary, -secondary"</b>
+								추가
+								<br />
+								<b>윤곽</b>
+								에 따라
+								<b>"-round"</b>
+								추가
+								<br />
+								접두사("btn-")이외에 나머지 접미사는 순서에 상관 없이 사용할 수
+								있습니다.
+								<br />
+								ex)
+								<b>"btn-sm-bg-primary"</b>
+								==
+								<b>"btn-primary-sm-bg"</b>
+								<br />
+								권장 사용 방식은
+								<b>"btn-사이즈-타입-색상"</b>
+								입니다.
+								<br />
+								경우에 따라
+								<b>"-사이즈", "-색상"</b>
+								등은
+								<b>생략될 수 있습니다.</b>
+							</p>
+							<h4 class="ui">Use "a tag" or "button tag":</h4>
+							<div>
+								<!-- [Start] Copy This-->
+								<a class="btn-lg-bg-primary-full" href="javascript:void(0);">
+									anchor type
+								</a>
+								<!-- [End] Copy This-->
+								<div class="ui-gap"></div>
+								<!-- [Start] Copy This-->
+								<button class="btn-lg-bg-primary-full" type="button">
+									button type
+								</button>
+								<!-- [End] Copy This-->
+							</div>
+							<hr class="ui" />
+							<h4 class="ui">Buttons sizes:</h4>
+							<div>
+								<!-- [Start] Copy This-->
+								<a class="btn-lg-line-primary" href="javascript:void(0);">
+									lg size
+								</a>
+								<!-- [End] Copy This-->
+								<div class="ui-gap"></div>
+								<!-- [Start] Copy This-->
+								<a class="btn-lg-line-primary-full" href="javascript:void(0);">
+									*-full
+								</a>
+								<!-- [End] Copy This-->
+								<div class="ui-gap"></div>
+								<!-- [Start] Copy This-->
+								<a class="btn-md-line-primary" href="javascript:void(0);">
+									md size
+								</a>
+								<!-- [End] Copy This-->
+								<div class="ui-gap"></div>
+								<!-- [Start] Copy This-->
+								<a class="btn-sm-line-primary" href="javascript:void(0);">
+									sm size
+								</a>
+								<!-- [End] Copy This-->
+								<div class="ui-gap"></div>
+							</div>
+							<hr class="ui" />
+							<h4 class="ui">Button styles:</h4>
+							<div>
+								<!-- [Start] Copy This-->
+								<button class="btn-md-line-primary-full" type="button">
+									line
+								</button>
+								<!-- [End] Copy This-->
+								<div class="ui-gap"></div>
+								<!-- [Start] Copy This-->
+								<button class="btn-md-bg-primary-full" type="button">bg</button>
+								<!-- [End] Copy This-->
+								<div class="ui-gap"></div>
+								<!-- [Start] Copy This-->
+								<button class="btn-md-bg-secondary-round" type="button">
+									shape '-round'
+								</button>
+								<!-- [End] Copy This-->
+								<div class="ui-gap"></div>
+							</div>
+							<hr class="ui" />
+							<h4 class="ui">Button colors:</h4>
+							<div>
+								<!-- [Start] Copy This-->
+								<button class="btn-md-bg-primary" type="button">
+									bg primary
+								</button>
+								<!-- [End] Copy This-->
+								<!-- [Start] Copy This-->
+								<button class="btn-md-bg-secondary" type="button">
+									bg secondary
+								</button>
+								<!-- [End] Copy This-->
+								<!-- [Start] Copy This-->
+								<button class="btn-md-bg-tertiay" type="button">
+									bg tertiay
+								</button>
+								<!-- [End] Copy This-->
+								<div class="ui-gap"></div>
+								<!-- [Start] Copy This-->
+								<button class="btn-md-line-primary" type="button">
+									line primary
+								</button>
+								<!-- [End] Copy This-->
+								<!-- [Start] Copy This-->
+								<button class="btn-md-line-secondary" type="button">
+									line secondary
+								</button>
+								<!-- [End] Copy This-->
+								<!-- button.btn-md-line-tertiay(type="button") line tertiay :: 없음.-->
+								<div class="ui-gap"></div>
+							</div>
+							<hr class="ui" />
+							<h4 class="ui">disabled state:</h4>
+							<p class="ui-desc">
+								a 태그에는 disabled 속성을 사용할 수 없기 때문에
+								<b>"disabled"</b>
+								클래스를 따로 적용해야 합니다.
+							</p>
+							<!-- [Start] Copy This-->
+							<button class="btn-lg-line-primary-full" type="button" disabled>
+								button line-primary disabled
+							</button>
+							<!-- [End] Copy This-->
+							<div class="ui-gap"></div>
+							<!-- [Start] Copy This-->
+							<a
+								class="btn-lg-bg-primary-full disabled"
+								href="javascript:void(0);"
+							>
+								anchor bg-primary disabled
+							</a>
+							<!-- [End] Copy This-->
+							<hr class="ui" />
+							<h4 class="ui">Marks:</h4>
+							<p class="ui-desc">
+								클래스 적용은 버튼과 비슷하게 사용합니다.
+								<br />
+								차이점은,
+								<b>"mark"</b>
+								태그 사용과, 클래스명이
+								<b>"mark-"로 시작</b>
+								되어야 합니다.
+							</p>
+							<!-- [Start] Copy This-->
+							<mark class="mark-sm-bg-primary">mark</mark>
+							<!-- [End] Copy This-->
+							<!-- [Start] Copy This-->
+							<mark class="mark-sm-bg-primary-round">mark</mark>
+							<!-- [End] Copy This-->
+							<!-- [Start] Copy This-->
+							<mark class="mark-sm-line-primary">mark</mark>
+							<!-- [End] Copy This-->
+							<!-- [Start] Copy This-->
+							<mark class="mark-sm-line-primary-round">mark</mark>
+							<!-- [End] Copy This-->
+							<div class="ui-gap"></div>
+							<!-- [Start] Copy This-->
+							<mark class="mark-sm-bg-secondary">mark</mark>
+							<!-- [End] Copy This-->
+							<!-- [Start] Copy This-->
+							<mark class="mark-sm-bg-secondary-round">mark</mark>
+							<!-- [End] Copy This-->
+							<!-- [Start] Copy This-->
+							<mark class="mark-sm-line-secondary">mark</mark>
+							<!-- [End] Copy This-->
+							<!-- [Start] Copy This-->
+							<mark class="mark-sm-line-secondary-round">mark</mark>
+							<!-- [End] Copy This-->
+							<div class="ui-gap"></div>
+							<!-- [Start] Copy This-->
+							<mark class="mark-sm-bg-tertiay">mark</mark>
+							<!-- [End] Copy This-->
+							<!-- [Start] Copy This-->
+							<mark class="mark-sm-bg-tertiay-round">mark</mark>
+							<!-- [End] Copy This-->
+							<!-- mark.mark-sm-line-tertiay mark :: 없음-->
+							<!-- mark.mark-sm-line-tertiay-round mark :: 없음-->
+						</section>
+						<section class="ui-component-section">
+							<h3 class="ui-section-title">Checkbox</h3>
+							<p class="ui-desc">
+								체크박스는 가이드 markup 그대로 사용하며, 컨테이너 요소를
+								이용하여 간격을 조정하는 것이 가장 안전한 방법입니다.
+							</p>
+							<h4 class="ui">간격 조절 없이 사용:</h4>
+							<!-- [Start] Copy This-->
+							<div class="checkbox">
+								<input class="a11y-hidden" type="checkbox" id="checkID1" />
+								<label for="checkID1">
+									<span class="icon"></span>
+									default
+								</label>
+							</div>
+							<!-- [End] Copy This-->
+							<!-- [Start] Copy This-->
+							<div class="checkbox">
+								<input
+									class="a11y-hidden"
+									type="checkbox"
+									id="checkID2"
+									checked
+								/>
+								<label for="checkID2">
+									<span class="icon"></span>
+									checked
+								</label>
+							</div>
+							<!-- [End] Copy This-->
+							<!-- [Start] Copy This-->
+							<div class="checkbox">
+								<input
+									class="a11y-hidden"
+									type="checkbox"
+									id="checkID3"
+									disabled
+								/>
+								<label for="checkID3">
+									<span class="icon"></span>
+									disabled
+								</label>
+							</div>
+							<!-- [End] Copy This-->
+							<!-- [Start] Copy This-->
+							<div class="checkbox">
+								<input
+									class="a11y-hidden"
+									type="checkbox"
+									id="checkID4"
+									disabled
+									checked
+								/>
+								<label for="checkID4">
+									<span class="icon"></span>
+									disabled checked
+								</label>
+							</div>
+							<!-- [End] Copy This-->
+							<hr class="ui" />
+							<h4 class="ui">부모 컨테이너로 간격 조절:</h4>
+							<div style="display: flex; gap: 2rem">
+								<!-- [Start] Copy This-->
+								<div class="checkbox">
+									<input
+										class="a11y-hidden"
+										type="checkbox"
+										id="checkID2-1"
+										checked
+									/>
+									<label for="checkID2-1">
+										<span class="icon"></span>
+										간격은
+									</label>
+								</div>
+								<!-- [End] Copy This-->
+								<!-- [Start] Copy This-->
+								<div class="checkbox">
+									<input class="a11y-hidden" type="checkbox" id="checkID2-2" />
+									<label for="checkID2-2">
+										<span class="icon"></span>
+										부모 요소로
+									</label>
+								</div>
+								<!-- [End] Copy This-->
+								<!-- [Start] Copy This-->
+								<div class="checkbox">
+									<input class="a11y-hidden" type="checkbox" id="checkID2-3" />
+									<label for="checkID2-3">
+										<span class="icon"></span>
+										조절함
+									</label>
+								</div>
+								<!-- [End] Copy This-->
+							</div>
+							<hr class="ui" />
+							<h4 class="ui">type2(full button type)</h4>
+							<!-- [Start] Copy This-->
+							<div class="checkbox type2">
+								<input class="a11y-hidden" type="checkbox" id="checkID3-1" />
+								<label for="checkID3-1">
+									<span class="icon"></span>
+									short text
+								</label>
+							</div>
+							<!-- [End] Copy This-->
+							<!-- [Start] Copy This-->
+							<div class="checkbox type2">
+								<input class="a11y-hidden" type="checkbox" id="checkID3-2" />
+								<label for="checkID3-2">
+									<span class="icon"></span>
+									Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+								</label>
+							</div>
+							<!-- [End] Copy This-->
+							<hr class="ui" />
+							<h4 class="ui">has-link(has anchor type)</h4>
+							<p class="ui-desc"></p>
+							<!-- [Start] Copy This-->
+							<div class="checkbox has-link">
+								<input class="a11y-hidden" type="checkbox" id="checkID4-1" />
+								<label for="checkID4-1">
+									<span class="icon"></span>
+									has-link short text
+									<a href="#none" aria-label="페이지 이동"></a>
+								</label>
+							</div>
+							<!-- [End] Copy This-->
+							<!-- [Start] Copy This-->
+							<div class="checkbox has-link">
+								<input class="a11y-hidden" type="checkbox" id="checkID4-2" />
+								<label for="checkID4-2">
+									<span class="icon"></span>
+									has-link Lorem ipsum, dolor sit amet consectetur adipisicing
+									elit.
+									<a href="#none" aria-label="페이지 이동"></a>
+								</label>
+							</div>
+							<!-- [End] Copy This-->
+						</section>
+						<section class="ui-component-section">
+							<h3 class="ui-section-title">Radios</h3>
+							<p class="ui-desc">
+								라디오버튼은 가이드 markup 그대로 사용하며, 컨테이너 요소를
+								이용하여 간격을 조정하는 것이 가장 안전한 방법입니다.
+								<br />
+								<i>
+									<b>
+										※ 라디오 버튼을 감싸는 태그는 단순 간격 조절용이니 사용하지
+										마십시오.
+									</b>
+								</i>
+							</p>
+							<h4 class="ui">Default type:</h4>
+							<div style="display: flex; gap: 20px">
+								<!-- [End] Copy This-->
+								<div class="radio">
+									<input
+										class="a11y-hidden"
+										type="radio"
+										name="radioGroup1"
+										id="radioID1-1"
+										checked
+									/>
+									<label for="radioID1-1">
+										<span class="icon"></span>
+										checked
+									</label>
+								</div>
+								<!-- [End] Copy This-->
+								<!-- [Start] Copy This-->
+								<div class="radio">
+									<input
+										class="a11y-hidden"
+										type="radio"
+										name="radioGroup1"
+										id="radioID1-2"
+									/>
+									<label for="radioID1-2">
+										<span class="icon"></span>
+										default
+									</label>
+								</div>
+								<!-- [End] Copy This-->
+								<!-- [End] Copy This-->
+								<div class="radio">
+									<input
+										class="a11y-hidden"
+										type="radio"
+										name="radioGroup1"
+										id="radioID1-3"
+									/>
+									<label for="radioID1-3">
+										<span class="icon"></span>
+										default
+									</label>
+								</div>
+								<!-- [End] Copy This-->
+							</div>
+							<div class="ui-gap"></div>
+							<div style="display: flex; gap: 20px">
+								<!-- [Start] Copy This-->
+								<div class="radio">
+									<input
+										class="a11y-hidden"
+										type="radio"
+										name="radioGroup2"
+										id="radioID2-1"
+										disabled
+										checked
+									/>
+									<label for="radioID2-1">
+										<span class="icon"></span>
+										disabled checked
+									</label>
+								</div>
+								<!-- [End] Copy This-->
+								<!-- [Start] Copy This-->
+								<div class="radio">
+									<input
+										class="a11y-hidden"
+										type="radio"
+										name="radioGroup2"
+										id="radioID2-2"
+										disabled
+									/>
+									<label for="radioID2-2">
+										<span class="icon"></span>
+										disabled
+									</label>
+								</div>
+								<!-- [End] Copy This-->
+								<!-- [Start] Copy This-->
+								<div class="radio">
+									<input
+										class="a11y-hidden"
+										type="radio"
+										name="radioGroup2"
+										id="radioID2-3"
+										disabled
+									/>
+									<label for="radioID2-3">
+										<span class="icon"></span>
+										disabled
+									</label>
+								</div>
+								<!-- [End] Copy This-->
+							</div>
+							<hr class="ui" />
+							<h4 class="ui">type2(check shape):</h4>
+							<div
+								style="
+									display: flex;
+									flex-direction: column;
+									align-items: flex-start;
+									gap: 10px;
+								"
+							>
+								<!-- [Start] Copy This-->
+								<div class="radio type2">
+									<input
+										class="a11y-hidden"
+										type="radio"
+										name="radioGroup3"
+										id="radioID3-1"
+										checked
+									/>
+									<label for="radioID3-1">
+										<span class="icon"></span>
+										default checked
+									</label>
+								</div>
+								<!-- [End] Copy This-->
+								<!-- [Start] Copy This-->
+								<div class="radio type2">
+									<input
+										class="a11y-hidden"
+										type="radio"
+										name="radioGroup3"
+										id="radioID3-2"
+									/>
+									<label for="radioID3-2">
+										<span class="icon"></span>
+										default
+									</label>
+								</div>
+								<!-- [End] Copy This-->
+								<!-- [Start] Copy This-->
+								<div class="radio type2">
+									<input
+										class="a11y-hidden"
+										type="radio"
+										name="radioGroup4"
+										id="radioID4-1"
+										disabled
+										checked
+									/>
+									<label for="radioID4-1">
+										<span class="icon"></span>
+										disabled checked
+									</label>
+								</div>
+								<!-- [End] Copy This-->
+								<!-- [Start] Copy This-->
+								<div class="radio type2">
+									<input
+										class="a11y-hidden"
+										type="radio"
+										name="radioGroup4"
+										id="radioID4-2"
+										disabled
+									/>
+									<label for="radioID4-2">
+										<span class="icon"></span>
+										disabled
+									</label>
+								</div>
+								<!-- [End] Copy This-->
+							</div>
+							<hr class="ui" />
+							<h4 class="ui">type3(button shape):</h4>
+							<p class="ui-desc">disabled 상태는 확정 아님.</p>
+							<div>
+								<!-- [Start] Copy This-->
+								<div class="radio type3">
+									<input
+										class="a11y-hidden"
+										type="radio"
+										name="radioGroup5"
+										id="radioID5-1"
+										checked
+									/>
+									<label for="radioID5-1">
+										<span class="icon"></span>
+										button radio
+									</label>
+								</div>
+								<!-- [End] Copy This-->
+								<!-- [Start] Copy This-->
+								<div class="radio type3">
+									<input
+										class="a11y-hidden"
+										type="radio"
+										name="radioGroup5"
+										id="radioID5-2"
+									/>
+									<label for="radioID5-2">
+										<span class="icon"></span>
+										button radio
+									</label>
+								</div>
+								<!-- [End] Copy This-->
+								<!-- [Start] Copy This-->
+								<div class="radio type3">
+									<input
+										class="a11y-hidden"
+										type="radio"
+										name="radioGroup5"
+										id="radioID5-3"
+									/>
+									<label for="radioID5-3">
+										<span class="icon"></span>
+										button radio
+									</label>
+								</div>
+								<!-- [End] Copy This-->
+								<div class="ui-gap"></div>
+								<!-- [Start] Copy This-->
+								<div class="radio type3">
+									<input
+										class="a11y-hidden"
+										type="radio"
+										name="radioGroup6"
+										id="radioID6-1"
+										disabled
+										checked
+									/>
+									<label for="radioID6-1">
+										<span class="icon"></span>
+										disabled checked
+									</label>
+								</div>
+								<!-- [End] Copy This-->
+								<!-- [Start] Copy This-->
+								<div class="radio type3">
+									<input
+										class="a11y-hidden"
+										type="radio"
+										name="radioGroup6"
+										id="radioID6-2"
+										disabled
+									/>
+									<label for="radioID6-2">
+										<span class="icon"></span>
+										disabled state
+									</label>
+								</div>
+								<!-- [End] Copy This-->
+								<!-- [Start] Copy This-->
+								<div class="radio type3">
+									<input
+										class="a11y-hidden"
+										type="radio"
+										name="radioGroup6"
+										id="radioID6-3"
+										disabled
+									/>
+									<label for="radioID6-3">
+										<span class="icon"></span>
+										disabled state
+									</label>
+								</div>
+								<!-- [End] Copy This-->
+							</div>
+							<hr class="ui" />
+							<h4 class="ui">type4(button shape):</h4>
+							<p class="ui-desc">
+								disabled 상태는 확정 아님.
+								<br />
+								<b>onclick="return false;"</b>
+								를 사용하여 readonly 효과를 줄 수 있습니다.
+							</p>
+							<div>
+								<!-- [Start] Copy This-->
+								<div class="radio type4">
+									<input
+										class="a11y-hidden"
+										type="radio"
+										name="radioGroup7"
+										id="radioID7-1"
+										checked
+									/>
+									<label for="radioID7-1">
+										<span class="icon"></span>
+										button radio
+									</label>
+								</div>
+								<!-- [End] Copy This-->
+								<!-- [Start] Copy This-->
+								<div class="radio type4">
+									<input
+										class="a11y-hidden"
+										type="radio"
+										name="radioGroup7"
+										id="radioID7-2"
+									/>
+									<label for="radioID7-2">
+										<span class="icon"></span>
+										button radio
+									</label>
+								</div>
+								<!-- [End] Copy This-->
+								<!-- [Start] Copy This-->
+								<div class="radio type4">
+									<input
+										class="a11y-hidden"
+										type="radio"
+										name="radioGroup7"
+										id="radioID7-3"
+									/>
+									<label for="radioID7-3">
+										<span class="icon"></span>
+										button radio
+									</label>
+								</div>
+								<!-- [End] Copy This-->
+								<div class="ui-gap"></div>
+								<!-- [Start] Copy This-->
+								<div class="radio type4">
+									<input
+										class="a11y-hidden"
+										type="radio"
+										name="radioGroup7a"
+										id="radioID7a-1"
+										checked
+										onclick="return false;"
+									/>
+									<label for="radioID7a-1">
+										<span class="icon"></span>
+										return false
+									</label>
+								</div>
+								<!-- [End] Copy This-->
+								<!-- [Start] Copy This-->
+								<div class="radio type4">
+									<input
+										class="a11y-hidden"
+										type="radio"
+										name="radioGroup7a"
+										id="radioID7a-2"
+										onclick="return false;"
+									/>
+									<label for="radioID7a-2">
+										<span class="icon"></span>
+										return false
+									</label>
+								</div>
+								<!-- [End] Copy This-->
+								<!-- [Start] Copy This-->
+								<div class="radio type4">
+									<input
+										class="a11y-hidden"
+										type="radio"
+										name="radioGroup7a"
+										id="radioID7a-3"
+										onclick="return false;"
+									/>
+									<label for="radioID7a-3">
+										<span class="icon"></span>
+										return false
+									</label>
+								</div>
+								<!-- [End] Copy This-->
+								<div class="ui-gap"></div>
+								<!-- [Start] Copy This-->
+								<div class="radio type4">
+									<input
+										class="a11y-hidden"
+										type="radio"
+										name="radioGroup8"
+										id="radioID8-1"
+										disabled
+										checked
+									/>
+									<label for="radioID8-1">
+										<span class="icon"></span>
+										disabled checked
+									</label>
+								</div>
+								<!-- [End] Copy This-->
+								<!-- [Start] Copy This-->
+								<div class="radio type4">
+									<input
+										class="a11y-hidden"
+										type="radio"
+										name="radioGroup8"
+										id="radioID8-2"
+										disabled
+									/>
+									<label for="radioID8-2">
+										<span class="icon"></span>
+										disabled state
+									</label>
+								</div>
+								<!-- [End] Copy This-->
+								<!-- [Start] Copy This-->
+								<div class="radio type4">
+									<input
+										class="a11y-hidden"
+										type="radio"
+										name="radioGroup8"
+										id="radioID8-3"
+										disabled
+									/>
+									<label for="radioID8-3">
+										<span class="icon"></span>
+										disabled state
+									</label>
+								</div>
+								<!-- [End] Copy This-->
+							</div>
+						</section>
+						<section class="ui-component-section">
+							<h3 class="ui-section-title">Inputs</h3>
+							<p class="ui-desc">
+								input[type="text"], input[type="tel"], input[type="password"]
+								등에 사용됩니다.
+							</p>
+							<h4 class="ui">Default type:</h4>
+							<!-- [Start] Copy This-->
+							<div class="input-container">
+								<div class="input-box">
+									<label for="input-1_1">input label</label>
+									<input type="text" id="input-1_1" placeholder="placeholder" />
+								</div>
+							</div>
+							<!-- [End] Copy This-->
+							<div class="ui-gap"></div>
+							<!-- [Start] Copy This-->
+							<div class="input-container">
+								<div class="input-box">
+									<label for="input-1_2">disabled</label>
+									<input
+										type="text"
+										id="input-1_2"
+										disabled
+										placeholder="disabled placeholder"
+										value="valued disabled"
+									/>
+								</div>
+							</div>
+							<!-- [End] Copy This-->
+							<div class="ui-gap"></div>
+							<!-- [Start] Copy This-->
+							<div class="input-container">
+								<div class="input-box">
+									<label for="input-1_3">disabled</label>
+									<input
+										type="text"
+										id="input-1_3"
+										disabled
+										placeholder="placeholder"
+									/>
+								</div>
+							</div>
+							<!-- [End] Copy This-->
+							<div class="ui-gap"></div>
+							<!-- [Start] Copy This-->
+							<div class="input-container">
+								<div class="input-box">
+									<label for="input-1_4">password</label>
+									<input
+										type="password"
+										id="input-1_4"
+										placeholder="password placeholder"
+										maxlength="20"
+									/>
+								</div>
+							</div>
+							<!-- [End] Copy This-->
+							<hr class="ui" />
+							<h4 class="ui">Label hidden:</h4>
+							<p class="ui-desc">
+								label은
+								<b>"a11y-hidden"</b>
+								를 추가하여 안보이게 처리합니다.(웹 접근성 준수)
+							</p>
+							<!-- [Start] Copy This-->
+							<div class="input-container">
+								<div class="input-box">
+									<label class="a11y-hidden" for="input-2">input label</label>
+									<input
+										type="text"
+										id="input-2"
+										placeholder="label hidden type"
+									/>
+								</div>
+							</div>
+							<!-- [End] Copy This-->
+							<hr class="ui" />
+							<h4 class="ui">Input Type2 (background gray):</h4>
+							<!-- [Start] Copy This-->
+							<div class="input-container type2">
+								<div class="input-box">
+									<label for="input-3_1">Type2 label</label>
+									<input type="text" id="input-3_1" placeholder="placeholder" />
+								</div>
+							</div>
+							<!-- [End] Copy This-->
+							<div class="ui-gap"></div>
+							<!-- [Start] Copy This-->
+							<div class="input-container type2">
+								<div class="input-box">
+									<label for="input-3_2">Type2 disabled</label>
+									<input
+										type="text"
+										id="input-3_2"
+										placeholder="label hidden type"
+										disabled
+									/>
+								</div>
+							</div>
+							<!-- [End] Copy This-->
+							<div class="ui-gap"></div>
+							<!-- [Start] Copy This-->
+							<div class="input-container type2">
+								<div class="input-box">
+									<label for="input-3_3">Type2 disabled</label>
+									<input
+										type="text"
+										id="input-3_3"
+										placeholder="label hidden type"
+										disabled
+										value="valued disabled"
+									/>
+								</div>
+							</div>
+							<!-- [End] Copy This-->
+							<hr class="ui" />
+							<h4 class="ui">Input message alert:</h4>
+							<p class="ui-desc">
+								ul.msg-box 에
+								<b>"active"</b>
+								클래스를 추가하면 메세지가 보이는 방식입니다.
+								<br />
+								li 태그에 직접
+								<b>"show"</b>
+								or
+								<b>"hidden"</b>
+								클래스를 적용하여 노출을 적용할 수 도 있습니다.
+							</p>
+							<!-- [Start] Copy This-->
+							<div class="input-container">
+								<div class="input-box">
+									<label for="input-9">input label</label>
+									<input type="text" id="input-9" placeholder="placeholder" />
+								</div>
+								<ul class="msg-box active">
+									<li>아무 클래스가 추가되지 않은 일반 텍스트 입니다.</li>
+									<li class="type2">
+										'type2' 클래스를 추가하여, 일반 텍스트에 구분자(※)가 추가된
+										메세지 입니다.
+									</li>
+									<li class="type2 success">
+										'success' 클래스를 추가하여 성공 메세지를 구분합니다.
+									</li>
+									<li class="type2 danger">
+										'danger' 클래스를 추가하여 에러 메세지를 구분합니다.
+									</li>
+									<li class="type2 warning">
+										'warning' 클래스를 추가하여 경고 메세지를 구분합니다.
+									</li>
+									<li class="type2">
+										긴텍스트 입니다. 긴텍스트 입니다. 긴텍스트 입니다. 긴텍스트
+										입니다. 긴텍스트 입니다. 긴텍스트 입니다.긴텍스트 입니다.
+										긴텍스트 입니다.
+									</li>
+								</ul>
+							</div>
+							<!-- [End] Copy This-->
+							<hr class="ui" />
+							<h4 class="ui">Input with button:</h4>
+							<p class="ui-desc">
+								.input-container에
+								<b>"has-btn"</b>
+								클래스를 추가하여 사용합니다.
+							</p>
+							<!-- [Start] Copy This-->
+							<div class="input-container has-btn">
+								<div class="input-box">
+									<label for="input-10_1">has-btn 클래스 적용</label>
+									<input
+										type="text"
+										id="input-10_1"
+										placeholder="placeholder text"
+									/>
+									<button class="btn-sm-bg-primary-round" type="button">
+										button
+									</button>
+								</div>
+							</div>
+							<!-- [End] Copy This-->
+							<div class="ui-gap"></div>
+							<!-- [Start] Copy This-->
+							<div class="input-container type2 has-btn">
+								<div class="input-box">
+									<label for="input-10_2">
+										type2 &amp; has-btn 클래스 적용
+									</label>
+									<input
+										type="text"
+										id="input-10_2"
+										placeholder="placeholder text"
+									/>
+									<button class="btn-sm-bg-primary-round" type="button">
+										button
+									</button>
+								</div>
+							</div>
+							<!-- [End] Copy This-->
+							<div class="ui-gap"></div>
+							<!-- [Start] Copy This-->
+							<div class="input-container type2 has-btn">
+								<div class="input-box">
+									<label for="input-10_3">mark 사용</label>
+									<input
+										type="text"
+										id="input-10_3"
+										placeholder="placeholder text"
+									/>
+									<mark class="mark-sm-bg-secondary-round">mark</mark>
+								</div>
+								<ul class="msg-box active">
+									<li>
+										default: Lorem ipsum dolor sit, amet consectetur adipisicing
+										elit.
+									</li>
+									<li class="success">
+										'success' Lorem ipsum dolor sit, amet consectetur
+										adipisicing elit.
+									</li>
+									<li class="danger">
+										'danger' Lorem ipsum dolor sit, amet consectetur adipisicing
+										elit.
+									</li>
+									<li class="type2">
+										'type2' Lorem ipsum dolor sit, amet consectetur adipisicing
+										elit.
+									</li>
+								</ul>
+							</div>
+							<!-- [End] Copy This-->
+							<hr class="ui" />
+							<h4 class="ui">Search Input:</h4>
+							<p class="ui-desc">
+								Input 요소와 스타일을 공유합니다. (ex. type2 적용 / label
+								숨김처리)
+							</p>
+							<!-- [Start] Copy This-->
+							<div class="input-container typeSearch">
+								<div class="input-box">
+									<label class="a11y-hidden" for="searchbar">검색창</label>
+									<input
+										type="search"
+										id="searchbar"
+										placeholder="검색어 입력"
+									/>
+									<button
+										class="btn-search"
+										type="submit"
+										aria-label="검색 버튼"
+									></button>
+								</div>
+								<div class="search-result">
+									<a href="javascript:void(0);">메종서리풀</a>
+									<a href="javascript:void(0);">제임스네이션3차</a>
+									<a href="javascript:void(0);">배곧C2판매시설</a>
+									<a href="javascript:void(0);">우솔빌</a>
+									<a href="javascript:void(0);">lorem Ipsum</a>
+									<a href="javascript:void(0);">lorem Ipsum</a>
+									<a href="javascript:void(0);">lorem Ipsum</a>
+									<a href="javascript:void(0);">lorem Ipsum</a>
+									<a href="javascript:void(0);">lorem Ipsum</a>
+									<a href="javascript:void(0);">lorem Ipsum</a>
+									<a href="javascript:void(0);">lorem Ipsum</a>
+									<a href="javascript:void(0);">lorem Ipsum</a>
+								</div>
+							</div>
+							<!-- [End] Copy This-->
+							<div class="ui-gap"></div>
+							<!-- [Start] Copy This-->
+							<div class="input-container typeSearch type2">
+								<div class="input-box">
+									<label for="searchbar2">search bar:type2</label>
+									<input
+										type="search"
+										id="searchbar2"
+										placeholder="검색어 입력"
+									/>
+									<button
+										class="btn-search"
+										type="submit"
+										aria-label="검색 버튼"
+									></button>
+								</div>
+								<div class="search-result">
+									<a href="javascript:void(0);">메종서리풀</a>
+									<a href="javascript:void(0);">제임스네이션3차</a>
+									<a href="javascript:void(0);">배곧C2판매시설</a>
+									<a href="javascript:void(0);">우솔빌</a>
+								</div>
+							</div>
+							<!-- [End] Copy This-->
+						</section>
+						<section class="ui-component-section">
+							<h3 class="ui-section-title">Date Picker</h3>
+							<p class="ui-desc">
+								<a
+									class="ui-link"
+									href="https://flatpickr.js.org/examples/"
+									target="_blank"
+								>
+									flatpickr.js
+								</a>
+								사용.
+								<br />
+								jQuery의 UI datepicker만큼 많은 기능을 제공하고 바닐라
+								스크립트의 사용이 가능함.
+								<br />
+								minDate, maxDate, enable, disable 등 다양한 api를 제공함.
+							</p>
+							<!-- [Start] Copy This-->
+							<div class="input-container inputDate">
+								<div class="input-box">
+									<label for="datepicker1">default &amp; .msg-box.active</label>
+									<input type="text" id="datepicker1" placeholder="pick date" />
+								</div>
+								<ul class="msg-box active">
+									<li>
+										default: Lorem ipsum dolor sit, amet consectetur adipisicing
+										elit.
+									</li>
+									<li class="success">
+										'success' Lorem ipsum dolor sit, amet consectetur
+										adipisicing elit.
+									</li>
+									<li class="danger">
+										'danger' Lorem ipsum dolor sit, amet consectetur adipisicing
+										elit.
+									</li>
+									<li class="type2 danger">
+										'type2' Lorem ipsum dolor sit, amet consectetur adipisicing
+										elit.
+									</li>
+								</ul>
+							</div>
+							<!-- [End] Copy This-->
+							<div class="ui-gap thick"></div>
+							<!-- [Start] Copy This-->
+							<div class="input-container type2 inputDate">
+								<div class="input-box">
+									<label for="datepicker2">date picker.type2</label>
+									<input
+										type="text"
+										id="datepicker2"
+										placeholder="type2 gray"
+									/>
+								</div>
+								<ul class="msg-box">
+									<li>
+										default: Lorem ipsum dolor sit, amet consectetur adipisicing
+										elit.
+									</li>
+									<li class="success">
+										'success' Lorem ipsum dolor sit, amet consectetur
+										adipisicing elit.
+									</li>
+									<li class="danger">
+										'danger' Lorem ipsum dolor sit, amet consectetur adipisicing
+										elit.
+									</li>
+									<li class="type2 danger">
+										'type2' Lorem ipsum dolor sit, amet consectetur adipisicing
+										elit.
+									</li>
+								</ul>
+							</div>
+							<!-- [End] Copy This-->
+							<div class="ui-gap thick"></div>
+							<h4 class="ui">no label</h4>
+							<!-- [Start] Copy This-->
+							<div class="input-container inputDate">
+								<div class="input-box">
+									<label class="a11y-hidden" for="datepicker4">날짜 지정</label>
+									<input
+										type="text"
+										id="datepicker4"
+										placeholder="replace label with placeholder"
+									/>
+								</div>
+								<ul class="msg-box">
+									<li>
+										default: Lorem ipsum dolor sit, amet consectetur adipisicing
+										elit.
+									</li>
+									<li class="success">
+										'success' Lorem ipsum dolor sit, amet consectetur
+										adipisicing elit.
+									</li>
+									<li class="danger">
+										'danger' Lorem ipsum dolor sit, amet consectetur adipisicing
+										elit.
+									</li>
+									<li class="type2 danger">
+										'type2' Lorem ipsum dolor sit, amet consectetur adipisicing
+										elit.
+									</li>
+								</ul>
+							</div>
+							<!-- [End] Copy This-->
+						</section>
+						<section class="ui-component-section">
+							<h3 class="ui-section-title">Select box</h3>
+							<!-- [Start] Copy This-->
+							<div class="selectBox">
+								<label for="select1-1">select label</label>
+								<select id="select1-1">
+									<option value="" disabled selected hidden>
+										please select option
+									</option>
+									<option value="option1">option1</option>
+									<option value="option2">option2</option>
+									<option value="option3">option3</option>
+									<option value="option4">option4</option>
+								</select>
+							</div>
+							<!-- [End] Copy This-->
+							<div class="ui-gap"></div>
+							<!-- [Start] Copy This-->
+							<div class="selectBox">
+								<label for="select1-2">select disabled</label>
+								<select id="select1-2" disabled>
+									<option value="" disabled selected hidden>
+										please select option
+									</option>
+									<option value="option1">option1</option>
+									<option value="option2">option2</option>
+									<option value="option3">option3</option>
+									<option value="option4">option4</option>
+								</select>
+							</div>
+							<!-- [End] Copy This-->
+							<div class="ui-gap"></div>
+							<!-- [Start] Copy This-->
+							<div class="selectBox">
+								<label for="select1-3">select disabled selected</label>
+								<select id="select1-3" disabled>
+									<option value="" disabled selected hidden>
+										please select option
+									</option>
+									<option value="option1" selected>option1 selected</option>
+									<option value="option2">option2</option>
+									<option value="option3">option3</option>
+									<option value="option4">option4</option>
+								</select>
+							</div>
+							<!-- [End] Copy This-->
+							<hr class="ui" />
+							<h4 class="ui">Select Type2 (background gray):</h4>
+							<!-- [Start] Copy This-->
+							<div class="selectBox type2">
+								<label for="select2-1">select label</label>
+								<select id="select2-1">
+									<option value="" disabled selected hidden>
+										please select option
+									</option>
+									<option value="option1">option1</option>
+									<option value="option2">option2</option>
+									<option value="option3">option3</option>
+									<option value="option4">option4</option>
+								</select>
+							</div>
+							<!-- [End] Copy This-->
+							<div class="ui-gap"></div>
+							<!-- [Start] Copy This-->
+							<div class="selectBox type2">
+								<label for="select2-2">select disabled</label>
+								<select id="select2-2" disabled>
+									<option value="" disabled selected hidden>
+										please select option
+									</option>
+									<option value="option1">option1</option>
+									<option value="option2">option2</option>
+									<option value="option3">option3</option>
+									<option value="option4">option4</option>
+								</select>
+							</div>
+							<!-- [End] Copy This-->
+							<div class="ui-gap"></div>
+							<!-- [Start] Copy This-->
+							<div class="selectBox type2">
+								<label for="select2-3">select disabled selected</label>
+								<select id="select2-3" disabled>
+									<option value="" disabled selected hidden>
+										please select option
+									</option>
+									<option value="option1" selected>option1</option>
+									<option value="option2">option2</option>
+									<option value="option3">option3</option>
+									<option value="option4">option4</option>
+								</select>
+							</div>
+							<!-- [End] Copy This-->
+						</section>
+						<section class="ui-component-section">
+							<h3 class="ui-section-title">Sub Menu</h3>
+							<p class="ui-desc"></p>
+							'.menu-item'에
+							<b>'active'</b>
+							클래스를 추가하여 활성화 합니다.
+							<div class="ui-gap"></div>
+							<div class="ui-gap"></div>
+							<!-- [Start] Copy This-->
+							<nav class="sub-menu-container">
+								<a class="menu-item active" href="#none">menu</a>
+								<a class="menu-item" href="#none">menu</a>
+							</nav>
+							<!-- [End] Copy This-->
+							<div class="ui-gap thick"></div>
+							<h4 class="ui">메뉴 넘침 경우:</h4>
+							<!-- [Start] Copy This-->
+							<nav class="sub-menu-container">
+								<a class="menu-item" href="#none">menu</a>
+								<a class="menu-item" href="#none">menu</a>
+								<a class="menu-item" href="#none">menu long</a>
+								<a class="menu-item active" href="#none">menu long</a>
+								<a class="menu-item" href="#none">menu</a>
+								<a class="menu-item" href="#none">menu long</a>
+								<a class="menu-item" href="#none">menu long</a>
+							</nav>
+							<!-- [End] Copy This-->
+						</section>
+						<section class="ui-component-section">
+							<h3 class="ui-section-title">Tables</h3>
+							<h4 class="ui">Simple Table:</h4>
+							<!-- [Start] Copy This-->
+							<div class="table-simple">
+								<table>
+									<thead>
+										<tr>
+											<th>thead</th>
+											<th>thead</th>
+											<th>thead</th>
+											<th>thead</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th>th cell</th>
+											<td>td cell</td>
+											<td>td cell</td>
+											<td>td cell</td>
+										</tr>
+										<tr>
+											<th>th cell</th>
+											<td colspan="2">td 2 cell</td>
+											<td>td cell</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td colspan="3">td 3 cell</td>
+											<td>td cell</td>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+							<!-- [End] Copy This-->
+						</section>
+						<section class="ui-component-section">
+							<h3 class="ui-section-title">section title</h3>
+						</section>
+					</div>
+				</div>
+				<!-- [End] App - Contents-->
+				<!-- [Start] App - Bottom-->
+				<div class="app-bottom"></div>
+				<!-- [End] App - Bottom-->
+			</div>
+			<!-- [End] App View-->
+		</div>
+		<!-- Script-->
+		<script src="../asset/js/lib/flatpickr.js"></script>
+		<script src="../asset/js/pub.js"></script>
+	</body>
+</html>

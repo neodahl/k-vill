@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+	<head>
+		<title>MT102. 월별청구내역</title>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+		/>
+		<link rel="stylesheet" href="../asset/css/lib/flatpickr.min.css" />
+		<link rel="stylesheet" href="../asset/css/common.css" />
+		<link rel="stylesheet" href="../asset/css/style.css" />
+	</head>
+	<body>
+		<div class="site-body">
+			<!-- [Start] App View-->
+			<div class="app-body bg-gray app-gnb-activated">
+				<!-- [Start] App - Top-->
+				<div class="app-top"></div>
+				<!-- [End] App - Top-->
+				<!-- [Start] App - Contents-->
+				<div class="app-main">
+					<div class="contents">
+						<h1 class="a11y-hidden">관리비고지서</h1>
+						<div class="maintenance-header">
+							<nav class="sub-menu-container">
+								<a class="menu-item" href="./MT101.html">청구서</a>
+								<a class="menu-item active" href="./MT102.html">월별청구내역</a>
+							</nav>
+							<div class="bill-history-container">
+								<div class="header-summary">
+									<span class="eye-brow">
+										2024년도 최근
+										<em>6개월 평균</em>
+									</span>
+									<span class="avg-cost">
+										<strong>120,920</strong>
+										원
+									</span>
+								</div>
+								<div class="history-list">
+									<dl>
+										<dt>2024년 3월 관리비</dt>
+										<dd>
+											<b>42,020</b>
+											원
+											<mark class="mark-sm-line-round danger">미납부</mark>
+										</dd>
+									</dl>
+									<dl>
+										<dt>2024년 2월 관리비</dt>
+										<dd>
+											<b>42,020</b>
+											원
+											<mark class="mark-sm-line-primary-round">납부완료</mark>
+										</dd>
+									</dl>
+									<dl>
+										<dt>2024년 1월 관리비</dt>
+										<dd>
+											<b>4,020</b>
+											원
+											<mark class="mark-sm-line-primary-round">납부완료</mark>
+										</dd>
+									</dl>
+									<dl>
+										<dt>2024년 12월 관리비</dt>
+										<dd>
+											<b>1,342,020</b>
+											원
+											<mark class="mark-sm-line-primary-round">납부완료</mark>
+										</dd>
+									</dl>
+									<dl>
+										<dt>2024년 11월 관리비</dt>
+										<dd>
+											<b>142,020</b>
+											원
+											<mark class="mark-sm-line-primary-round">납부완료</mark>
+										</dd>
+									</dl>
+									<dl>
+										<dt>2024년 10월 관리비</dt>
+										<dd>
+											<b>42,020</b>
+											원
+											<mark class="mark-sm-line-primary-round">납부완료</mark>
+										</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+						<div class="layout-helper"></div>
+						<div class="announcement">
+							<div class="title">공지사항</div>
+							<p>
+								관리비 입금 시 호수 표기하여 입금(예: 101호) 관리비를 2개월 이상
+								연체한 차량은 3일 이내 해지됩니다. 관리비를 2개월 연체 시 단전,
+								단수 조치가 될 수 있습니다.
+
+								<strong class="danger">자동이체를 추천합니다.</strong>
+							</p>
+							<!-- p 태그 사용이 불가할 시에 아래 코드를 활용해주세요(style속성에서 display:none;을 제거해서 사용해주세요)-->
+							<ul class="info-list" style="display: none">
+								<li>관리비 입금 시 호수 표기하여 입금(예: 101호)</li>
+								<li>관리비를 2개월 이상 연체한 차량은 3일 이내 해지됩니다.</li>
+								<li>
+									관리비를 2개월 연체 시 단전, 단수 조치가 될 수 있습니다.
+								</li>
+								<li><strong class="danger">자동이체를 추천합니다.</strong></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- [End] App - Contents-->
+				<!-- [Start] App - Bottom-->
+				<div class="app-bottom">
+					<!-- gnb-type1 사용시 .AppBody에 "app-gnb-activated" 클래스 적용 필요.-->
+					<nav class="gnb-container">
+						<a class="menu-item menu1" href="./HM100.html">홈</a>
+						<a class="menu-item menu2" href="#none">공지사항</a>
+						<a class="menu-item menu3 active" href="./MT101.html">관리비</a>
+						<a class="menu-item menu4" href="#none">커뮤니티</a>
+						<a class="menu-item menu5" href="./MN100.html">전체</a>
+					</nav>
+				</div>
+				<!-- [End] App - Bottom-->
+			</div>
+			<!-- [End] App View-->
+		</div>
+		<!-- Script-->
+		<script src="../asset/js/lib/flatpickr.js"></script>
+		<script src="../asset/js/pub.js"></script>
+	</body>
+</html>

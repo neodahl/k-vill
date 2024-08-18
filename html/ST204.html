@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+	<head>
+		<title>ST204. 비밀번호 찾기</title>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+		/>
+		<link rel="stylesheet" href="../asset/css/lib/flatpickr.min.css" />
+		<link rel="stylesheet" href="../asset/css/common.css" />
+		<link rel="stylesheet" href="../asset/css/style.css" />
+	</head>
+	<body>
+		<div class="site-body">
+			<!-- [Start] App View-->
+			<div class="app-body bg-white">
+				<!-- [Start] App - Top-->
+				<div class="app-top"></div>
+				<!-- [End] App - Top-->
+				<!-- [Start] App - Contents-->
+				<div class="app-main">
+					<div class="contents">
+						<div class="full-wrapper sign-in-wrapper">
+							<div class="header">
+								<img class="logo" src="../asset/img/icon/svg/logo-txt-1.svg" />
+								<h1 class="title">비밀번호 찾기</h1>
+							</div>
+							<div class="input-container type2">
+								<div class="input-box">
+									<label class="a11y-hidden" for="userName">이름</label>
+									<input type="text" id="userName" placeholder="이름 입력" />
+								</div>
+								<ul class="msg-box">
+									<li class="type2 danger">잘못된 양식입니다.</li>
+								</ul>
+							</div>
+							<div class="input-container type2 has-btn">
+								<div class="input-box">
+									<label class="a11y-hidden" for="userTel">휴대전화번호</label>
+									<input
+										type="tel"
+										id="userTel"
+										placeholder="휴대전화번호"
+										maxlength="11"
+									/>
+									<button class="btn-sm-bg-primary-round" type="button">
+										인증요청
+									</button>
+								</div>
+								<ul class="msg-box active">
+									<li class="type2 danger">전화번호를 다시 확인해 주세요.</li>
+								</ul>
+							</div>
+							<div class="input-container type2 has-btn">
+								<div class="input-box">
+									<label class="a11y-hidden" for="userTel">인증번호</label>
+									<input
+										type="tel"
+										id="userTel"
+										placeholder="인증번호"
+										maxlength="11"
+									/>
+									<button class="btn-sm-bg-secondary-round" type="button">
+										인증확인
+									</button>
+								</div>
+								<ul class="msg-box active">
+									<li class="type2 danger">인증 번호를 다시 확인해 주세요.</li>
+								</ul>
+							</div>
+							<div class="btn-container">
+								<a class="btn-lg-line-primary-full" href="javascript:void(0);">
+									확인
+								</a>
+							</div>
+							<div class="full-bottom-container">
+								<div class="footer-link-container">
+									<a href="javascript:void(0);">이용약관</a>
+									<a href="javascript:void(0);">개인정보보호정책</a>
+									<a href="javascript:void(0);">고객센터</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- [End] App - Contents-->
+				<!-- [Start] App - Bottom-->
+				<div class="app-bottom"></div>
+				<!-- [End] App - Bottom-->
+			</div>
+			<!-- [End] App View-->
+		</div>
+		<!-- Script-->
+		<script src="../asset/js/lib/flatpickr.js"></script>
+		<script src="../asset/js/pub.js"></script>
+	</body>
+</html>

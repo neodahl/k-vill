@@ -1,0 +1,38 @@
+@use "./_mixins" as *;
+
+/* Main Colors */
+$primary1: #3182f7;
+
+$font1: #181f29;
+$font2: #6c7584;
+$font3: #848484;
+
+$success: $primary1;
+$danger: #dc3545;
+$warning: #efb300;
+$notify: #ee2f74;
+
+$secondary1: #343d4c;
+$tertiay1: #f3f4f6;
+
+$disabledBg: #aeb2b6;
+$disabledBorder: #808080;
+$disabledFont: #fff;
+
+$inputBorderColor: #b0b9c2;
+
+// Background Color & Font Color
+$bgPrimary: $primary1;
+$bgPrimaryFont: #fff;
+
+$bgSecondary: $secondary1;
+$bgSecondaryFont: #fff;
+
+$bgTertiay: $tertiay1;
+$bgTertiayFont: #4c5a67;
+
+/* Layout Values */
+$AppBodyMaxWidth: 550px;
+$appTop: 100;
+$appBottom: 100;
+$contentContainerPadding: rem(16px);

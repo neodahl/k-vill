@@ -1,0 +1,30 @@
+@use "sass:list";
+
+// rem함수의 계산 전용이므로 to-rem 함수 사용을 권장하지 않음.
+@function to-rem($value) {
+	$design-root-size: 16px;
+	@if string == type-of($value) {
+		@return $value;
+	} @else if 0 == $value {
+		@return 0;
+	} @else {
+		@return ($value / $design-root-size * 1rem);
+	}
+}
+
+// $value : px 단위만 계산가능
+// $value 값을 list로 값을 받는 경우가 있기 때문에 unit() 함수는 사용하지 않는다.
+// '0 auto' 같이 px 을 사용하지 않는 경우도 대비해야 한다.
+// $value : number or list로 사용함. ex) '18px' or '18px auto 20px'
+@function rem($value) {
+	@if list == type-of($value) {
+		$remList: (); // 빈 배열 선언.
+		@for $i from 1 through length($value) {
+			$valueItem: to-rem(list.nth($value, $i));
+			$remList: list.append($remList, $valueItem);
+		}
+		@return $remList;
+	} @else {
+		@return to-rem($value);
+	}
+}

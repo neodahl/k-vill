@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+	<head>
+		<title>MT103. 관리비 &gt; 정기 결제 방법</title>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+		/>
+		<link rel="stylesheet" href="../asset/css/lib/flatpickr.min.css" />
+		<link rel="stylesheet" href="../asset/css/common.css" />
+		<link rel="stylesheet" href="../asset/css/style.css" />
+	</head>
+	<body>
+		<div class="site-body">
+			<!-- [Start] App View-->
+			<div class="app-body bg-white app-header-activated">
+				<!-- [Start] App - Top-->
+				<div class="app-top">
+					<!-- header-type1 사용시 .AppBody에 "app-header-activated" 클래스 적용 필요.-->
+					<header class="lnb-header bg-white">
+						<div class="start-box">
+							<a
+								class="btn-before"
+								href="./index.html"
+								aria-lable="이전 페이지로"
+							></a>
+						</div>
+						<h1 class="title">정기 결제 선택</h1>
+						<div class="end-box"></div>
+					</header>
+				</div>
+				<!-- [End] App - Top-->
+				<!-- [Start] App - Contents-->
+				<div class="app-main">
+					<div class="contents">
+						<div class="full-wrapper">
+							<h1 class="full-title">
+								<b>정기 결제 방법</b>
+								을
+								<br />
+								<b>선택</b>
+								해주세요.
+							</h1>
+							<div class="form-container">
+								<div class="row-contaienr">
+									<div class="radio type3">
+										<input
+											class="a11y-hidden"
+											type="radio"
+											name="radioGroup1"
+											id="radioID1-1"
+											checked
+										/>
+										<label for="radioID1-1">
+											<span class="icon"></span>
+											신용카드
+										</label>
+									</div>
+									<div class="radio type3">
+										<input
+											class="a11y-hidden"
+											type="radio"
+											name="radioGroup1"
+											id="radioID1-2"
+										/>
+										<label for="radioID1-2">
+											<span class="icon"></span>
+											계좌이체
+										</label>
+									</div>
+								</div>
+								<div class="selectBox">
+									<label class="a11y-hidden" for="select1-1">
+										카드사 / 은행 선택
+									</label>
+									<select id="select1-1">
+										<option value="" disabled selected hidden>
+											카드사 / 은행 선택
+										</option>
+										<option value="option1">option1</option>
+										<option value="option2">option2</option>
+										<option value="option3">option3</option>
+										<option value="option4">option4</option>
+									</select>
+								</div>
+								<div class="input-container">
+									<div class="input-box">
+										<label class="a11y-hidden" for="paymentDate1-1">
+											정기 결제 등록일
+										</label>
+										<input
+											type="text"
+											id="paymentDate1-1"
+											placeholder="정기 결제 등록일"
+										/>
+									</div>
+								</div>
+								<div class="input-container inputDate">
+									<div class="input-box">
+										<label class="a11y-hidden" for="paymentDate1-2">
+											정기 결제 등록일
+										</label>
+										<input
+											type="text"
+											id="paymentDate1-2"
+											placeholder="정기 결제 등록일"
+										/>
+									</div>
+								</div>
+								<div class="input-container">
+									<div class="input-box">
+										<label class="a11y-hidden" for="paymentDate2-1">
+											정기 결제 만료일
+										</label>
+										<input
+											type="text"
+											id="paymentDate2-1"
+											placeholder="정기 결제 만료일"
+										/>
+									</div>
+								</div>
+								<div class="input-container">
+									<div class="input-box">
+										<label class="a11y-hidden" for="paymentDate3-1">
+											정기 결제 만료일
+										</label>
+										<input
+											type="text"
+											id="paymentDate3-1"
+											placeholder="정기 결제일"
+										/>
+									</div>
+								</div>
+							</div>
+							<div class="full-bottom-container">
+								<a class="btn-lg-bg-primary-full" href="javascript:void(0);">
+									정기 결제 등록
+								</a>
+								<a class="btn-lg-line-primary-full" href="javascript:void(0);">
+									해지 신청
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- [End] App - Contents-->
+				<!-- [Start] App - Bottom-->
+				<div class="app-bottom"></div>
+				<!-- [End] App - Bottom-->
+			</div>
+			<!-- [End] App View-->
+		</div>
+		<!-- Script-->
+		<script src="../asset/js/lib/flatpickr.js"></script>
+		<script src="../asset/js/pub.js"></script>
+	</body>
+</html>

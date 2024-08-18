@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+	<head>
+		<title>MN101. 개인 정보 수정</title>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+		/>
+		<link rel="stylesheet" href="../asset/css/lib/flatpickr.min.css" />
+		<link rel="stylesheet" href="../asset/css/common.css" />
+		<link rel="stylesheet" href="../asset/css/style.css" />
+	</head>
+	<body>
+		<div class="site-body">
+			<!-- [Start] App View-->
+			<div class="app-body bg-gray app-header-activated">
+				<!-- [Start] App - Top-->
+				<div class="app-top">
+					<!-- header-type1 사용시 .AppBody에 "app-header-activated" 클래스 적용 필요.-->
+					<header class="lnb-header bg-gray">
+						<div class="start-box">
+							<a
+								class="btn-before"
+								href="./index.html"
+								aria-lable="이전 페이지로"
+							></a>
+						</div>
+						<h1 class="title">정보수정</h1>
+						<div class="end-box"></div>
+					</header>
+				</div>
+				<!-- [End] App - Top-->
+				<!-- [Start] App - Contents-->
+				<div class="app-main">
+					<div class="contents">
+						<div class="full-wrapper type-overflow">
+							<div class="user-profile-info">
+								<!-- - 사용자 등록 이미지-->
+								<!-- .profile-img(style="background-image:url('https://cdn.iconscout.com/icon/premium/png-256-thumb/house-protection-14-1159435.png?f=webp&w=256');")-->
+								<!-- - 사용자: 남성 기본 이미지-->
+								<!-- .profile-img(style="background-image:url('../asset/img/user-male.png');")-->
+								<!-- - 사용자: 여성 기본 이미지-->
+								<div
+									class="profile-img"
+									style="background-image: url('../asset/img/user-female.png')"
+								></div>
+								<div class="right-area">
+									<span class="name">
+										<em>홍길동</em>
+										님
+									</span>
+									<span class="address">메종서리풀 1204호</span>
+									<span class="signup-date">2024.07.15</span>
+								</div>
+							</div>
+							<div class="form-container">
+								<h4 class="form-title">입주 정보</h4>
+								<div class="input-container">
+									<div class="input-box">
+										<label for="input-1">건물명</label>
+										<input
+											type="text"
+											id="input-1"
+											placeholder="placeholder"
+											value="메종서리풀"
+											readonly
+										/>
+									</div>
+									<ul class="msg-box">
+										<li>아무 클래스가 추가되지 않은 일반 텍스트 입니다.</li>
+										<li class="type2">
+											'type2' 클래스를 추가하여, 일반 텍스트에 구분자(※)가
+											추가된 메세지 입니다.
+										</li>
+										<li class="type2 success">
+											'success' 클래스를 추가하여 성공 메세지를 구분합니다.
+										</li>
+										<li class="type2 danger">
+											'danger' 클래스를 추가하여 에러 메세지를 구분합니다.
+										</li>
+										<li class="type2 warning">
+											'warning' 클래스를 추가하여 경고 메세지를 구분합니다.
+										</li>
+										<li class="type2">
+											긴텍스트 입니다. 긴텍스트 입니다. 긴텍스트 입니다.
+											긴텍스트 입니다. 긴텍스트 입니다. 긴텍스트 입니다.긴텍스트
+											입니다. 긴텍스트 입니다.
+										</li>
+									</ul>
+								</div>
+								<div class="row-contaienr">
+									<div class="selectBox">
+										<label for="select1-2">동</label>
+										<select id="select1-2">
+											<option value="" disabled selected hidden>동</option>
+											<option value="option1">option1</option>
+											<option value="option2">option2</option>
+										</select>
+									</div>
+									<div class="input-container">
+										<div class="input-box">
+											<label for="unitNum">호수</label>
+											<input type="text" id="unitNum" placeholder="호수" />
+										</div>
+									</div>
+								</div>
+								<div class="input-container inputDate">
+									<div class="input-box">
+										<label for="datepicker1">전입일</label>
+										<input
+											type="text"
+											id="datepicker1"
+											placeholder="전입일 선택"
+										/>
+									</div>
+									<ul class="msg-box">
+										<li>
+											default: Lorem ipsum dolor sit, amet consectetur
+											adipisicing elit.
+										</li>
+									</ul>
+								</div>
+								<div class="group-container">
+									<div class="group-label">소유 구분</div>
+									<div class="radio type4">
+										<input
+											class="a11y-hidden"
+											type="radio"
+											name="classification1"
+											id="classification1-1"
+											checked
+											onclick="return false;"
+										/>
+										<label for="classification1-1">
+											<span class="icon"></span>
+											소유
+										</label>
+									</div>
+									<div class="radio type4">
+										<input
+											class="a11y-hidden"
+											type="radio"
+											name="classification1"
+											id="classification1-2"
+											onclick="return false;"
+										/>
+										<label for="classification1-2">
+											<span class="icon"></span>
+											임차
+										</label>
+									</div>
+								</div>
+								<div class="group-container">
+									<div class="group-label">소유 구분</div>
+									<div class="radio type4">
+										<input
+											class="a11y-hidden"
+											type="radio"
+											name="classification2"
+											id="classification2-1"
+											checked
+										/>
+										<label for="classification2-1">
+											<span class="icon"></span>
+											가족대표
+										</label>
+									</div>
+									<div class="radio type4">
+										<input
+											class="a11y-hidden"
+											type="radio"
+											name="classification2"
+											id="classification2-2"
+										/>
+										<label for="classification2-2">
+											<span class="icon"></span>
+											가족
+										</label>
+									</div>
+								</div>
+								<div class="input-container">
+									<div class="input-box">
+										<label for="carNumber">차량번호</label>
+										<input
+											type="text"
+											id="carNumber"
+											placeholder="차량번호"
+											value="123가 1234"
+										/>
+									</div>
+									<ul class="msg-box">
+										<li class="danger">이미 등록된 차량입니다.</li>
+									</ul>
+								</div>
+								<div class="input-container">
+									<div class="input-box">
+										<label for="cellNumber">연락처</label>
+										<input
+											type="tel"
+											id="cellNumber"
+											placeholder="연락처"
+											value="01000000000"
+											maxlength="11"
+										/>
+									</div>
+									<ul class="msg-box active">
+										<li class="danger">이미 사용중인 번호 입니다.</li>
+									</ul>
+								</div>
+								<div class="input-container">
+									<div class="input-box">
+										<label for="userID">아이디</label>
+										<input
+											type="text"
+											id="userID"
+											placeholder="아이디"
+											value="k-vll-user"
+											readonly
+										/>
+									</div>
+								</div>
+								<h4 class="form-title">기타</h4>
+								<div class="group-container">
+									<div class="group-label">정기결제</div>
+									<div class="radio type4">
+										<input
+											class="a11y-hidden"
+											type="radio"
+											name="classification3"
+											id="classification3-1"
+											checked
+										/>
+										<label for="classification3-1">
+											<span class="icon"></span>
+											등록
+										</label>
+									</div>
+									<div class="radio type4">
+										<input
+											class="a11y-hidden"
+											type="radio"
+											name="classification3"
+											id="classification3-2"
+										/>
+										<label for="classification3-2">
+											<span class="icon"></span>
+											미등록
+										</label>
+									</div>
+								</div>
+								<div class="input-container">
+									<div class="input-box">
+										<label for="userID">E-mail</label>
+										<input
+											type="email"
+											id="userID"
+											placeholder="이메일 주소 입력"
+											value="k-vll-user@naver.com"
+										/>
+									</div>
+								</div>
+							</div>
+							<div class="full-bottom-container">
+								<div class="btn-container">
+									<button class="btn-lg-bg-primary-full" type="button" disabled>
+										수정 완료
+									</button>
+								</div>
+								<div class="footer-link-container">
+									<a href="javascript:void(0);">전출신청</a>
+									<a href="javascript:void(0);">회원탈퇴</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- [End] App - Contents-->
+				<!-- [Start] App - Bottom-->
+				<div class="app-bottom"></div>
+				<!-- [End] App - Bottom-->
+			</div>
+			<!-- [End] App View-->
+		</div>
+		<!-- Script-->
+		<script src="../asset/js/lib/flatpickr.js"></script>
+		<script src="../asset/js/pub.js"></script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				flatpickr("#datepicker1", {
+					dateFormat: "Y-m-d",
+					defaultDate: "2024-01-25",
+					enableTime: false,
+				});
+			});
+		</script>
+	</body>
+</html>

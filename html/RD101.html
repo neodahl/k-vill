@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+	<head>
+		<title>RD101. 입주자 카드작성 Step01 ver.2</title>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+		/>
+		<link rel="stylesheet" href="../asset/css/lib/flatpickr.min.css" />
+		<link rel="stylesheet" href="../asset/css/common.css" />
+		<link rel="stylesheet" href="../asset/css/style.css" />
+	</head>
+	<body>
+		<div class="site-body">
+			<!-- [Start] App View-->
+			<div class="app-body bg-white app-header-activated">
+				<!-- [Start] App - Top-->
+				<div class="app-top">
+					<!-- header-type1 사용시 .AppBody에 "app-header-activated" 클래스 적용 필요.-->
+					<header class="lnb-header bg-white">
+						<div class="start-box">
+							<a
+								class="btn-before"
+								href="./index.html"
+								aria-lable="이전 페이지로"
+							></a>
+						</div>
+						<h1 class="title">입주자 카드 작성</h1>
+						<div class="end-box">
+							<a class="btn-setting" aria-rabel="설정"></a>
+						</div>
+					</header>
+				</div>
+				<!-- [End] App - Top-->
+				<!-- [Start] App - Contents-->
+				<div class="app-main">
+					<div class="contents">
+						<div class="full-wrapper">
+							<div class="form-container">
+								<div class="input-container typeSearch type2">
+									<div class="input-box">
+										<label class="a11y-hidden" for="searchbar">
+											건물검색창
+										</label>
+										<input
+											type="search"
+											id="searchbar"
+											placeholder="건물 검색"
+										/>
+										<button
+											class="btn-search"
+											type="submit"
+											aria-label="검색 버튼"
+										></button>
+									</div>
+									<div class="search-result">
+										<a href="javascript:void(0);">메종서리풀</a>
+										<a href="javascript:void(0);">제임스네이션3차</a>
+										<a href="javascript:void(0);">배곧C2판매시설</a>
+										<a href="javascript:void(0);">우솔빌</a>
+									</div>
+								</div>
+								<div class="row-contaienr">
+									<div class="selectBox type2">
+										<label class="a11y-hidden" for="select1-2">동 선택</label>
+										<select id="select1-2">
+											<option value="" disabled selected hidden>동</option>
+											<option value="option1">option1</option>
+											<option value="option2">option2</option>
+										</select>
+									</div>
+									<div class="input-container type2">
+										<div class="input-box">
+											<label class="a11y-hidden" for="unitNum">호수</label>
+											<input type="text" id="unitNum" placeholder="호수" />
+										</div>
+									</div>
+								</div>
+								<div class="input-container type2">
+									<div class="input-box">
+										<label class="a11y-hidden" for="input-1_1">이름</label>
+										<input type="text" id="input-1_1" placeholder="이름" />
+									</div>
+								</div>
+								<div class="row-contaienr">
+									<div class="radio type3">
+										<input
+											class="a11y-hidden"
+											type="radio"
+											name="radioGroup1"
+											id="radioID1-1"
+											checked
+										/>
+										<label for="radioID1-1">
+											<span class="icon"></span>
+											세대 대표
+										</label>
+									</div>
+									<div class="radio type3">
+										<input
+											class="a11y-hidden"
+											type="radio"
+											name="radioGroup1"
+											id="radioID1-2"
+										/>
+										<label for="radioID1-2">
+											<span class="icon"></span>
+											세대 구성원
+										</label>
+									</div>
+								</div>
+								<div class="input-container type2 has-btn">
+									<div class="input-box">
+										<label class="a11y-hidden" for="userPhoneNum">
+											휴대전화번호
+										</label>
+										<input
+											type="tel"
+											id="userPhoneNum"
+											placeholder="휴대전화번호"
+											maxlength="11"
+										/>
+										<button class="btn-sm-bg-primary-round" type="button">
+											본인인증
+										</button>
+									</div>
+								</div>
+								<div class="input-container type2 has-btn">
+									<div class="input-box">
+										<label class="a11y-hidden" for="numCertify">인증번호</label>
+										<input
+											type="tel"
+											id="numCertify"
+											placeholder="인증번호"
+											maxlength="8"
+										/>
+										<button class="btn-sm-bg-secondary-round" type="button">
+											인증확인
+										</button>
+									</div>
+									<ul class="msg-box active">
+										<li class="type2 danger">
+											인증 번호를 다시 확인해 주세요.
+										</li>
+									</ul>
+								</div>
+								<div class="input-container type2">
+									<div class="input-box">
+										<label class="a11y-hidden" for="userCarNum">차량번호</label>
+										<input
+											type="text"
+											id="userCarNum"
+											placeholder="차량번호"
+											maxlength="8"
+										/>
+									</div>
+								</div>
+							</div>
+							<div class="full-bottom-container">
+								<div class="info-box">
+									<b>1600-6245</b>
+									<p></p>
+									본인 명의 휴대폰이 아닌 경우
+									<br />
+									고객센터로 문의해 주시기 바랍니다.
+								</div>
+								<button class="btn-lg-bg-primary-full" type="button">
+									작성완료
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- [End] App - Contents-->
+				<!-- [Start] App - Bottom-->
+				<div class="app-bottom"></div>
+				<!-- [End] App - Bottom-->
+			</div>
+			<!-- [End] App View-->
+		</div>
+		<!-- Script-->
+		<script src="../asset/js/lib/flatpickr.js"></script>
+		<script src="../asset/js/pub.js"></script>
+	</body>
+</html>
