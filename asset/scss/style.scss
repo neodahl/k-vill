@@ -598,13 +598,6 @@
 		}
 		dd {
 			flex: 1 0 auto;
-			box-shadow: none !important;
-			&::before,
-			&::after {
-				display: none !important;
-				pointer-events: none;
-				box-shadow: none !important;
-			}
 		}
 	}
 	.tel {

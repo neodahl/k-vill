@@ -559,12 +559,6 @@
 }
 .office-info dl dd {
   flex: 1 0 auto;
-  box-shadow: none !important;
-}
-.office-info dl dd::before, .office-info dl dd::after {
-  display: none !important;
-  pointer-events: none;
-  box-shadow: none !important;
 }
 .office-info .tel {
   display: inline-block;
