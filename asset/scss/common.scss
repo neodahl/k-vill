@@ -922,10 +922,12 @@ hr.divider {
 	$borderColor: #dadbdc;
 	position: relative;
 	padding-bottom: rem(2px);
-	white-space: nowrap;
+	// white-space: nowrap;
 	overflow: auto;
 	// color: rgba(19, 23, 58, 0.2);
 	// opacity 사용하면 컬러 중첩 오류가 있음.
+	display: flex;
+	flex-flow: row nowrap;
 	&::after {
 		content: "";
 		position: absolute;
@@ -936,14 +938,16 @@ hr.divider {
 	}
 	.menu-item {
 		position: relative;
-		display: inline-block;
+		display: inline-flex;
+		flex: 1 1 rem(86px);
 		padding: rem(10px 10px);
-		min-width: rem(86px);
+		// min-width: rem(86px);
 		font-size: rem(18px);
 		font-weight: 600;
 		text-align: center;
 		color: rgba(19, 23, 58, 0.2); // #181f29;
 		border-bottom: rem(1px) solid $borderColor; // overflow 대비
+		white-space: nowrap;
 		&::after {
 			content: "";
 			position: absolute;

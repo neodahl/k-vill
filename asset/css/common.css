@@ -1078,8 +1078,9 @@ hr.divider {
 .sub-menu-container {
   position: relative;
   padding-bottom: 0.125rem;
-  white-space: nowrap;
   overflow: auto;
+  display: flex;
+  flex-flow: row nowrap;
 }
 .sub-menu-container::after {
   content: "";
@@ -1091,14 +1092,15 @@ hr.divider {
 }
 .sub-menu-container .menu-item {
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  flex: 1 1 5.375rem;
   padding: 0.625rem 0.625rem;
-  min-width: 5.375rem;
   font-size: 1.125rem;
   font-weight: 600;
   text-align: center;
   color: rgba(19, 23, 58, 0.2);
   border-bottom: 0.0625rem solid #dadbdc;
+  white-space: nowrap;
 }
 .sub-menu-container .menu-item::after {
   content: "";
