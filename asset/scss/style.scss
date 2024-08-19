@@ -598,6 +598,8 @@
 		}
 		dd {
 			flex: 1 0 auto;
+			text-decoration: none !important; // iphone 대응
+			border: none !important; // iphone 대응
 		}
 	}
 	.tel {
