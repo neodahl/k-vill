@@ -1077,10 +1077,10 @@ hr.divider {
 /* Sub Menu */
 .sub-menu-container {
   position: relative;
-  padding-bottom: 0.125rem;
-  overflow: auto;
   display: flex;
   flex-flow: row nowrap;
+  padding-bottom: 0.125rem;
+  overflow: auto;
 }
 .sub-menu-container::after {
   content: "";
@@ -1093,7 +1093,8 @@ hr.divider {
 .sub-menu-container .menu-item {
   position: relative;
   display: inline-flex;
-  flex: 1 1 5.375rem;
+  justify-content: center;
+  flex: 0 0 5.375rem;
   padding: 0.625rem 0.625rem;
   font-size: 1.125rem;
   font-weight: 600;
