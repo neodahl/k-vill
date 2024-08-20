@@ -758,10 +758,11 @@
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
 }
-.announcement p {
-  font-size: 0.875rem;
+.announcement .title {
+  margin-bottom: 1.25rem;
+  font-size: 1.125rem;
+  font-weight: 700;
   color: #6c7584;
-  white-space: pre-line;
 }
 .announcement strong {
   font-weight: 400;
