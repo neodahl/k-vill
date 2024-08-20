@@ -54,11 +54,9 @@ function selectbox() {
 }
 
 function dateFatpickr() {
-	// Select all inputs with the class "datepicker"
 	const datepickers = document.querySelectorAll(".inputDate input");
 	if (datepickers.length === 0) return;
 
-	// Initialize Flatpickr for each input
 	datepickers.forEach((input) => {
 		flatpickr(input, {
 			locale: "ko", 
@@ -225,7 +223,7 @@ function mt102LayoutHelper() {
 	// layoutHelper의 높이 설정
 	layoutHelper.style.height = `${resultInRem}rem`;
 }
-
+window.addEventListener('resize', mt102LayoutHelper);
 
 
 (function init(){
