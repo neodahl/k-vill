@@ -779,6 +779,7 @@
   background-color: #fff;
   color: #181f29;
   border-radius: 0.75rem;
+  box-shadow: 0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.25);
 }
 .bill-history-container .header-summary {
   padding-bottom: 0.9375rem;
