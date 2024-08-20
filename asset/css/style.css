@@ -775,7 +775,7 @@
 
 .bill-history-container {
   margin-top: 0.9375rem;
-  padding: 1.375rem 1.5rem;
+  padding: 1.375rem 1rem;
   background-color: #fff;
   color: #181f29;
   border-radius: 0.75rem;
@@ -814,6 +814,9 @@
   align-items: center;
   color: #181f29;
   font-size: 1rem;
+  letter-spacing: -0.035em;
+  color: #181f29;
+  font-weight: 500;
 }
 .bill-history-container .history-list > dl:nth-child(n+2) {
   margin-top: 1.25rem;
