@@ -619,7 +619,7 @@
 	}
 }
 
-/* Notification - HM101, CR101 */
+/* Notification - HM101 */
 .notification-count {
 	margin-bottom: rem(10px);
 	font-size: rem(15px);
@@ -644,11 +644,6 @@
 		&:nth-of-type(n + 2) {
 			margin-top: rem(10px);
 		}
-		&.is-completed {
-			.text {
-				opacity: 0.5;
-			}
-		}
 		.badge-type1 {
 			display: inline-flex;
 			align-items: center;
@@ -662,13 +657,6 @@
 			background-color: $notify;
 			border-radius: rem(30px);
 		}
-		.badge-new {
-			width: $badgeWidth;
-			// width: rem(36px);
-			height: rem(36px);
-			background: url("../img/icon/png/icon-new.png") center center no-repeat;
-			background-size: contain;
-		}
 		.text {
 			flex: 1 0 auto;
 			max-width: calc(100% - $stateWidth - $badgeWidth - 2 * $gap);
@@ -678,9 +666,6 @@
 			text-overflow: ellipsis;
 			white-space: nowrap;
 			overflow: hidden;
-			&:first-child {
-				margin-left: rem(10px);
-			}
 		}
 		[class^="mark-"] {
 			width: $stateWidth;
@@ -688,7 +673,7 @@
 	}
 }
 
-/* 관리비(Maintenance) - MT101 */
+/* Maintenance - MT101 */
 .maintenance-header {
 	margin-left: calc(-1 * $contentContainerPadding);
 	margin-right: calc(-1 * $contentContainerPadding);
@@ -912,7 +897,7 @@
 	}
 }
 
-/* 전체메뉴(All Menu) - MN100 */
+/* All Menu - MN100 */
 .MN-top-menus {
 	display: flex;
 	flex-flow: row wrap;
@@ -960,7 +945,7 @@
 	padding-bottom: 0;
 }
 
-/* 전체메뉴(All Menu) - MN101, MN103 */
+/* All Menu - MN101, MN103 */
 .user-profile-info {
 	display: flex;
 	flex-flow: row wrap;
@@ -1022,134 +1007,3 @@
 		}
 	}
 }
-
-/* 방문차량(Visit Registration) - VR101, VR102 */
-.visit-vehicle-container {
-}
-
-.visit-card {
-	position: relative;
-	margin-bottom: rem(12px);
-	padding: rem(26px 22px 22px);
-	background-color: #fff;
-	border-radius: rem(12px);
-	box-shadow: rem(0 4px 12px 0) rgba(0, 0, 0, 0.1);
-	overflow: hidden;
-	&.is-closed {
-		&::before {
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			z-index: 10;
-			background-color: rgba(132, 132, 132, 0.1);
-		}
-		* {
-			color: #b0b9c2 !important;
-		}
-		mark[class^="mark-"] {
-			opacity: 0.3;
-		}
-		.btn-edit {
-			opacity: 0.5;
-			&::after {
-				background-image: url("../img/icon/svg/icon-arrow-right-gray.svg");
-			}
-		}
-	}
-	.visit-title {
-		margin-bottom: rem(6px);
-		font-size: rem(15px);
-		font-weight: 500;
-		color: $primary1;
-	}
-	.car-number {
-		display: flex;
-		align-items: center;
-		justify-content: flex-start;
-		gap: rem(5px);
-		& > span {
-			font-size: rem(21px);
-			font-weight: 600;
-			color: $font1;
-		}
-	}
-	.times-container {
-		display: flex;
-		flex-flow: row wrap;
-		margin-top: rem(25px);
-		gap: rem(12px);
-		& > dl {
-			flex: 1 1 calc(50% - rem(12px));
-			&:nth-child(n + 2) {
-				flex: 1 1 calc(50%);
-				padding-inline-start: rem(24px);
-				border-left: rem(1px) solid rgba(176, 185, 194, 0.5);
-			}
-			dt {
-				display: block;
-				// margin-bottom: rem(4px);
-				font-size: rem(13px);
-				font-weight: 500;
-				color: $font2;
-			}
-			dd {
-				display: block;
-				font-size: rem(14px);
-				font-weight: 400;
-				color: $font1;
-			}
-		}
-	}
-	.btn-edit {
-		position: absolute;
-		top: rem(12px);
-		right: rem(7px);
-		font-size: rem(14px);
-		color: $primary1;
-		&::after {
-			content: "";
-			width: rem(18px);
-			height: rem(18px);
-			background: url("../img/icon/svg/icon-arrow-right-primary.svg") center
-				center no-repeat;
-			background-size: contain;
-		}
-	}
-}
-.guide-frame {
-	border-radius: rem(9px);
-	background-color: #fff;
-	padding: rem(14px 16px 14px);
-	&.bg-gray {
-		background-color: #f3f4f6;
-	}
-	h4 {
-		font-size: rem(16px);
-		font-weight: 500;
-		margin-bottom: 0.4em;
-	}
-	p {
-		line-height: 1.3;
-		font-size: rem(14px);
-		color: $font2;
-	}
-}
-.guide-bottom-container {
-	display: flex;
-	flex-flow: row wrap;
-	gap: rem(8px);
-	&.align-end {
-		justify-content: flex-end;
-	}
-	a {
-		font-size: rem(14px);
-		font-weight: 500;
-		color: $font1;
-		text-decoration: underline;
-	}
-}
-
-/* 민원접수(Complaint Reception) */
