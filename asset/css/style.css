@@ -173,8 +173,11 @@
 
 .footer-link-container {
   margin-top: 2.5rem;
-  margin-bottom: 1.25rem;
+  padding-bottom: 1.25rem;
   text-align: center;
+}
+.footer-link-container.bottom-space-zero {
+  padding-bottom: 0;
 }
 .footer-link-container a {
   font-size: 0.875rem;
@@ -190,6 +193,7 @@
   flex-flow: column wrap;
   gap: 0.625rem;
   width: 100%;
+  padding-bottom: 1.875rem;
 }
 .form-container .form-title {
   margin-bottom: 0.3125rem;
@@ -578,7 +582,7 @@
   vertical-align: bottom;
 }
 
-/* Notification - HM101 */
+/* Notification - HM101, CR101 */
 .notification-count {
   margin-bottom: 0.625rem;
   font-size: 0.9375rem;
@@ -588,6 +592,9 @@
   color: #ee2f74;
 }
 
+.notification-list {
+  padding-bottom: 1.875rem;
+}
 .notification-list .noti-item {
   display: flex;
   flex-flow: row wrap;
@@ -600,6 +607,9 @@
 }
 .notification-list .noti-item:nth-of-type(n + 2) {
   margin-top: 0.625rem;
+}
+.notification-list .noti-item.is-completed .text {
+  opacity: 0.5;
 }
 .notification-list .noti-item .badge-type1 {
   display: inline-flex;
@@ -614,6 +624,12 @@
   background-color: #ee2f74;
   border-radius: 1.875rem;
 }
+.notification-list .noti-item .badge-new {
+  width: 2.75rem;
+  height: 2.25rem;
+  background: url("../img/icon/png/icon-new.png") center center no-repeat;
+  background-size: contain;
+}
 .notification-list .noti-item .text {
   flex: 1 0 auto;
   max-width: calc(100% - 3.75rem - 2.75rem - 1.25rem);
@@ -624,16 +640,19 @@
   white-space: nowrap;
   overflow: hidden;
 }
+.notification-list .noti-item .text:first-child {
+  margin-left: 0.625rem;
+}
 .notification-list .noti-item [class^=mark-] {
   width: 3.75rem;
 }
 
-/* Maintenance - MT101 */
+/* 관리비(Maintenance) - MT101 */
 .maintenance-header {
   margin-left: -1rem;
   margin-right: -1rem;
   padding: 1.5rem 1rem;
-  max-height: 23.125rem;
+  max-height: 25.625rem;
   background: rgb(49, 176, 247);
   background: linear-gradient(158deg, rgb(49, 176, 247) 0%, rgb(49, 130, 247) 100%);
   color: #fff;
@@ -835,7 +854,7 @@
   margin-left: 0.4375rem;
 }
 
-/* All Menu - MN100 */
+/* 전체메뉴(All Menu) - MN100 */
 .MN-top-menus {
   display: flex;
   flex-flow: row wrap;
@@ -878,7 +897,7 @@
   padding-bottom: 0;
 }
 
-/* All Menu - MN101, MN103 */
+/* 전체메뉴(All Menu) - MN101, MN103 */
 .user-profile-info {
   display: flex;
   flex-flow: row wrap;
@@ -935,5 +954,134 @@
   top: 0;
   left: 0;
 }
+
+/* 방문차량(Visit Registration) - VR101, VR102 */
+.visit-vehicle-container {
+  padding-bottom: 1.875rem;
+}
+.visit-vehicle-container .visit-card {
+  position: relative;
+  margin-bottom: 0.75rem;
+  padding: 1.625rem 1.375rem 1.375rem;
+  background-color: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.25rem 0.75rem 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.visit-vehicle-container .visit-card.is-closed::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background-color: rgba(132, 132, 132, 0.1);
+}
+.visit-vehicle-container .visit-card.is-closed * {
+  color: #b0b9c2 !important;
+}
+.visit-vehicle-container .visit-card.is-closed mark[class^=mark-] {
+  opacity: 0.3;
+}
+.visit-vehicle-container .visit-card.is-closed .btn-edit {
+  opacity: 0.5;
+}
+.visit-vehicle-container .visit-card.is-closed .btn-edit::after {
+  background-image: url("../img/icon/svg/icon-arrow-right-gray.svg");
+}
+.visit-vehicle-container .visit-card .visit-title {
+  margin-bottom: 0.375rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #3182f7;
+}
+.visit-vehicle-container .visit-card .car-number {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.3125rem;
+}
+.visit-vehicle-container .visit-card .car-number > span {
+  font-size: 1.3125rem;
+  font-weight: 600;
+  color: #181f29;
+}
+.visit-vehicle-container .visit-card .times-container {
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 1.5625rem;
+  gap: 0.75rem;
+}
+.visit-vehicle-container .visit-card .times-container > dl {
+  flex: 1 1 calc(50% - 0.75rem);
+}
+.visit-vehicle-container .visit-card .times-container > dl:nth-child(n+2) {
+  flex: 1 1 50%;
+  padding-inline-start: 1.5rem;
+  border-left: 0.0625rem solid rgba(176, 185, 194, 0.5);
+}
+.visit-vehicle-container .visit-card .times-container > dl dt {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #6c7584;
+}
+.visit-vehicle-container .visit-card .times-container > dl dd {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #181f29;
+}
+.visit-vehicle-container .visit-card .btn-edit {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.4375rem;
+  font-size: 0.875rem;
+  color: #3182f7;
+}
+.visit-vehicle-container .visit-card .btn-edit::after {
+  content: "";
+  width: 1.125rem;
+  height: 1.125rem;
+  background: url("../img/icon/svg/icon-arrow-right-primary.svg") center center no-repeat;
+  background-size: contain;
+}
+
+.guide-frame {
+  border-radius: 0.5625rem;
+  background-color: #fff;
+  padding: 0.875rem 1rem 0.875rem;
+}
+.guide-frame.bg-gray {
+  background-color: #f3f4f6;
+}
+.guide-frame h4 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.4em;
+}
+.guide-frame p {
+  line-height: 1.3;
+  font-size: 0.875rem;
+  color: #6c7584;
+}
+
+.guide-bottom-container {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0.5rem;
+}
+.guide-bottom-container.align-end {
+  justify-content: flex-end;
+}
+.guide-bottom-container a {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #181f29;
+  text-decoration: underline;
+}
+
+/* 민원접수(Complaint Reception) */
 
 /*# sourceMappingURL=style.css.map */
