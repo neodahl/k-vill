@@ -54,30 +54,18 @@ body {
 	&.app-header-activated {
 		padding-top: rem(80px); // lnb의 height 값 + padding 값
 		.full-wrapper {
-			height: calc(100dvh - rem(80px));
-			&.type-overflow {
-				height: auto;
-				min-height: calc(100dvh - rem(80px));
-			}
+			min-height: calc(100dvh - rem(80px));
 		}
 	}
 	&.app-gnb-activated {
 		padding-bottom: rem(90px); // gnb의 height + 약간의 padding 값
 		.full-wrapper {
-			height: calc(100dvh - rem(90px));
-			&.type-overflow {
-				height: auto;
-				min-height: calc(100dvh - rem(90px));
-			}
+			min-height: calc(100dvh - rem(90px));
 		}
 	}
 	&.app-header-activated.app-gnb-activated {
 		.full-wrapper {
-			height: calc(100dvh - rem(80px + 70px));
-			&.type-overflow {
-				height: auto;
-				min-height: calc(100dvh - rem(80px + 70px));
-			}
+			min-height: calc(100dvh - rem(80px + 70px));
 		}
 	}
 	// scrollbar design
@@ -109,6 +97,10 @@ body {
 	top: 0;
 	z-index: $appTop;
 }
+.app-bottom {
+	bottom: 0;
+	z-index: $appBottom;
+}
 .app-main {
 	// overflow: auto; 해당 속성 사용시 pc 버전에서 스크롤이 앱뷰 내에 생기기 때문에 사용 금지.
 	.contents {
@@ -116,21 +108,13 @@ body {
 		padding: 0 $contentContainerPadding;
 	}
 }
-.app-bottom {
-	bottom: 0;
-	z-index: $appBottom;
-}
 
 /* App - Sub Layout */
 .full-wrapper {
 	// 스크롤 없는 전체 페이지를 나타낼 때 사용.
 	display: flex;
 	flex-flow: column nowrap;
-	height: 100dvh;
-	&.type-overflow {
-		height: auto;
-		min-height: 100dvh;
-	}
+	min-height: 100dvh;
 	.full-title {
 		margin-bottom: rem(20px);
 		font-size: rem(27px);
@@ -163,7 +147,7 @@ body {
 }
 
 /* App Navigations */
-
+// Local Navigation
 .lnb-header {
 	position: relative;
 	display: flex;
@@ -211,15 +195,14 @@ body {
 			background-image: url("../img/icon/svg/icon-setting.svg");
 		}
 	}
-	&.bg-white {
+	@at-root .app-body.bg-white & {
 		background-color: #fff;
-		// box-shadow: rem(0 2px 4px) rgba(243, 244, 246, 1);
 	}
-	&.bg-gray {
+	@at-root .app-body.bg-gray & {
 		background-color: #f3f4f6;
-		// box-shadow: rem(0 2px 4px) rgba(255, 255, 255, 0.3);
 	}
 }
+// Global Navigation
 .gnb-container {
 	display: flex;
 	flex-flow: row wrap;
@@ -228,6 +211,7 @@ body {
 	background-color: #fff;
 	border-radius: rem(20px 20px 0 0);
 	box-shadow: rem(0 -2px 4px) #eee;
+
 	.menu-item {
 		flex: 1 1 auto; // basis 값은 auto 로 해야 280px까지 대응 됨.
 		display: inline-flex;
@@ -287,6 +271,17 @@ body {
 	}
 }
 
+// App bottom
+.app-bottom .btn-container {
+	padding: 0 $contentContainerPadding rem(40px);
+	@at-root .app-body.bg-white & {
+		background-color: #fff;
+	}
+	@at-root .app-body.bg-gray & {
+		background-color: #f3f4f6;
+	}
+}
+
 /* Typograpy */
 .success {
 	color: $success !important;
@@ -314,7 +309,7 @@ button[class^="btn-"] {
 		// small
 		min-width: rem(60px);
 		height: rem(27px);
-		padding: rem(0 4px);
+		padding: rem(0 8px);
 		border-radius: rem(6px);
 		font-size: rem(12px);
 		font-weight: 600;
@@ -992,4 +987,13 @@ hr.divider {
 			color: $font2;
 		}
 	}
+}
+
+/* Popup */
+.modal-header,
+.modal-footer {
+	border: none;
+}
+.modal-footer {
+	justify-content: center;
 }
