@@ -118,7 +118,7 @@ function dateFatpickr() {
 
 
 function accordionControl_exceptional() {
-	// MT101만 사용하는 특별한 케이스로 권장 사용 코드가 아닙니다.
+	// MT101, MT105만 사용하는 특별한 케이스로 권장 사용 코드가 아닙니다.
 	const btnAccd = document.querySelectorAll('.btnAcdn-exceptional');
 	if (btnAccd.length === 0) return;
 
@@ -191,39 +191,26 @@ function accordionControl_exceptional() {
 	}
 }
 
-function mt102LayoutHelper() {
-	// 이 함수는 단순히 "관리비 > 월별청구내역"에서 레이아웃을 위한 코드입니다.
-	const layoutHelper = document.querySelector('.maintenance-header + .layout-helper');
-	if (!layoutHelper) return;
+function writingComment() {
+	const chatInput = document.querySelector('.writing-comment textarea');
+	if (!chatInput) return;
 
-	const getComputedValue = (element, property) => parseFloat(window.getComputedStyle(element)[property]);
+	chatInput.addEventListener('input', function() {
+		autoResize(chatInput);
+	});
 
-	// .maintenance-header의 max-height와 padding-top 값 가져오기
-	const maintenanceHeader = document.querySelector('.maintenance-header');
-	const maintenanceHeaderMaxHeight = getComputedValue(maintenanceHeader, 'maxHeight');
-	const maintenanceHeaderPaddingTop = getComputedValue(maintenanceHeader, 'paddingTop');
-	const totalMaintenanceHeaderHeight = maintenanceHeaderMaxHeight - maintenanceHeaderPaddingTop;
-
-	// .sub-menu-container의 높이, margin-top, margin-bottom 값 가져오기
-	const subMenuContainer = document.querySelector('.sub-menu-container');
-	const subMenuContainerHeight = subMenuContainer.offsetHeight;
-	const subMenuContainerMarginTop = getComputedValue(subMenuContainer, 'marginTop');
-	const subMenuContainerMarginBottom = getComputedValue(subMenuContainer, 'marginBottom');
-	const totalSubMenuHeight = subMenuContainerHeight + subMenuContainerMarginTop + subMenuContainerMarginBottom;
-
-	// .bill-history-container의 높이 가져오기
-	const billHistoryContainer = document.querySelector('.bill-history-container');
-	const billHistoryContainerHeight = billHistoryContainer.offsetHeight;
-
-	// 결과 계산 후 rem 단위로 변환
-	const result = Math.abs((totalMaintenanceHeaderHeight - totalSubMenuHeight) - billHistoryContainerHeight);
-	const rootFontSize = getComputedValue(document.documentElement, 'fontSize');
-	const resultInRem = result / rootFontSize;
-
-	// layoutHelper의 높이 설정
-	layoutHelper.style.height = `${resultInRem}rem`;
+	function autoResize(textarea) {
+		// textarea의 높이를 초기화
+		textarea.style.height = (40/16) + 'rem';
+		// 스크롤 높이에 따라 높이 설정
+		const remHeight = textarea.scrollHeight / 16;
+		textarea.style.height = remHeight + 'rem';
+	}
 }
-window.addEventListener('resize', mt102LayoutHelper);
+
+
+
+
 
 
 (function init(){
@@ -231,7 +218,7 @@ window.addEventListener('resize', mt102LayoutHelper);
 	searchbar();
 	selectbox();
 	accordionControl_exceptional();
-	mt102LayoutHelper();
 	dateFatpickr();
+	writingComment();
 })();
 

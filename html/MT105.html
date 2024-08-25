@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko-kr">
 	<head>
-		<title>MT101. 청구서</title>
+		<title>MT105. 월별청구내역 &gt; 고지서 상세</title>
 		<meta charset="utf-8" />
 		<meta
 			name="viewport"
@@ -19,70 +19,58 @@
 	<body>
 		<div class="site-body">
 			<!-- [Start] App View-->
-			<div class="app-body bg-gray app-gnb-activated">
+			<div class="app-body bg-gray app-header-activated app-gnb-activated">
 				<!-- [Start] App - Top-->
-				<div class="app-top"></div>
+				<div class="app-top">
+					<!-- header-type1 사용시 .AppBody에 "app-header-activated" 클래스 적용 필요.-->
+					<header class="lnb-header">
+						<div class="start-box">
+							<a
+								class="btn-before"
+								href="./index.html"
+								aria-lable="이전 페이지로"
+							></a>
+						</div>
+						<h1 class="title">2024년 X월 관리비</h1>
+						<div class="end-box"></div>
+					</header>
+				</div>
 				<!-- [End] App - Top-->
 				<!-- [Start] App - Contents-->
 				<div class="app-main">
 					<div class="contents">
-						<h1 class="a11y-hidden">관리비고지서</h1>
-						<div class="maintenance-header">
-							<nav class="sub-menu-container">
-								<a class="menu-item active" href="./MT101.html">청구서</a>
-								<a class="menu-item" href="./MT102.html">월별청구내역</a>
-							</nav>
-							<div class="bill-info-container">
-								<h2 class="title">7월 관리비</h2>
-								<div class="cost-box">
-									<span class="eye-brow">총 결제 금액</span>
-									<span class="amounts">
-										<strong>120,840</strong>
-										원
-									</span>
-									<dl>
-										<dt>납부기한</dt>
-										<dd>2024년 7월 24일까지</dd>
-									</dl>
-								</div>
-								<div class="stamp">
-									<img src="../asset/img/stamp-state-1.png" alt="납부 전" />
-									<!-- 아래 코드를 이용하여 상태에 따라 변경해 주세요.(display:none; 제거)-->
-									<img
-										style="display: none"
-										src="../asset/img/stamp-state-2.png"
-										alt="정기결제 예정"
-									/>
-									<img
-										style="display: none"
-										src="../asset/img/stamp-state-3-white.png"
-										alt="납부 완료"
-									/>
-									<img
-										style="display: none"
-										src="../asset/img/stamp-state-4.png"
-										alt="미납연체"
-									/>
-								</div>
-								<div class="btn-container">
-									<a class="btn-sm-line-round" href="javascript:void(0);">
-										납부하기
-									</a>
-									<a class="btn-sm-line-round" href="./MT103.html">정기결제</a>
-								</div>
-								<div class="account-info-container">
-									<div>
-										<dl>
-											<dt>KB국민은행</dt>
-											<dd>10000 00 000000</dd>
-										</dl>
-										<dl>
-											<dt>예금주</dt>
-											<dd>아름드리 관리사무소</dd>
-										</dl>
-									</div>
-								</div>
+						<div class="frame-container type2">
+							<div class="frame-header">
+								<h3 class="frame-title">수납은행</h3>
+								<span class="maintenance-fee">
+									<em>15,300</em>
+									원
+								</span>
 							</div>
+							<div class="detail-list">
+								<dl>
+									<dt>사용기한</dt>
+									<dd><b>2024년 7월 1일 - 31일</b></dd>
+									<dt>납부기한</dt>
+									<dd><b class="danger">2024년 8월 8일</b></dd>
+								</dl>
+							</div>
+						</div>
+						<div class="frame-container type2">
+							<h3 class="frame-title">수납은행</h3>
+							<div class="detail-list">
+								<dl>
+									<dt>KB국민은행</dt>
+									<dd><b>378801-01-175601</b></dd>
+									<dt>예금주</dt>
+									<dd><b>주식회사케이피엠씨</b></dd>
+								</dl>
+							</div>
+						</div>
+						<div class="btn-container">
+							<button class="btn-lg-bg-primary-full" type="button">
+								납부하기
+							</button>
 						</div>
 						<div class="frame-container type2">
 							<div
@@ -119,6 +107,13 @@
 										원
 									</dd>
 								</dl>
+								<button
+									class="btnAcdn-exceptional actionOpen"
+									data-accd-open-target="accd-box-02"
+									data-accd-close-target="accd-box-01"
+								>
+									관리비 세부내역 보기
+								</button>
 							</div>
 							<div
 								class="detail-list accdBox-exceptional"
@@ -230,59 +225,41 @@
 										원
 									</dd>
 								</dl>
+								<h3 class="frame-title">에너지 사용량</h3>
+								<div class="table-simple">
+									<table>
+										<thead>
+											<tr>
+												<th>품목</th>
+												<th>당월</th>
+												<th>전월</th>
+												<th>증감</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th>전기</th>
+												<td>200</td>
+												<td>180</td>
+												<td>+20</td>
+											</tr>
+											<tr>
+												<th>품목</th>
+												<td>150</td>
+												<td>200</td>
+												<td>-50</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<button
+									class="btnAcdn-exceptional actionClose"
+									data-accd-open-target="accd-box-01"
+									data-accd-close-target="accd-box-02"
+								>
+									닫기
+								</button>
 							</div>
-							<button
-								class="btnAcdn-exceptional actionOpen"
-								data-accd-open-target="accd-box-02 accd-box-03"
-								data-accd-close-target="accd-box-01"
-							>
-								관리비 세부내역 보기
-							</button>
-						</div>
-						<div
-							class="frame-container type2 accdBox-exceptional"
-							data-accd-box="accd-box-03"
-						>
-							<h3 class="frame-title">에너지 사용량</h3>
-							<div class="table-simple">
-								<table>
-									<thead>
-										<tr>
-											<th>품목</th>
-											<th>당월</th>
-											<th>전월</th>
-											<th>증감</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<th>전기</th>
-											<td>200</td>
-											<td>180</td>
-											<td>+20</td>
-										</tr>
-										<tr>
-											<th>품목</th>
-											<td>150</td>
-											<td>200</td>
-											<td>-50</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-							<h3 class="frame-title">관리비 정산 기간</h3>
-							<ul class="info-list">
-								<li>일반관리비: 당월 1일 ~ 당월 말일</li>
-								<li>전기: 전월 10일 ~ 당월 9월</li>
-								<li>전전월 5일 ~ 당월 4일</li>
-							</ul>
-							<button
-								class="btnAcdn-exceptional actionClose"
-								data-accd-open-target="accd-box-01"
-								data-accd-close-target="accd-box-02 accd-box-03"
-							>
-								닫기
-							</button>
 						</div>
 						<div class="announcement">
 							<div class="title">공지사항</div>
@@ -299,16 +276,7 @@
 				</div>
 				<!-- [End] App - Contents-->
 				<!-- [Start] App - Bottom-->
-				<div class="app-bottom">
-					<!-- gnb-type1 사용시 .AppBody에 "app-gnb-activated" 클래스 적용 필요.-->
-					<nav class="gnb-container">
-						<a class="menu-item menu1" href="./HM100.html">홈</a>
-						<a class="menu-item menu2" href="#none">공지사항</a>
-						<a class="menu-item menu3 active" href="./MT101.html">관리비</a>
-						<a class="menu-item menu4" href="#none">커뮤니티</a>
-						<a class="menu-item menu5" href="./MN100.html">전체</a>
-					</nav>
-				</div>
+				<div class="app-bottom"></div>
 				<!-- [End] App - Bottom-->
 			</div>
 			<!-- [End] App View-->

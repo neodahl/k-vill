@@ -59,12 +59,14 @@ body {
 			min-height: calc(100dvh - $topLnbPadding);
 		}
 	}
+	&.app-bottom-fix-activated,
 	&.app-gnb-activated {
 		padding-bottom: $BottomGnbPadding; // gnb의 height + 약간의 padding 값
 		.full-wrapper {
 			min-height: calc(100dvh - $BottomGnbPadding);
 		}
 	}
+	&.app-header-activated.app-bottom-fix-activated,
 	&.app-header-activated.app-gnb-activated {
 		.full-wrapper {
 			min-height: calc(100dvh - $topLnbPadding - $BottomGnbPadding);
@@ -142,7 +144,7 @@ body {
 		flex-flow: column wrap;
 		justify-content: flex-end;
 		// margin-top: rem(30px); // MN101 확인
-		padding-bottom: rem(50px);
+		padding-bottom: rem(40px);
 		[class*="btn-"]:not(:first-of-type) {
 			margin-top: rem(10px);
 		}
@@ -240,7 +242,6 @@ body {
 			background-image: url("../img/icon/svg/icon-gnb-reception-active.svg"); // previous load
 			background-image: url("../img/icon/svg/icon-gnb-reception-default.svg");
 		}
-
 		&.menu3::before {
 			background-image: url("../img/icon/svg/icon-gnb-maintenance-active.svg"); // previous load
 			background-image: url("../img/icon/svg/icon-gnb-maintenance-default.svg");
@@ -311,7 +312,7 @@ button[class^="btn-"] {
 	&[class*="-sm"] {
 		// small
 		min-width: rem(60px);
-		height: rem(27px);
+		min-height: rem(27px);
 		padding: rem(0 8px);
 		border-radius: rem(6px);
 		font-size: rem(12px);
@@ -320,7 +321,7 @@ button[class^="btn-"] {
 	&[class*="-md"] {
 		// medium
 		min-width: rem(80px);
-		height: rem(40px);
+		min-height: rem(40px);
 		padding: rem(0 10px);
 		border-radius: rem(9px);
 		font-size: rem(18px);
@@ -329,7 +330,7 @@ button[class^="btn-"] {
 	&[class*="-lg"] {
 		// large
 		min-width: rem(120px); // 임시 값
-		height: rem(50px);
+		min-height: rem(50px);
 		padding: rem(0 20px);
 		border-radius: rem(10px);
 		font-size: rem(18px);
@@ -353,20 +354,48 @@ button[class^="btn-"] {
 			background-color: $bgSecondary;
 			color: $bgSecondaryFont;
 		}
-		&[class*="-tertiay"] {
-			background-color: $bgTertiay;
-			color: $bgTertiayFont;
+		&[class*="-tertiary"] {
+			background-color: $bgTertiary;
+			color: $bgTertiaryFont;
+		}
+		&[class*="-danger"] {
+			background-color: $danger;
+			color: #fff;
+		}
+		&[class*="-notify"] {
+			background-color: $notify;
+			color: #fff;
+		}
+		&[class*="-warning"] {
+			background-color: $warning;
+			color: #fff;
 		}
 	}
 	&[class*="-line"] {
 		border: 1px solid currentColor;
 		&[class*="-primary"] {
-			background-color: $bgPrimaryFont;
+			background-color: #fff;
 			color: $primary1;
 		}
 		&[class*="-secondary"] {
-			background-color: $bgSecondaryFont;
+			background-color: #fff;
 			color: $secondary1;
+		}
+		&[class*="-tertiary"] {
+			background-color: #fff;
+			color: $tertiary1;
+		}
+		&[class*="-danger"] {
+			background-color: #fff;
+			color: $danger;
+		}
+		&[class*="-notify"] {
+			background-color: #fff;
+			color: $notify;
+		}
+		&[class*="-warning"] {
+			background-color: #fff;
+			color: $warning;
 		}
 	}
 	&:focus {
@@ -508,9 +537,6 @@ button[class^="btn-"] {
 					center no-repeat;
 				background-size: contain;
 			}
-		}
-		&:nth-of-type(n + 2) {
-			margin-top: 0.5em;
 		}
 	}
 } // .checkbox
@@ -885,6 +911,33 @@ hr.divider {
 	}
 }
 
+/* Textarea */
+.textarea-container {
+	textarea {
+		display: block;
+		padding: rem(16px 12px);
+		width: 100%;
+		height: rem(160px);
+		font-size: rem(18px);
+		border: rem(1px) solid #f3f4f6;
+		border-radius: rem(9px);
+		background-color: #f3f4f6;
+		&:focus {
+			border-color: $primary1;
+			outline-color: $primary1;
+		}
+		&::placeholder {
+			color: #b0b9c2;
+		}
+		&:disabled {
+			background-color: #dfdfdf !important;
+			&::placeholder {
+				color: #a1a9b1;
+			}
+		}
+	}
+}
+
 /* Select */
 .selectBox {
 	label {
@@ -921,6 +974,7 @@ hr.divider {
 	position: relative;
 	display: flex;
 	flex-flow: row nowrap;
+	margin-bottom: rem(20px);
 	padding-bottom: rem(2px);
 	overflow: auto;
 	// color: rgba(19, 23, 58, 0.2);
@@ -999,4 +1053,233 @@ hr.divider {
 }
 .modal-footer {
 	justify-content: center;
+}
+.modal-dialog {
+	.modal-body {
+		text-align: center; // 필수
+		padding: rem(40px 22px 22px);
+	}
+	.pop-title {
+		margin-bottom: rem(16px);
+		font-size: rem(24px);
+		font-weight: 700;
+	}
+	.img-state {
+		display: block;
+		margin: rem(0 auto 14px);
+	}
+	.txt-state {
+		margin-bottom: rem(10px);
+		font-size: rem(24px);
+	}
+	.info-txt {
+		line-height: 1.8;
+		font-size: rem(18px);
+		color: $font1;
+		word-break: keep-all;
+	}
+}
+// Simple popup
+.pop-simple {
+}
+
+// Each Popups
+.pop-car-out {
+	.header-carinfo {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		gap: rem(10px);
+		margin-bottom: rem(24px);
+		font-size: rem(22px);
+		font-weight: 700;
+		.car-num {
+			color: #13173a;
+		}
+		.visit {
+			color: $primary1;
+		}
+	}
+	.visit-details {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		margin-bottom: rem(35px);
+		font-size: rem(14px);
+		dt {
+			flex: 1 1 40%;
+			margin-bottom: rem(8px);
+			font-weight: 400;
+			color: $font2;
+			text-align: start;
+		}
+		dd {
+			flex: 1 0 60%;
+			font-weight: 500;
+			color: $font1;
+			text-align: end;
+		}
+	}
+	.info-txt {
+		.f-bold {
+			font-size: rem(26px);
+			color: $font1;
+		}
+	}
+}
+.pop-privacy {
+	.info-txt {
+		text-align: start;
+	}
+}
+
+/* Post Contenst */
+.post-container {
+	.post-header {
+		margin-left: -$contentContainerPadding;
+		margin-right: -$contentContainerPadding;
+		padding: 0 $contentContainerPadding rem(20px);
+		border-bottom: rem(1px) solid #d9d9d9;
+		.title {
+			font-size: rem(18px);
+			font-weight: 500;
+			color: $font1;
+		}
+		.meta-info {
+			font-size: rem(12px);
+			color: $font2;
+		}
+	}
+	.post-contents {
+		padding-top: rem(20px);
+		.message {
+			font-size: rem(15px);
+		}
+	}
+}
+.comment-container {
+	margin-top: rem(40px);
+	margin-bottom: rem(16px);
+	.count {
+		margin-bottom: rem(16px);
+		font-size: rem(15px);
+		font-weight: 600;
+		color: #000;
+		span {
+			color: $primary1;
+		}
+	}
+	.comment-box {
+		$userImgSize: rem(36px);
+		$gap: rem(12px);
+		display: flex;
+		flex-flow: row wrap;
+		gap: $gap;
+		margin-bottom: rem(12px);
+		& + .comment-footer,
+		&.is-reply {
+			margin-left: rem(16px);
+		}
+		.start-area {
+			flex: 0 0 auto;
+			.user-img {
+				width: $userImgSize;
+				height: $userImgSize;
+				background-color: #d4e2f0;
+				border-radius: 50%;
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: cover;
+			}
+		}
+		.end-area {
+			flex: 1 0 calc(100% - $gap - $userImgSize);
+			.meta-info {
+				font-size: rem(12px);
+				color: $font2;
+				.date {
+					margin-left: rem(8px);
+				}
+			}
+			.message {
+				font-size: rem(13px);
+				color: $font1;
+			}
+			.btn-container {
+				margin-top: rem(10px);
+				.btn-reply {
+					font-size: rem(13px);
+					color: $primary1;
+				}
+			}
+		}
+		& + .comment-footer {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: rem(10px);
+			.btn-reply-more {
+				font-size: rem(13px);
+				color: $primary1;
+			}
+		}
+	}
+}
+.input-comment-container {
+	$userImgSize: rem(36px);
+	$gap: rem(12px);
+	display: flex;
+	flex-flow: row wrap;
+	align-items: end;
+	gap: $gap;
+	padding: rem(10px);
+	border-top: rem(1px) solid #d9d9d9;
+	background-color: #fff;
+	.user-img {
+		flex: 0 0 auto;
+		margin-bottom: rem(2px);
+		width: $userImgSize;
+		height: $userImgSize;
+		background-color: #d4e2f0;
+		border-radius: 50%;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+	}
+	.writing-comment {
+		flex: 1 0 calc(100% - $gap - $userImgSize);
+		position: relative;
+		background-color: #f3f4f6;
+		border-radius: rem(6px);
+		padding-right: rem(40px);
+		textarea {
+			padding: rem(8px);
+			height: rem(40px);
+			max-height: rem(240px);
+			width: 100%;
+			overflow: auto;
+			background-color: transparent;
+			&:focus {
+				outline-color: $primary1;
+				& + .btn-write {
+					opacity: 1;
+				}
+			}
+		}
+		.btn-write {
+			position: absolute;
+			bottom: rem(2px);
+			right: rem(2px);
+			width: rem(36px);
+			height: rem(36px);
+			background: url("../img/icon/svg/icon-msg-send.svg") center center
+				no-repeat;
+			background-size: 80%;
+			opacity: 0.5;
+			&.active, // 대비 값.
+			&:focus {
+				opacity: 1;
+			}
+		}
+	}
 }

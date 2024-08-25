@@ -44,54 +44,54 @@
 									</span>
 								</div>
 								<div class="history-list">
-									<dl>
-										<dt>2024년 3월 관리비</dt>
-										<dd>
+									<a class="link-item" href="./MT105.html">
+										<span class="title">2024년 3월 관리비</span>
+										<div class="cost">
 											<b>42,020</b>
 											원
-											<mark class="mark-sm-line-round danger">미납부</mark>
-										</dd>
-									</dl>
-									<dl>
-										<dt>2024년 2월 관리비</dt>
-										<dd>
+										</div>
+										<mark class="mark-sm-line-round danger">미납부</mark>
+									</a>
+									<a class="link-item" href="./MT105.html">
+										<span class="title">2024년 2월 관리비</span>
+										<div class="cost">
 											<b>42,020</b>
 											원
-											<mark class="mark-sm-line-primary-round">납부완료</mark>
-										</dd>
-									</dl>
-									<dl>
-										<dt>2024년 1월 관리비</dt>
-										<dd>
+										</div>
+										<mark class="mark-sm-line-primary-round">납부완료</mark>
+									</a>
+									<a class="link-item" href="./MT105.html">
+										<span class="title">2024년 1월 관리비</span>
+										<div class="cost">
 											<b>4,020</b>
 											원
-											<mark class="mark-sm-line-primary-round">납부완료</mark>
-										</dd>
-									</dl>
-									<dl>
-										<dt>2024년 12월 관리비</dt>
-										<dd>
+										</div>
+										<mark class="mark-sm-line-primary-round">납부완료</mark>
+									</a>
+									<a class="link-item" href="./MT105.html">
+										<span class="title">2024년 12월 관리비</span>
+										<div class="cost">
 											<b>1,342,020</b>
 											원
-											<mark class="mark-sm-line-primary-round">납부완료</mark>
-										</dd>
-									</dl>
-									<dl>
-										<dt>2024년 11월 관리비</dt>
-										<dd>
+										</div>
+										<mark class="mark-sm-line-primary-round">납부완료</mark>
+									</a>
+									<a class="link-item" href="./MT105.html">
+										<span class="title">2024년 11월 관리비</span>
+										<div class="cost">
 											<b>142,020</b>
 											원
-											<mark class="mark-sm-line-primary-round">납부완료</mark>
-										</dd>
-									</dl>
-									<dl>
-										<dt>2024년 10월 관리비</dt>
-										<dd>
+										</div>
+										<mark class="mark-sm-line-primary-round">납부완료</mark>
+									</a>
+									<a class="link-item" href="./MT105.html">
+										<span class="title">2024년 10월 관리비</span>
+										<div class="cost">
 											<b>42,020</b>
 											원
-											<mark class="mark-sm-line-primary-round">납부완료</mark>
-										</dd>
-									</dl>
+										</div>
+										<mark class="mark-sm-line-primary-round">납부완료</mark>
+									</a>
 								</div>
 							</div>
 						</div>
@@ -127,8 +127,72 @@
 		</div>
 		<!-- Popup-->
 		<!-- Script-->
-		<script src="../asset/js/lib/flatpickr.js"></script>
 		<script src="../asset/js/lib/bootstrap.bundle.min.js"></script>
+		<script src="../asset/js/lib/flatpickr.js"></script>
 		<script src="../asset/js/pub.js"></script>
+		<script>
+			function mt102LayoutHelper() {
+				// 이 함수는 단순히 "관리비 > 월별청구내역"에서 레이아웃을 위한 코드입니다.
+				const layoutHelper = document.querySelector(
+					".maintenance-header + .layout-helper"
+				);
+				if (!layoutHelper) return;
+
+				const getComputedValue = (element, property) =>
+					parseFloat(window.getComputedStyle(element)[property]);
+
+				// .maintenance-header의 max-height와 padding-top 값 가져오기
+				const maintenanceHeader = document.querySelector(".maintenance-header");
+				const maintenanceHeaderMaxHeight = getComputedValue(
+					maintenanceHeader,
+					"maxHeight"
+				);
+				const maintenanceHeaderPaddingTop = getComputedValue(
+					maintenanceHeader,
+					"paddingTop"
+				);
+				const totalMaintenanceHeaderHeight =
+					maintenanceHeaderMaxHeight - maintenanceHeaderPaddingTop;
+
+				// .sub-menu-container의 높이, margin-top, margin-bottom 값 가져오기
+				const subMenuContainer = document.querySelector(".sub-menu-container");
+				const subMenuContainerHeight = subMenuContainer.offsetHeight;
+				const subMenuContainerMarginTop = getComputedValue(
+					subMenuContainer,
+					"marginTop"
+				);
+				const subMenuContainerMarginBottom = getComputedValue(
+					subMenuContainer,
+					"marginBottom"
+				);
+				const totalSubMenuHeight =
+					subMenuContainerHeight +
+					subMenuContainerMarginTop +
+					subMenuContainerMarginBottom;
+
+				// .bill-history-container의 높이 가져오기
+				const billHistoryContainer = document.querySelector(
+					".bill-history-container"
+				);
+				const billHistoryContainerHeight = billHistoryContainer.offsetHeight;
+
+				// 결과 계산 후 rem 단위로 변환
+				const result = Math.abs(
+					totalMaintenanceHeaderHeight -
+						totalSubMenuHeight -
+						billHistoryContainerHeight
+				);
+				const rootFontSize = getComputedValue(
+					document.documentElement,
+					"fontSize"
+				);
+				const resultInRem = result / rootFontSize;
+
+				// layoutHelper의 높이 설정
+				layoutHelper.style.height = `${resultInRem}rem`;
+			}
+			window.addEventListener("resize", mt102LayoutHelper);
+			mt102LayoutHelper();
+		</script>
 	</body>
 </html>

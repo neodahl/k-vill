@@ -240,6 +240,10 @@ h6 {
   margin: 0;
 }
 
+dt {
+  font-weight: normal;
+}
+
 /* Common Class */
 caption.a11y-hidden {
   position: static !important;
@@ -299,13 +303,13 @@ body {
 .app-body.app-header-activated .full-wrapper {
   min-height: calc(100dvh - 5rem);
 }
-.app-body.app-gnb-activated {
+.app-body.app-bottom-fix-activated, .app-body.app-gnb-activated {
   padding-bottom: 5.625rem;
 }
-.app-body.app-gnb-activated .full-wrapper {
+.app-body.app-bottom-fix-activated .full-wrapper, .app-body.app-gnb-activated .full-wrapper {
   min-height: calc(100dvh - 5.625rem);
 }
-.app-body.app-header-activated.app-gnb-activated .full-wrapper {
+.app-body.app-header-activated.app-bottom-fix-activated .full-wrapper, .app-body.app-header-activated.app-gnb-activated .full-wrapper {
   min-height: calc(100dvh - 5rem - 5.625rem);
 }
 .app-body *::-webkit-scrollbar {
@@ -377,7 +381,7 @@ body {
   display: flex;
   flex-flow: column wrap;
   justify-content: flex-end;
-  padding-bottom: 3.125rem;
+  padding-bottom: 2.5rem;
 }
 .full-wrapper .full-bottom-container [class*=btn-]:not(:first-of-type) {
   margin-top: 0.625rem;
@@ -520,7 +524,7 @@ body {
 }
 
 .danger {
-  color: #dc3545 !important;
+  color: #f04452 !important;
 }
 
 .warning {
@@ -543,7 +547,7 @@ mark[class^=mark-][class*=-sm],
 a[class^=btn-][class*=-sm],
 button[class^=btn-][class*=-sm] {
   min-width: 3.75rem;
-  height: 1.6875rem;
+  min-height: 1.6875rem;
   padding: 0 0.5rem;
   border-radius: 0.375rem;
   font-size: 0.75rem;
@@ -553,7 +557,7 @@ mark[class^=mark-][class*=-md],
 a[class^=btn-][class*=-md],
 button[class^=btn-][class*=-md] {
   min-width: 5rem;
-  height: 2.5rem;
+  min-height: 2.5rem;
   padding: 0 0.625rem;
   border-radius: 0.5625rem;
   font-size: 1.125rem;
@@ -563,7 +567,7 @@ mark[class^=mark-][class*=-lg],
 a[class^=btn-][class*=-lg],
 button[class^=btn-][class*=-lg] {
   min-width: 7.5rem;
-  height: 3.125rem;
+  min-height: 3.125rem;
   padding: 0 1.25rem;
   border-radius: 0.625rem;
   font-size: 1.125rem;
@@ -591,11 +595,29 @@ button[class^=btn-][class*=-bg][class*=-secondary] {
   background-color: #343d4c;
   color: #fff;
 }
-mark[class^=mark-][class*=-bg][class*=-tertiay],
-a[class^=btn-][class*=-bg][class*=-tertiay],
-button[class^=btn-][class*=-bg][class*=-tertiay] {
+mark[class^=mark-][class*=-bg][class*=-tertiary],
+a[class^=btn-][class*=-bg][class*=-tertiary],
+button[class^=btn-][class*=-bg][class*=-tertiary] {
   background-color: #f3f4f6;
   color: #4c5a67;
+}
+mark[class^=mark-][class*=-bg][class*=-danger],
+a[class^=btn-][class*=-bg][class*=-danger],
+button[class^=btn-][class*=-bg][class*=-danger] {
+  background-color: #f04452;
+  color: #fff;
+}
+mark[class^=mark-][class*=-bg][class*=-notify],
+a[class^=btn-][class*=-bg][class*=-notify],
+button[class^=btn-][class*=-bg][class*=-notify] {
+  background-color: #ee2f74;
+  color: #fff;
+}
+mark[class^=mark-][class*=-bg][class*=-warning],
+a[class^=btn-][class*=-bg][class*=-warning],
+button[class^=btn-][class*=-bg][class*=-warning] {
+  background-color: #efb300;
+  color: #fff;
 }
 mark[class^=mark-][class*=-line],
 a[class^=btn-][class*=-line],
@@ -613,6 +635,30 @@ a[class^=btn-][class*=-line][class*=-secondary],
 button[class^=btn-][class*=-line][class*=-secondary] {
   background-color: #fff;
   color: #343d4c;
+}
+mark[class^=mark-][class*=-line][class*=-tertiary],
+a[class^=btn-][class*=-line][class*=-tertiary],
+button[class^=btn-][class*=-line][class*=-tertiary] {
+  background-color: #fff;
+  color: #f3f4f6;
+}
+mark[class^=mark-][class*=-line][class*=-danger],
+a[class^=btn-][class*=-line][class*=-danger],
+button[class^=btn-][class*=-line][class*=-danger] {
+  background-color: #fff;
+  color: #f04452;
+}
+mark[class^=mark-][class*=-line][class*=-notify],
+a[class^=btn-][class*=-line][class*=-notify],
+button[class^=btn-][class*=-line][class*=-notify] {
+  background-color: #fff;
+  color: #ee2f74;
+}
+mark[class^=mark-][class*=-line][class*=-warning],
+a[class^=btn-][class*=-line][class*=-warning],
+button[class^=btn-][class*=-line][class*=-warning] {
+  background-color: #fff;
+  color: #efb300;
 }
 mark[class^=mark-]:focus,
 a[class^=btn-]:focus,
@@ -752,9 +798,6 @@ button[class^=btn-].kakao::before {
   height: 1.25rem;
   background: url("../img/icon/svg/icon-arrow-right-gray.svg") center center no-repeat;
   background-size: contain;
-}
-.checkbox.has-link:nth-of-type(n + 2) {
-  margin-top: 0.5em;
 }
 
 /* Radio Button */
@@ -1062,6 +1105,31 @@ hr.divider {
   box-shadow: inset 0 0 0 0.0625rem #3182f7;
 }
 
+/* Textarea */
+.textarea-container textarea {
+  display: block;
+  padding: 1rem 0.75rem;
+  width: 100%;
+  height: 10rem;
+  font-size: 1.125rem;
+  border: 0.0625rem solid #f3f4f6;
+  border-radius: 0.5625rem;
+  background-color: #f3f4f6;
+}
+.textarea-container textarea:focus {
+  border-color: #3182f7;
+  outline-color: #3182f7;
+}
+.textarea-container textarea::placeholder {
+  color: #b0b9c2;
+}
+.textarea-container textarea:disabled {
+  background-color: #dfdfdf !important;
+}
+.textarea-container textarea:disabled::placeholder {
+  color: #a1a9b1;
+}
+
 /* Select */
 .selectBox label {
   display: inline-block;
@@ -1115,6 +1183,7 @@ hr.divider {
   position: relative;
   display: flex;
   flex-flow: row nowrap;
+  margin-bottom: 1.25rem;
   padding-bottom: 0.125rem;
   overflow: auto;
 }
@@ -1186,6 +1255,218 @@ hr.divider {
 
 .modal-footer {
   justify-content: center;
+}
+
+.modal-dialog .modal-body {
+  text-align: center;
+  padding: 2.5rem 1.375rem 1.375rem;
+}
+.modal-dialog .pop-title {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.modal-dialog .img-state {
+  display: block;
+  margin: 0 auto 0.875rem;
+}
+.modal-dialog .txt-state {
+  margin-bottom: 0.625rem;
+  font-size: 1.5rem;
+}
+.modal-dialog .info-txt {
+  line-height: 1.8;
+  font-size: 1.125rem;
+  color: #181f29;
+  word-break: keep-all;
+}
+
+.pop-car-out .header-carinfo {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: 0.625rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.375rem;
+  font-weight: 700;
+}
+.pop-car-out .header-carinfo .car-num {
+  color: #13173a;
+}
+.pop-car-out .header-carinfo .visit {
+  color: #3182f7;
+}
+.pop-car-out .visit-details {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin-bottom: 2.1875rem;
+  font-size: 0.875rem;
+}
+.pop-car-out .visit-details dt {
+  flex: 1 1 40%;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+  color: #6c7584;
+  text-align: start;
+}
+.pop-car-out .visit-details dd {
+  flex: 1 0 60%;
+  font-weight: 500;
+  color: #181f29;
+  text-align: end;
+}
+.pop-car-out .info-txt .f-bold {
+  font-size: 1.625rem;
+  color: #181f29;
+}
+
+.pop-privacy .info-txt {
+  text-align: start;
+}
+
+/* Post Contenst */
+.post-container .post-header {
+  margin-left: -1rem;
+  margin-right: -1rem;
+  padding: 0 1rem 1.25rem;
+  border-bottom: 0.0625rem solid #d9d9d9;
+}
+.post-container .post-header .title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #181f29;
+}
+.post-container .post-header .meta-info {
+  font-size: 0.75rem;
+  color: #6c7584;
+}
+.post-container .post-contents {
+  padding-top: 1.25rem;
+}
+.post-container .post-contents .message {
+  font-size: 0.9375rem;
+}
+
+.comment-container {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+.comment-container .count {
+  margin-bottom: 1rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #000;
+}
+.comment-container .count span {
+  color: #3182f7;
+}
+.comment-container .comment-box {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.comment-container .comment-box + .comment-footer, .comment-container .comment-box.is-reply {
+  margin-left: 1rem;
+}
+.comment-container .comment-box .start-area {
+  flex: 0 0 auto;
+}
+.comment-container .comment-box .start-area .user-img {
+  width: 2.25rem;
+  height: 2.25rem;
+  background-color: #d4e2f0;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.comment-container .comment-box .end-area {
+  flex: 1 0 calc(100% - 0.75rem - 2.25rem);
+}
+.comment-container .comment-box .end-area .meta-info {
+  font-size: 0.75rem;
+  color: #6c7584;
+}
+.comment-container .comment-box .end-area .meta-info .date {
+  margin-left: 0.5rem;
+}
+.comment-container .comment-box .end-area .message {
+  font-size: 0.8125rem;
+  color: #181f29;
+}
+.comment-container .comment-box .end-area .btn-container {
+  margin-top: 0.625rem;
+}
+.comment-container .comment-box .end-area .btn-container .btn-reply {
+  font-size: 0.8125rem;
+  color: #3182f7;
+}
+.comment-container .comment-box + .comment-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.625rem;
+}
+.comment-container .comment-box + .comment-footer .btn-reply-more {
+  font-size: 0.8125rem;
+  color: #3182f7;
+}
+
+.input-comment-container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: end;
+  gap: 0.75rem;
+  padding: 0.625rem;
+  border-top: 0.0625rem solid #d9d9d9;
+  background-color: #fff;
+}
+.input-comment-container .user-img {
+  flex: 0 0 auto;
+  margin-bottom: 0.125rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  background-color: #d4e2f0;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.input-comment-container .writing-comment {
+  flex: 1 0 calc(100% - 0.75rem - 2.25rem);
+  position: relative;
+  background-color: #f3f4f6;
+  border-radius: 0.375rem;
+  padding-right: 2.5rem;
+}
+.input-comment-container .writing-comment textarea {
+  padding: 0.5rem;
+  height: 2.5rem;
+  max-height: 15rem;
+  width: 100%;
+  overflow: auto;
+  background-color: transparent;
+}
+.input-comment-container .writing-comment textarea:focus {
+  outline-color: #3182f7;
+}
+.input-comment-container .writing-comment textarea:focus + .btn-write {
+  opacity: 1;
+}
+.input-comment-container .writing-comment .btn-write {
+  position: absolute;
+  bottom: 0.125rem;
+  right: 0.125rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  background: url("../img/icon/svg/icon-msg-send.svg") center center no-repeat;
+  background-size: 80%;
+  opacity: 0.5;
+}
+.input-comment-container .writing-comment .btn-write.active, .input-comment-container .writing-comment .btn-write:focus {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=common.css.map */
