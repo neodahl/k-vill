@@ -1,3 +1,17 @@
+function LNBscroll() {
+	document.addEventListener('scroll', function() {
+		const lnb = document.querySelector('.lnb-header');
+		if (!lnb) return;
+		
+		if (window.scrollY > 0) {
+				lnb.classList.add('is-shadow');
+		} else {
+				lnb.classList.remove('is-shadow');
+		}
+});
+}
+
+
 function checkbox() {
 	const checkboxes = document.querySelectorAll('.checkbox input[type="checkbox"]');
 	if (!checkboxes) return;
@@ -233,6 +247,7 @@ function writingComment() {
 
 
 (function init(){
+	LNBscroll()
 	checkbox();
 	searchbar();
 	selectbox();

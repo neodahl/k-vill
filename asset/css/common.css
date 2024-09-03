@@ -420,6 +420,9 @@ body {
   align-items: center;
   height: 3.75rem;
 }
+.lnb-header.is-shadow {
+  box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.2);
+}
 .lnb-header .title {
   font-size: 1.3125rem;
   font-weight: 600;
@@ -1291,14 +1294,22 @@ hr.divider {
   font-size: 0.875rem;
   font-weight: 500;
   background-color: rgba(255, 255, 255, 0.3333333333);
-  border: 0.0625rem solid rgba(176, 185, 194, 0.5);
+}
+.table-simple tr:last-child th,
+.table-simple tr:last-child td {
+  border-bottom: 0.0625rem solid rgba(176, 185, 194, 0.5);
+}
+.table-simple tr th:last-child,
+.table-simple tr td:last-child {
+  border-right: 0.0625rem solid rgba(176, 185, 194, 0.5);
 }
 .table-simple th,
 .table-simple td {
   text-align: center;
   height: 1.875rem;
   padding: 0.3125rem 0.625rem;
-  border: 0.0625rem solid rgba(176, 185, 194, 0.5);
+  border-top: 0.0625rem solid rgba(176, 185, 194, 0.5);
+  border-left: 0.0625rem solid rgba(176, 185, 194, 0.5);
   color: #454d69;
 }
 .table-simple thead th {

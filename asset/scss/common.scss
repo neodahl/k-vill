@@ -177,6 +177,9 @@ body {
 	justify-content: center;
 	align-items: center;
 	height: rem(60px);
+	&.is-shadow {
+		box-shadow: rem(0 0 4px 0) rgba(0, 0, 0, 0.2);
+	}
 	.title {
 		font-size: rem(21px);
 		font-weight: 600;
@@ -1069,18 +1072,31 @@ hr.divider {
 
 /* Tables */
 .table-simple {
+	$border: rem(1px) solid rgba(176, 185, 194, 0.5);
 	table {
 		font-size: rem(14px);
 		font-weight: 500;
 		background-color: #fff5;
-		border: rem(1px) solid rgba(176, 185, 194, 0.5);
+	}
+	tr {
+		&:last-child {
+			th,
+			td {
+				border-bottom: $border;
+			}
+		}
+		th:last-child,
+		td:last-child {
+			border-right: $border;
+		}
 	}
 	th,
 	td {
 		text-align: center;
 		height: rem(30px);
 		padding: rem(5px 10px);
-		border: rem(1px) solid rgba(176, 185, 194, 0.5);
+		border-top: $border;
+		border-left: $border;
 		color: #454d69;
 	}
 	thead {
