@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko-kr">
 	<head>
-		<title>MN102. 전출신청</title>
+		<title>CS103. 민원접수 등록(입력 전)</title>
 		<meta charset="utf-8" />
 		<meta
 			name="viewport"
@@ -31,7 +31,7 @@
 								aria-label="이전 페이지로"
 							></a>
 						</div>
-						<h1 class="title">전출신청</h1>
+						<h1 class="title">민원접수하기</h1>
 						<div class="end-box"></div>
 					</header>
 				</div>
@@ -40,19 +40,39 @@
 				<div class="app-main">
 					<div class="contents">
 						<div class="full-wrapper">
-							<div class="input-container type2 inputDate">
-								<div class="input-box">
-									<label class="a11y-hidden" for="datepicker1">전출일자</label>
-									<input type="text" id="datepicker1" placeholder="전출일자" />
+							<div class="guide-container">
+								<p>
+									주거 생활에 불편한 점이 있다면 접수해 주세요.
+									<br />
+									담당자 확인 후 처리해 드립니다.
+								</p>
+							</div>
+							<div class="complaint-form">
+								<h4 class="title">1. 민원발생 이미지를 등록해주세요.</h4>
+								<div class="img-list-container">
+									<div class="upload-box">
+										<input type="file" id="imageUpload" accept="image/*" />
+										<label for="imageUpload">
+											<img
+												src="../asset/img/icon/svg/icon-camera-primary.svg"
+											/>
+											<span>이미지 등록하기</span>
+										</label>
+									</div>
 								</div>
-								<ul class="msg-box active">
-									<li class="danger">전출일자를 다시 지정해주세요.</li>
-								</ul>
+							</div>
+							<div class="complaint-form">
+								<h4 class="title">2. 요청사항을 기재해주세요.</h4>
+								<div class="textarea-container">
+									<textarea placeholder="요청사항을 적어주세요."></textarea>
+								</div>
 							</div>
 							<div class="full-bottom-container">
-								<button class="btn-lg-bg-primary-full" type="button" disabled>
-									신청 완료
-								</button>
+								<div class="btn-container">
+									<button class="btn-lg-bg-primary-full" type="button" disabled>
+										작성 완료
+									</button>
+								</div>
 							</div>
 						</div>
 					</div>

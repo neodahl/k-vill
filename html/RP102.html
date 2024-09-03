@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+	<head>
+		<title>RP102. 주민투표 &gt; 투표 만들기</title>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+		/>
+		<meta
+			name="format-detection"
+			content="telephone=no, address=no, email=no"
+		/>
+		<link rel="stylesheet" href="../asset/css/lib/bootstrap.min.css" />
+		<link rel="stylesheet" href="../asset/css/lib/flatpickr.min.css" />
+		<link rel="stylesheet" href="../asset/css/common.css" />
+		<link rel="stylesheet" href="../asset/css/style.css" />
+	</head>
+	<body>
+		<div class="site-body">
+			<!-- [Start] App View-->
+			<div class="app-body bg-white app-header-activated">
+				<!-- [Start] App - Top-->
+				<div class="app-top">
+					<!-- header-type1 사용시 .AppBody에 "app-header-activated" 클래스 적용 필요.-->
+					<header class="lnb-header">
+						<div class="start-box">
+							<a
+								class="btn-before"
+								href="./RP101.html"
+								aria-label="이전 페이지로"
+							></a>
+						</div>
+						<h1 class="title">투표 만들기</h1>
+						<div class="end-box"></div>
+					</header>
+				</div>
+				<!-- [End] App - Top-->
+				<!-- [Start] App - Contents-->
+				<div class="app-main">
+					<div class="contents">
+						<div class="full-wrapper">
+							<div class="form-container">
+								<div class="input-container type2">
+									<div class="input-box">
+										<label class="a11y-hidden" for="voteTitle">투표제목</label>
+										<input type="text" id="voteTitle" placeholder="투표제목" />
+									</div>
+								</div>
+								<fieldset class="group-container">
+									<legend class="group-label">투표 방식 설정</legend>
+									<div class="radio">
+										<input
+											class="a11y-hidden"
+											type="radio"
+											name="voteType"
+											id="voteTypeText"
+											checked
+										/>
+										<label for="voteTypeText">
+											<span class="icon"></span>
+											항목 선택형
+										</label>
+									</div>
+									<div class="radio">
+										<input
+											class="a11y-hidden"
+											type="radio"
+											name="voteType"
+											id="voteTypeDate"
+										/>
+										<label for="voteTypeDate">
+											<span class="icon"></span>
+											날짜 선택형
+										</label>
+									</div>
+								</fieldset>
+								<div class="select-container isTextItems active">
+									<div class="input-container type2">
+										<div class="input-box">
+											<label class="a11y-hidden" for="votingItem1">
+												항목 입력
+											</label>
+											<input
+												type="text"
+												id="votingItem1"
+												placeholder="항목을 입력해주세요."
+											/>
+										</div>
+									</div>
+									<div class="input-container type2">
+										<div class="input-box">
+											<label class="a11y-hidden" for="votingItem2">
+												항목 입력
+											</label>
+											<input
+												type="text"
+												id="votingItem2"
+												placeholder="항목을 입력해주세요."
+											/>
+										</div>
+										<ul class="msg-box active">
+											<li class="danger">동일한 조건 항목이 이미 있습니다.</li>
+										</ul>
+									</div>
+									<button
+										class="btn-lg-bg-tertiary-full"
+										type="button"
+										aiaa-label="항목 추가"
+									>
+										<b class="plus-sign">+</b>
+									</button>
+								</div>
+								<div class="select-container isDateItems">
+									<div class="input-container inputDate">
+										<div class="input-box">
+											<label class="a11y-hidden" for="dateItem1">
+												종료일 선택
+											</label>
+											<input
+												type="text"
+												id="dateItem1"
+												placeholder="날짜를 선택해 주세요"
+											/>
+										</div>
+									</div>
+									<div class="input-container inputDate">
+										<div class="input-box">
+											<label class="a11y-hidden" for="dateItem2">
+												종료일 선택
+											</label>
+											<input
+												type="text"
+												id="dateItem2"
+												placeholder="날짜를 선택해 주세요"
+											/>
+										</div>
+										<ul class="msg-box active">
+											<li class="danger">동일한 날짜 항목이 이미 있습니다.</li>
+										</ul>
+									</div>
+									<button
+										class="btn-lg-bg-tertiary-full"
+										type="button"
+										aiaa-label="항목 추가"
+									>
+										<b class="plus-sign">+</b>
+									</button>
+								</div>
+								<div class="checkbox mg-t-1">
+									<input class="a11y-hidden" type="checkbox" id="deadline" />
+									<label for="deadline">
+										<span class="icon"></span>
+										종료시간 설정
+									</label>
+								</div>
+								<fieldset class="dateTime-container">
+									<legend class="picker-group-label a11y-hidden">
+										종료 일자 및 시간 선택
+									</legend>
+									<div class="input-group">
+										<div class="input-container inputDate">
+											<div class="input-box">
+												<label class="a11y-hidden" for="datePicker6">
+													종료일 선택
+												</label>
+												<input
+													type="text"
+													id="datePicker6"
+													placeholder="date"
+													value="today"
+													disabled
+												/>
+											</div>
+										</div>
+										<div class="input-container inputTime">
+											<div class="input-box">
+												<label class="a11y-hidden" for="timepicker6a">
+													시간 선택
+												</label>
+												<input
+													type="text"
+													id="timepicker6a"
+													value="오전 09:00"
+													disabled
+												/>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+								<div class="checkbox">
+									<input class="a11y-hidden" type="checkbox" id="multiOption" />
+									<label for="multiOption">
+										<span class="icon"></span>
+										복수 선택 가능
+									</label>
+								</div>
+							</div>
+							<div class="full-bottom-container">
+								<div class="btn-container align-end">
+									<a class="btn-md-bg-primary" href="#none">등록</a>
+									<a class="btn-md-bg-tertiary" href="#none">취소</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- [End] App - Contents-->
+				<!-- [Start] App - Bottom-->
+				<div class="app-bottom"></div>
+				<!-- [End] App - Bottom-->
+			</div>
+			<!-- [End] App View-->
+		</div>
+		<!-- Popup-->
+		<!-- Script-->
+		<script src="../asset/js/lib/bootstrap.bundle.min.js"></script>
+		<script src="../asset/js/lib/flatpickr.js"></script>
+		<script src="../asset/js/pub.js"></script>
+		<script>
+			(function () {
+				const checkbox = document.querySelector("#deadline");
+				const datePicker = document.querySelector("#datePicker6");
+				const timePicker = document.querySelector("#timepicker6a");
+
+				checkbox.addEventListener("change", function () {
+					if (checkbox.checked) {
+						datePicker.disabled = false;
+						timePicker.disabled = false;
+					} else {
+						datePicker.disabled = true;
+						timePicker.disabled = true;
+					}
+				});
+			})();
+			(function () {
+				const voteRadios = document.querySelectorAll('input[name="voteType"]');
+
+				voteRadios.forEach(function (radio) {
+					radio.addEventListener("change", function () {
+						if (this.id === "voteTypeText") {
+							document
+								.querySelector(".select-container.isTextItems")
+								.classList.add("active");
+							document
+								.querySelector(".select-container.isDateItems")
+								.classList.remove("active");
+						} else if (this.id === "voteTypeDate") {
+							document
+								.querySelector(".select-container.isTextItems")
+								.classList.remove("active");
+							document
+								.querySelector(".select-container.isDateItems")
+								.classList.add("active");
+						}
+					});
+				});
+			})();
+
+			//- (function() {
+			//- 	document.addEventListener('DOMContentLoaded', );
+			//- })();
+		</script>
+	</body>
+</html>

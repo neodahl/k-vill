@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+	<head>
+		<title>CM101. 커뮤니티 &gt; 게시판</title>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+		/>
+		<meta
+			name="format-detection"
+			content="telephone=no, address=no, email=no"
+		/>
+		<link rel="stylesheet" href="../asset/css/lib/bootstrap.min.css" />
+		<link rel="stylesheet" href="../asset/css/lib/flatpickr.min.css" />
+		<link rel="stylesheet" href="../asset/css/common.css" />
+		<link rel="stylesheet" href="../asset/css/style.css" />
+	</head>
+	<body>
+		<div class="site-body">
+			<!-- [Start] App View-->
+			<div
+				class="app-body bg-gray app-header-activated app-gnb-activated has-bottom-button"
+			>
+				<!-- [Start] App - Top-->
+				<div class="app-top">
+					<!-- header-type1 사용시 .AppBody에 "app-header-activated" 클래스 적용 필요.-->
+					<header class="lnb-header">
+						<div class="start-box"></div>
+						<h1 class="title">커뮤니티</h1>
+						<div class="end-box"></div>
+					</header>
+				</div>
+				<!-- [End] App - Top-->
+				<!-- [Start] App - Contents-->
+				<div class="app-main">
+					<div class="contents">
+						<nav class="sub-menu-container">
+							<a class="menu-item active" href="./CM101.html">게시판</a>
+							<a class="menu-item" href="./RP101.html">주민투표</a>
+							<a class="menu-item" href="./CS101.html">민원접수</a>
+							<a class="menu-item" href="./VR101.html">방문차량</a>
+							<a class="menu-item" href="#none">단톡방</a>
+						</nav>
+						<div class="board-container">
+							<div class="post-list">
+								<!-- 공지사항 양식-->
+								<a class="post-item" href="#none">
+									<div class="start-box">
+										<mark class="badge-new-1" aria-label="NEW"></mark>
+									</div>
+									<div class="center-box">
+										<span class="title">게시물 제목</span>
+										<span class="date">2024.09.03</span>
+									</div>
+									<div class="end-box">
+										<mark class="arrow-right"></mark>
+									</div>
+								</a>
+								<a class="post-item" href="#none">
+									<div class="start-box">
+										<mark class="badge-new-1" aria-label="NEW"></mark>
+									</div>
+									<div class="center-box">
+										<span class="title">게시물 제목 게시물 제목</span>
+										<span class="date">2024.09.03</span>
+									</div>
+									<div class="end-box">
+										<mark class="arrow-right"></mark>
+									</div>
+								</a>
+								<a class="post-item" href="#none">
+									<div class="start-box"></div>
+									<div class="center-box">
+										<span class="title">
+											게시물 제목 Lorem ipsum dolor, sit amet consectetur
+											adipisicing elit.
+										</span>
+										<span class="date">2024.09.03</span>
+									</div>
+									<div class="end-box">
+										<mark class="arrow-right"></mark>
+									</div>
+								</a>
+								<!-- 반복-->
+								<a class="post-item" href="#none">
+									<div class="start-box"></div>
+									<div class="center-box">
+										<span class="title">게시물 제목 (반복)</span>
+										<span class="date">2024.09.03</span>
+									</div>
+									<div class="end-box">
+										<mark class="arrow-right"></mark>
+									</div>
+								</a>
+								<a class="post-item" href="#none">
+									<div class="start-box"></div>
+									<div class="center-box">
+										<span class="title">게시물 제목 (반복)</span>
+										<span class="date">2024.09.03</span>
+									</div>
+									<div class="end-box">
+										<mark class="arrow-right"></mark>
+									</div>
+								</a>
+								<a class="post-item" href="#none">
+									<div class="start-box"></div>
+									<div class="center-box">
+										<span class="title">게시물 제목 (반복)</span>
+										<span class="date">2024.09.03</span>
+									</div>
+									<div class="end-box">
+										<mark class="arrow-right"></mark>
+									</div>
+								</a>
+								<a class="post-item" href="#none">
+									<div class="start-box"></div>
+									<div class="center-box">
+										<span class="title">게시물 제목 (반복)</span>
+										<span class="date">2024.09.03</span>
+									</div>
+									<div class="end-box">
+										<mark class="arrow-right"></mark>
+									</div>
+								</a>
+								<a class="post-item" href="#none">
+									<div class="start-box"></div>
+									<div class="center-box">
+										<span class="title">게시물 제목 (반복)</span>
+										<span class="date">2024.09.03</span>
+									</div>
+									<div class="end-box">
+										<mark class="arrow-right"></mark>
+									</div>
+								</a>
+								<a class="post-item" href="#none">
+									<div class="start-box"></div>
+									<div class="center-box">
+										<span class="title">게시물 제목 (반복)</span>
+										<span class="date">2024.09.03</span>
+									</div>
+									<div class="end-box">
+										<mark class="arrow-right"></mark>
+									</div>
+								</a>
+							</div>
+							<!-- 점검일지 양식
+              a.post-item(href="#none")
+              	.start-box
+              		mark.mark-sm-line-primary-round 정기
+              	.center-box 
+              		span.title 24년 6월 건물점검
+              	.end-box
+              		mark.mark-sm-bg-primary 양호
+              a.post-item(href="#none")
+              	.start-box
+              		mark.mark-sm-line-notify-round 추가
+              	.center-box 
+              		span.title 24년 6월 건물점검
+              	.end-box
+              		mark.mark-sm-bg-warning 보통
+              a.post-item(href="#none")
+              	.start-box
+              		mark.mark-sm-line-primary-round 정기
+              	.center-box 
+              		span.title 24년 6월 건물점검
+              	.end-box
+              		mark.mark-sm-bg-danger 불량
+              
+              
+              -->
+							<!-- 주민투표 양식
+              a.post-item(href="#none")
+              	.start-box
+              		mark.badge-new-1(aria-label="NEW")
+              	.center-box 
+              		span.title 주차 차단기 설치 투표하기
+              		span.date <em class="success">투표중</em> 2024.08.06
+              	.end-box
+              		mark.arrow-right
+              a.post-item(href="#none")
+              	.start-box
+              		mark.badge-new-1(aria-label="NEW")
+              	.center-box 
+              		span.title 주차 차단기 설치 투표하기 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              		span.date <em class="success">투표중</em> 2024.08.06
+              	.end-box
+              		mark.arrow-right
+              a.post-item(href="#none")
+              	.start-box
+              		mark.badge-new-1(aria-label="NEW")
+              	.center-box 
+              		span.title 주차 차단기 설치 투표하기 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              		span.date 투표마감 <em>2024.08.06</em>
+              	.end-box
+              		mark.arrow-right
+              
+              
+              -->
+							<!-- 민원접수 양식
+              a.post-item(href="#none")
+              	.start-box
+              		mark.badge-new-2(aria-label="NEW")
+              	.center-box 
+              		span.title 공용현관 1층 센서등이 안들어와요.
+              	.end-box
+              		mark.mark-sm-line-danger 접수중
+              a.post-item(href="#none")
+              	.start-box
+              		mark.badge-new-2(aria-label="NEW")
+              	.center-box 
+              		span.title 공용현관 1층 센서등이 안들어와요. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              	.end-box
+              		mark.mark-sm-line-primary 처리중
+              a.post-item(class="is-closed" href="#none")
+              	.start-box
+              		mark.badge-new-2(aria-label="NEW")
+              	.center-box 
+              		span.title 공용현관 1층 센서등이 안들어와요. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              	.end-box
+              		mark.mark-sm-bg-tertiary 처리완료
+              
+              
+              
+              
+              
+              -->
+						</div>
+					</div>
+				</div>
+				<!-- [End] App - Contents-->
+				<!-- [Start] App - Bottom-->
+				<div class="app-bottom">
+					<div class="btn-container before-gnb">
+						<a class="btn-lg-bg-primary-full" href="./RP102.html">등록하기</a>
+					</div>
+					<!-- gnb-type1 사용시 .AppBody에 "app-gnb-activated" 클래스 적용 필요.-->
+					<nav class="gnb-container">
+						<a class="menu-item menu1" href="./HM100.html">홈</a>
+						<a class="menu-item menu2" href="./NF101.html">공지사항</a>
+						<a class="menu-item menu3" href="./MT101.html">관리비</a>
+						<a class="menu-item menu4 active" href="./CM101.html">커뮤니티</a>
+						<a class="menu-item menu5" href="./MN100.html">전체</a>
+					</nav>
+				</div>
+				<!-- [End] App - Bottom-->
+			</div>
+			<!-- [End] App View-->
+		</div>
+		<!-- Popup-->
+		<!-- Script-->
+		<script src="../asset/js/lib/bootstrap.bundle.min.js"></script>
+		<script src="../asset/js/lib/flatpickr.js"></script>
+		<script src="../asset/js/pub.js"></script>
+	</body>
+</html>

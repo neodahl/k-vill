@@ -1,6 +1,6 @@
 function checkbox() {
 	const checkboxes = document.querySelectorAll('.checkbox input[type="checkbox"]');
-	if (checkboxes.length === 0) return;
+	if (!checkboxes) return;
 
 	checkboxes.forEach((checkbox) => {
 		checkbox.addEventListener('keydown', (event) => {
@@ -13,7 +13,7 @@ function checkbox() {
 
 function searchbar() {
 	const searchContainers = document.querySelectorAll('.typeSearch');
-	if (searchContainers.length === 0) return;
+	if (!searchContainers) return;
 
 	searchContainers.forEach(searchContainer => {
 		const searchInput = searchContainer.querySelector('input');
@@ -39,7 +39,7 @@ function searchbar() {
 
 function selectbox() {
 	const selectElements = document.querySelectorAll('.selectBox select');
-	if (selectElements.length === 0) return;
+	if (!selectElements) return;
 	const selectedColor = "#000";
 
 	selectElements.forEach(selectElement => {
@@ -53,9 +53,9 @@ function selectbox() {
 	});
 }
 
-function dateFatpickr() {
-	const datepickers = document.querySelectorAll(".inputDate input");
-	if (datepickers.length === 0) return;
+function dateFlatpickr() {
+	const datepickers = document.querySelectorAll(".inputDate .input-box input");
+	if (!datepickers) return;
 
 	datepickers.forEach((input) => {
 		flatpickr(input, {
@@ -113,14 +113,33 @@ function dateFatpickr() {
 		}
 	}
 }
+function timeFlatpickr() {
+	const timepickers = document.querySelectorAll(".inputTime input");
+	if (!timepickers) return;
 
+	timepickers.forEach((input) => {
+		flatpickr(input, {
+			disableMobile: "true",
+			enableTime: true,
+			noCalendar: true,
+			dateFormat: "K h:i", // K는 AM/PM 형식
+			locale: {
+				firstDayOfWeek: 1,
+				amPM: ['오전', '오후'] // AM/PM을 '오전'/'오후'로 변경
+			},
+			onOpen: function (selectedDates, dateStr, instance) {
+				instance.calendarContainer.classList.add("custom-timepicker");
+			},
+		});
+	});
+}
 
 
 
 function accordionControl_exceptional() {
 	// MT101, MT105만 사용하는 특별한 케이스로 권장 사용 코드가 아닙니다.
 	const btnAccd = document.querySelectorAll('.btnAcdn-exceptional');
-	if (btnAccd.length === 0) return;
+	if (!btnAccd) return;
 
 	btnAccd.forEach(button => {
 		button.addEventListener('click', function() {
@@ -218,7 +237,8 @@ function writingComment() {
 	searchbar();
 	selectbox();
 	accordionControl_exceptional();
-	dateFatpickr();
+	dateFlatpickr();
+	timeFlatpickr()
 	writingComment();
 })();
 

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+	<head>
+		<title>RP103. 주민투표 &gt; 주민투표 게시물(항목형, 투표 전)</title>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+		/>
+		<meta
+			name="format-detection"
+			content="telephone=no, address=no, email=no"
+		/>
+		<link rel="stylesheet" href="../asset/css/lib/bootstrap.min.css" />
+		<link rel="stylesheet" href="../asset/css/lib/flatpickr.min.css" />
+		<link rel="stylesheet" href="../asset/css/common.css" />
+		<link rel="stylesheet" href="../asset/css/style.css" />
+	</head>
+	<body>
+		<div class="site-body">
+			<!-- [Start] App View-->
+			<div
+				class="app-body bg-white app-header-activated app-bottom-fix-activated"
+			>
+				<!-- [Start] App - Top-->
+				<div class="app-top">
+					<!-- header-type1 사용시 .AppBody에 "app-header-activated" 클래스 적용 필요.-->
+					<header class="lnb-header">
+						<div class="start-box">
+							<a
+								class="btn-before"
+								href="./index.html"
+								aria-label="이전 페이지로"
+							></a>
+						</div>
+						<h1 class="title">우리건물 주민투표 (단일형, 투표 종료)</h1>
+						<div class="end-box"></div>
+					</header>
+				</div>
+				<!-- [End] App - Top-->
+				<!-- [Start] App - Contents-->
+				<div class="app-main">
+					<div class="contents">
+						<div class="vote-post-container">
+							<div class="vote-header">
+								<div class="user-img">
+									<img
+										src="../asset/img/icon/png/icon-user.png"
+										alt="프로필 사진"
+									/>
+								</div>
+								<div class="meta-info">
+									<span class="author">161동 1037호</span>
+									<span class="upload-date">2023년 11월 30일 15:10</span>
+								</div>
+							</div>
+							<div class="vote-contents">
+								<div class="header-container">
+									<h2 class="title">주차차단기 설치 투표하기</h2>
+									<div class="meta-info">
+										<span class="option">복수 선택 가능</span>
+										<span class="option">2일 남음</span>
+									</div>
+								</div>
+								<div class="body-container">
+									<ul class="vote-options">
+										<li>
+											<div class="radio">
+												<input
+													class="a11y-hidden"
+													type="radio"
+													name="option"
+													id="option1"
+													checked
+													disabled
+												/>
+												<label for="option1">
+													<span class="icon"></span>
+													찬성
+												</label>
+											</div>
+											<div class="count">
+												<em>10</em>
+												명
+											</div>
+											<div class="progress-bar">
+												<span style="width: 100%"></span>
+											</div>
+										</li>
+										<li>
+											<div class="radio">
+												<input
+													class="a11y-hidden"
+													type="radio"
+													name="option"
+													id="option2"
+													disabled
+												/>
+												<label for="option2">
+													<span class="icon"></span>
+													반대
+												</label>
+											</div>
+											<div class="count">
+												<em>0</em>
+												명
+											</div>
+											<div class="progress-bar">
+												<span style="width: 0%"></span>
+											</div>
+										</li>
+										<li>
+											<div class="radio">
+												<input
+													class="a11y-hidden"
+													type="radio"
+													name="option"
+													id="option3"
+													disabled
+												/>
+												<label for="option3">
+													<span class="icon"></span>
+													기권(다수결에 따름)
+												</label>
+											</div>
+											<div class="count">
+												<em>0</em>
+												명
+											</div>
+											<div class="progress-bar">
+												<span style="width: 0%"></span>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="footer-container">
+									<div class="btn-container">
+										<a
+											class="btn-lg-line-primary-full disabled"
+											href="javascript:void(0)"
+										>
+											투표 종료
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="comment-container">
+							<div class="count">
+								댓글
+								<span>0</span>
+								개
+							</div>
+							<p class="no-comment">아직 댓글이 없습니다.</p>
+						</div>
+					</div>
+				</div>
+				<!-- [End] App - Contents-->
+				<!-- [Start] App - Bottom-->
+				<div class="app-bottom">
+					<div class="input-comment-container">
+						<div
+							class="user-img"
+							style="
+								background-image: url('../asset/img/icon/png/icon-user.png');
+							"
+						></div>
+						<div class="writing-comment">
+							<textarea placeholder="메시지를 입력하세요..."></textarea>
+							<button class="btn-write" aria-label="등록"></button>
+						</div>
+					</div>
+				</div>
+				<!-- [End] App - Bottom-->
+			</div>
+			<!-- [End] App View-->
+		</div>
+		<!-- Popup-->
+		<!-- Script-->
+		<script src="../asset/js/lib/bootstrap.bundle.min.js"></script>
+		<script src="../asset/js/lib/flatpickr.js"></script>
+		<script src="../asset/js/pub.js"></script>
+	</body>
+</html>

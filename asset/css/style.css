@@ -192,11 +192,11 @@
   margin-inline-start: 1em;
 }
 
-/* Residents - RD101, MN101, VR102*/
+/* Residents - RD101, MN101, VR102, RP102*/
 .form-container {
   display: flex;
   flex-flow: column wrap;
-  gap: 0.625rem;
+  gap: 1rem;
   width: 100%;
   padding-bottom: 1.875rem;
 }
@@ -234,6 +234,15 @@
   width: 100%;
   font-size: 1rem;
   font-weight: 600;
+}
+.form-container .group-container .btn-group {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+}
+.form-container [class^=btn-] .plus-sign {
+  font-size: 2rem;
+  font-weight: 300;
 }
 .form-container .form-footer {
   display: flex;
@@ -516,6 +525,43 @@
 }
 .frame-container .frame-title:nth-of-type(n + 2) {
   margin-top: 2.5rem;
+}
+.frame-container .sup-title {
+  margin-bottom: 1.25rem;
+  font-size: 1.3125rem;
+  font-weight: 700;
+  color: #181f29;
+}
+.frame-container .sup-title:nth-child(n+2) {
+  margin-top: 2.5rem;
+}
+.frame-container .sup-title[class*=type-icon] {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.375rem;
+}
+.frame-container .sup-title[class*=type-icon]::before {
+  content: "";
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-position: center center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.frame-container .sup-title.type-icon-cctv::before {
+  background-image: url("../img/icon/png/icon-cctv.png");
+}
+.frame-container .sub-title {
+  margin-bottom: 0.75rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #181f29;
+}
+.frame-container .sub-title:nth-child(n+2) {
+  margin-top: 1.875rem;
 }
 
 .frame-container .link-item {
@@ -862,8 +908,8 @@
   font-weight: 500;
   color: #181f29;
 }
-.detail-list dl + .frame-title:nth-of-type(n + 2) {
-  margin-top: 2.5em;
+.detail-list.type2 dl {
+  gap: 0.375rem;
 }
 
 .announcement {
@@ -1005,7 +1051,7 @@
   border-radius: 50%;
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
+  background-size: 60%;
 }
 .user-profile-info .name {
   display: block;
@@ -1185,7 +1231,7 @@
 }
 
 /* 공지사항(Notifications) - CS101, NF101 */
-/* 게시판 공통 */
+/*[Start] 게시판 공통 */
 .board-container .post-count {
   margin-bottom: 0.625rem;
   font-size: 0.9375rem;
@@ -1211,11 +1257,8 @@
   background-color: #fff;
   border-radius: 0.75rem;
 }
-.board-container .post-list .post-item.is-closed [class^=badge-new-], .board-container .post-list .post-item.is-completed [class^=badge-new-] {
+.board-container .post-list .post-item.is-closed [class^=badge-new-] {
   display: none;
-}
-.board-container .post-list .post-item.is-completed .date em {
-  color: inherit !important;
 }
 .board-container .post-list .post-item.is-closed .title {
   opacity: 0.5;
@@ -1253,9 +1296,6 @@
   font-weight: 500;
   color: #6c7584;
 }
-.board-container .post-list .post-item .center-box .date em {
-  color: #ee2f74;
-}
 .board-container .post-list .post-item .badge-new-2,
 .board-container .post-list .post-item .badge-new-1 {
   display: inline-block;
@@ -1277,6 +1317,109 @@
   height: 1.5rem;
   background: url("../img/icon/svg/icon-arrow-right-black.svg") center center no-repeat;
   background-size: 100%;
+}
+
+/*[End] 게시판 공통 */
+.message-container {
+  font-size: 1.125rem;
+}
+
+.attachment-container {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: start;
+  gap: 0.375rem;
+}
+
+/* 공지사항(Resident Poll) - RP102, RP103 */
+.select-container {
+  display: none;
+  flex-flow: column wrap;
+  gap: 0.75rem;
+}
+.select-container.active {
+  display: flex;
+}
+
+.vote-post-container .vote-header {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0.625rem;
+  margin-bottom: 1.5rem;
+}
+.vote-post-container .vote-header .user-img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #d4e2f0;
+}
+.vote-post-container .vote-header .user-img img {
+  object-fit: cover;
+}
+.vote-post-container .vote-header .meta-info {
+  color: #181f29;
+}
+.vote-post-container .vote-header .meta-info .author {
+  font-size: 1rem;
+}
+.vote-post-container .vote-header .meta-info .upload-date {
+  font-size: 0.8125rem;
+}
+.vote-post-container .vote-header .meta-info .author,
+.vote-post-container .vote-header .meta-info .upload-date {
+  display: block;
+}
+.vote-post-container .vote-contents {
+  border: 0.0625rem solid #e1e1e1;
+  border-radius: 0.625rem;
+}
+.vote-post-container .vote-contents .header-container {
+  padding: 1.25rem;
+}
+.vote-post-container .vote-contents .header-container .title {
+  font-size: 1.3125rem;
+  margin-bottom: 0.375rem;
+}
+.vote-post-container .vote-contents .header-container .meta-info .option {
+  display: block;
+  font-size: 0.875rem;
+  color: #454d69;
+}
+.vote-post-container .vote-contents .body-container {
+  padding: 1.25rem;
+  border-top: 0.0625rem solid #e1e1e1;
+  border-bottom: 0.0625rem solid #e1e1e1;
+}
+.vote-post-container .vote-contents .vote-options li {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: start;
+  gap: 0 0.1875rem;
+  font-size: 1rem;
+}
+.vote-post-container .vote-contents .vote-options li:nth-child(n+2) {
+  margin-top: 1.25rem;
+}
+.vote-post-container .vote-contents .vote-options li .count em {
+  color: #3182f7;
+}
+.vote-post-container .vote-contents .vote-options li .progress-bar {
+  margin-top: 0.375rem;
+  width: 100%;
+  height: 0.1875rem;
+  background-color: #ddd;
+  border-radius: 0.125rem;
+}
+.vote-post-container .vote-contents .vote-options li .progress-bar span {
+  display: block;
+  height: 100%;
+  background-color: #3182f7;
+  border-radius: 0.125rem;
+}
+.vote-post-container .vote-contents .footer-container {
+  padding: 1.25rem;
 }
 
 /*# sourceMappingURL=style.css.map */

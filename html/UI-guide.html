@@ -555,7 +555,7 @@
 							</div>
 							<!-- [End] Copy This-->
 							<hr class="ui" />
-							<h4 class="ui">has-link(has anchor type)</h4>
+							<h4 class="ui">has-link(has anchor type):</h4>
 							<p class="ui-desc"></p>
 							<div class="flex-box">
 								<!-- [Start] Copy This-->
@@ -859,10 +859,12 @@
 								<hr class="ui" />
 								<h4 class="ui">type4(button shape):</h4>
 								<p class="ui-desc">
-									disabled 상태는 확정 아님.
+									bg-gray용으로 제작되었습니다.
 									<br />
 									<b>onclick="return false;"</b>
 									를 사용하여 readonly 효과를 줄 수 있습니다.
+									<br />
+									disabled 상태는 확정 아님.
 								</p>
 								<div>
 									<!-- [Start] Copy This-->
@@ -1328,12 +1330,12 @@
 								<!-- [Start] Copy This-->
 								<div class="input-container inputDate">
 									<div class="input-box">
-										<label for="datepicker1">
+										<label for="datePicker1">
 											default &amp; .msg-box.active
 										</label>
 										<input
 											type="text"
-											id="datepicker1"
+											id="datePicker1"
 											placeholder="pick date"
 										/>
 									</div>
@@ -1357,15 +1359,16 @@
 									</ul>
 								</div>
 								<!-- [End] Copy This-->
-								<div class="ui-gap thick"></div>
+								<div class="ui-gap"></div>
 								<!-- [Start] Copy This-->
-								<div class="input-container type2 inputDate">
+								<div class="input-container inputDate">
 									<div class="input-box">
-										<label for="datepicker2">date picker.type2</label>
+										<label for="datePicker1a">disabled</label>
 										<input
 											type="text"
-											id="datepicker2"
-											placeholder="type2 gray"
+											id="datePicker1a"
+											placeholder="pick date"
+											disabled
 										/>
 									</div>
 									<ul class="msg-box">
@@ -1389,16 +1392,47 @@
 								</div>
 								<!-- [End] Copy This-->
 								<div class="ui-gap thick"></div>
-								<h4 class="ui">no label</h4>
+								<!-- [Start] Copy This-->
+								<div class="input-container type2 inputDate">
+									<div class="input-box">
+										<label for="datePicker2">type2</label>
+										<input
+											type="text"
+											id="datePicker2"
+											placeholder="type2: gray style"
+										/>
+									</div>
+									<ul class="msg-box">
+										<li>
+											default: Lorem ipsum dolor sit, amet consectetur
+											adipisicing elit.
+										</li>
+										<li class="success">
+											'success' Lorem ipsum dolor sit, amet consectetur
+											adipisicing elit.
+										</li>
+										<li class="danger">
+											'danger' Lorem ipsum dolor sit, amet consectetur
+											adipisicing elit.
+										</li>
+										<li class="type2 danger">
+											'type2' Lorem ipsum dolor sit, amet consectetur
+											adipisicing elit.
+										</li>
+									</ul>
+								</div>
+								<!-- [End] Copy This-->
+								<div class="ui-gap thick"></div>
+								<h4 class="ui">no label:</h4>
 								<!-- [Start] Copy This-->
 								<div class="input-container inputDate">
 									<div class="input-box">
-										<label class="a11y-hidden" for="datepicker4">
+										<label class="a11y-hidden" for="datePicker4">
 											날짜 지정
 										</label>
 										<input
 											type="text"
-											id="datepicker4"
+											id="datePicker4"
 											placeholder="replace label with placeholder"
 										/>
 									</div>
@@ -1421,6 +1455,69 @@
 										</li>
 									</ul>
 								</div>
+								<!-- [End] Copy This-->
+								<div class="ui-gap thick"></div>
+								<h4 class="ui">Time Picker:</h4>
+								<!-- [Start] Copy This-->
+								<div class="input-container inputTime">
+									<div class="input-box">
+										<label for="timePicker1a">time-label</label>
+										<input type="text" id="timePicker1a" value="오후 12:00" />
+									</div>
+									<ul class="msg-box active">
+										<li class="danger">
+											'danger' Lorem ipsum dolor sit, amet consectetur
+											adipisicing elit.
+										</li>
+									</ul>
+								</div>
+								<!-- [End] Copy This-->
+								<div class="ui-gap"></div>
+								<!-- [Start] Copy This-->
+								<div class="input-container inputTime">
+									<div class="input-box">
+										<label for="timePicker1b">time disabled</label>
+										<input
+											type="text"
+											id="timePicker1b"
+											value="오후 12:00"
+											disabled
+										/>
+									</div>
+								</div>
+								<!-- [End] Copy This-->
+								<div class="ui-gap thick"></div>
+								<h4 class="ui">Date and Time Picker:</h4>
+								<!-- [Start] Copy This-->
+								<fieldset class="dateTime-container">
+									<legend class="picker-group-label">날짜 및 시간</legend>
+									<div class="input-group">
+										<div class="input-container inputDate">
+											<div class="input-box">
+												<label class="a11y-hidden" for="datePicker6">
+													Date
+												</label>
+												<input
+													type="text"
+													id="datePicker6"
+													placeholder="date"
+												/>
+											</div>
+										</div>
+										<div class="input-container inputTime">
+											<div class="input-box">
+												<label class="a11y-hidden" for="timepicker6a">
+													Time
+												</label>
+												<input
+													type="text"
+													id="timepicker6a"
+													value="오전 09:00"
+												/>
+											</div>
+										</div>
+									</div>
+								</fieldset>
 								<!-- [End] Copy This-->
 							</div>
 						</section>
@@ -1668,12 +1765,16 @@
 										<span>3</span>
 										개
 									</div>
+									<!-- [Start] 댓글이 없을 경우-->
+									<p class="no-comment">아직 댓글이 없습니다.</p>
+									<!-- [End] 댓글이 없을 경우-->
+									<!-- [Start] Comment-->
 									<div class="comment-box">
 										<div class="start-area">
 											<div
 												class="user-img"
 												style="
-													background-image: url('../asset/img/user-female.png');
+													background-image: url('../asset/img/icon/png/icon-user.png');
 												"
 											></div>
 										</div>
@@ -1692,12 +1793,14 @@
 											</div>
 										</div>
 									</div>
+									<!-- [End] Comment-->
+									<!-- [Start] Comment Reply-->
 									<div class="comment-box is-reply">
 										<div class="start-area">
 											<div
 												class="user-img"
 												style="
-													background-image: url('../asset/img/user-male.png');
+													background-image: url('../asset/img/icon/png/icon-user.png');
 												"
 											></div>
 										</div>
@@ -1712,12 +1815,13 @@
 											</p>
 										</div>
 									</div>
+									<!-- [End] Comment Reply-->
 									<div class="comment-box is-reply">
 										<div class="start-area">
 											<div
 												class="user-img"
 												style="
-													background-image: url('../asset/img/user-male.png');
+													background-image: url('../asset/img/icon/png/icon-user.png');
 												"
 											></div>
 										</div>
@@ -1732,17 +1836,22 @@
 											</p>
 										</div>
 									</div>
+									<!-- [Start] End of Comment Reply-->
 									<div class="comment-footer">
 										<button class="btn-reply-more" type="button">
 											답글 더보기
 										</button>
+										<button class="btn-reply-more" type="button">
+											답글 달기
+										</button>
 									</div>
+									<!-- [End] End of Comment Reply-->
 									<div class="comment-box">
 										<div class="start-area">
 											<div
 												class="user-img"
 												style="
-													background-image: url('../asset/img/user-female.png');
+													background-image: url('../asset/img/icon/png/icon-user.png');
 												"
 											></div>
 										</div>
@@ -1764,7 +1873,7 @@
 											<div
 												class="user-img"
 												style="
-													background-image: url('../asset/img/user-female.png');
+													background-image: url('../asset/img/icon/png/icon-user.png');
 												"
 											></div>
 										</div>
@@ -1786,7 +1895,7 @@
 											<div
 												class="user-img"
 												style="
-													background-image: url('../asset/img/user-female.png');
+													background-image: url('../asset/img/icon/png/icon-user.png');
 												"
 											></div>
 										</div>
@@ -1812,7 +1921,9 @@
 								<div class="input-comment-container">
 									<div
 										class="user-img"
-										style="background-image: url('../asset/img/user-male.png')"
+										style="
+											background-image: url('../asset/img/icon/png/icon-user.png');
+										"
 									></div>
 									<div class="writing-comment">
 										<textarea placeholder="메시지를 입력하세요..."></textarea>

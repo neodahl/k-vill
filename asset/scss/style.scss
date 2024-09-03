@@ -204,11 +204,11 @@
 	}
 }
 
-/* Residents - RD101, MN101, VR102*/
+/* Residents - RD101, MN101, VR102, RP102*/
 .form-container {
 	display: flex;
 	flex-flow: column wrap;
-	gap: rem(10px);
+	gap: rem(16px);
 	width: 100%;
 	padding-bottom: rem(30px);
 	.form-title {
@@ -250,6 +250,17 @@
 			width: 100%;
 			font-size: rem(16px);
 			font-weight: 600;
+		}
+		.btn-group {
+			display: flex;
+			flex-flow: row wrap;
+			gap: rem(16px);
+		}
+	}
+	[class^="btn-"] {
+		.plus-sign {
+			font-size: rem(32px);
+			font-weight: 300;
 		}
 	}
 	.form-footer {
@@ -534,6 +545,45 @@
 		color: $font1;
 		&:nth-of-type(n + 2) {
 			margin-top: rem(40px);
+		}
+	}
+	.sup-title {
+		margin-bottom: rem(20px);
+		font-size: rem(21px);
+		font-weight: 700;
+		color: $font1;
+		&:nth-child(n + 2) {
+			margin-top: rem(40px);
+		}
+		&[class*="type-icon"] {
+			display: flex;
+			flex-flow: row wrap;
+			align-items: center;
+			justify-content: flex-start;
+			gap: rem(6px);
+			&::before {
+				content: "";
+				display: inline-block;
+				width: rem(20px);
+				height: rem(20px);
+				background-position: center center;
+				background-size: 100%;
+				background-repeat: no-repeat;
+			}
+		}
+		&.type-icon-cctv {
+			&::before {
+				background-image: url("../img/icon/png/icon-cctv.png");
+			}
+		}
+	}
+	.sub-title {
+		margin-bottom: rem(12px);
+		font-size: rem(18px);
+		font-weight: 700;
+		color: $font1;
+		&:nth-child(n + 2) {
+			margin-top: rem(30px);
 		}
 	}
 }
@@ -912,8 +962,11 @@
 				color: $font1;
 			}
 		}
-		& + .frame-title:nth-of-type(n + 2) {
-			margin-top: 2.5em;
+	}
+	&.type2 {
+		// used NF103
+		dl {
+			gap: rem(6px);
 		}
 	}
 }
@@ -1065,7 +1118,7 @@
 		border-radius: 50%;
 		background-repeat: no-repeat;
 		background-position: center center;
-		background-size: cover;
+		background-size: 60%;
 	}
 	.name {
 		display: block;
@@ -1251,7 +1304,7 @@
 }
 
 /* 공지사항(Notifications) - CS101, NF101 */
-/* 게시판 공통 */
+/*[Start] 게시판 공통 */
 .board-container {
 	// margin-top: rem(20px);
 	.post-count {
@@ -1281,17 +1334,9 @@
 			padding: rem(15px 11px);
 			background-color: #fff;
 			border-radius: rem(12px);
-			&.is-closed,
-			&.is-completed {
+			&.is-closed {
 				[class^="badge-new-"] {
 					display: none;
-				}
-			}
-			&.is-completed {
-				.date {
-					em {
-						color: inherit !important;
-					}
 				}
 			}
 			&.is-closed {
@@ -1331,9 +1376,6 @@
 					font-size: rem(13px);
 					font-weight: 500;
 					color: $font2;
-					em {
-						color: $notify;
-					}
 				}
 			}
 			.badge-new-2,
@@ -1359,6 +1401,119 @@
 					center no-repeat;
 				background-size: 100%;
 			}
+		}
+	}
+}
+/*[End] 게시판 공통 */
+
+.message-container {
+	font-size: rem(18px);
+}
+.attachment-container {
+	// 첨부파일
+	display: flex;
+	flex-flow: column wrap;
+	// justify-content: end;
+	align-items: start;
+	gap: rem(6px);
+}
+
+/* 공지사항(Resident Poll) - RP102, RP103 */
+.select-container {
+	display: none;
+	&.active {
+		display: flex;
+	}
+	flex-flow: column wrap;
+	gap: rem(12px);
+}
+.vote-post-container {
+	.vote-header {
+		display: flex;
+		flex-flow: row wrap;
+		gap: rem(10px);
+		margin-bottom: rem(24px);
+		.user-img {
+			width: rem(40px);
+			height: rem(40px);
+			border-radius: 50%;
+			overflow: hidden;
+			background-color: #d4e2f0;
+			img {
+				object-fit: cover;
+			}
+		}
+		.meta-info {
+			color: $font1;
+			.author {
+				font-size: rem(16px);
+			}
+			.upload-date {
+				font-size: rem(13px);
+			}
+			.author,
+			.upload-date {
+				display: block;
+			}
+		}
+	}
+	.vote-contents {
+		$padding: rem(20px);
+		border: rem(1px) solid #e1e1e1;
+		border-radius: rem(10px);
+		.header-container {
+			padding: $padding;
+			.title {
+				font-size: rem(21px);
+				margin-bottom: rem(6px);
+			}
+			.meta-info {
+				.option {
+					display: block;
+					font-size: rem(14px);
+					color: #454d69;
+				}
+			}
+		}
+		.body-container {
+			padding: $padding;
+			border-top: rem(1px) solid #e1e1e1;
+			border-bottom: rem(1px) solid #e1e1e1;
+		}
+
+		.vote-options {
+			li {
+				display: flex;
+				flex-flow: row wrap;
+				justify-content: space-between;
+				align-items: start;
+				gap: rem(0 3px);
+				font-size: rem(16px);
+				&:nth-child(n + 2) {
+					margin-top: rem(20px);
+				}
+				.count {
+					em {
+						color: $primary1;
+					}
+				}
+				.progress-bar {
+					margin-top: rem(6px);
+					width: 100%;
+					height: rem(3px);
+					background-color: #ddd;
+					border-radius: rem(2px);
+					span {
+						display: block;
+						height: 100%;
+						background-color: $primary1;
+						border-radius: rem(2px);
+					}
+				}
+			}
+		}
+		.footer-container {
+			padding: $padding;
 		}
 	}
 }

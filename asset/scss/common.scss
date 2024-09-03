@@ -29,6 +29,9 @@ caption.a11y-hidden {
 .hide {
 	display: hidden !important;
 }
+.mg-t-1 {
+	margin-top: 1em;
+}
 
 /* App - Main Layout */
 body {
@@ -40,11 +43,14 @@ body {
 }
 .app-body {
 	$topLnbPadding: rem(80px);
-	$BottomGnbPadding: rem(90px);
+	$bottomGnbPadding: rem(90px);
+	$bottomBtnPadding: rem(70px);
 	position: relative;
-	max-width: rem($AppBodyMaxWidth);
+	max-width: rem($appBodyMaxWidth);
 	min-height: 100dvh;
 	margin: 0 auto;
+	// padding-top: rem(10px); //MT101 때문에 사용 금지
+	// padding-bottom: rem(10px); // .full-wrapper 때문에 사용 금지
 	// overflow: hidden; 사용하면 siteBody에서 스크롤이 생기지 않아서 안됨
 	overflow-x: hidden;
 	&.bg-white {
@@ -61,15 +67,18 @@ body {
 	}
 	&.app-bottom-fix-activated,
 	&.app-gnb-activated {
-		padding-bottom: $BottomGnbPadding; // gnb의 height + 약간의 padding 값
+		padding-bottom: $bottomGnbPadding; // gnb의 height + 약간의 padding 값
+		&.has-bottom-button {
+			padding-bottom: calc($bottomGnbPadding + $bottomBtnPadding);
+		}
 		.full-wrapper {
-			min-height: calc(100dvh - $BottomGnbPadding);
+			min-height: calc(100dvh - $bottomGnbPadding);
 		}
 	}
 	&.app-header-activated.app-bottom-fix-activated,
 	&.app-header-activated.app-gnb-activated {
 		.full-wrapper {
-			min-height: calc(100dvh - $topLnbPadding - $BottomGnbPadding);
+			min-height: calc(100dvh - $topLnbPadding - $bottomGnbPadding);
 		}
 	}
 	// scrollbar design
@@ -95,7 +104,7 @@ body {
 .app-bottom {
 	position: fixed;
 	width: 100%;
-	max-width: rem($AppBodyMaxWidth);
+	max-width: rem($appBodyMaxWidth);
 }
 .app-top {
 	top: 0;
@@ -145,8 +154,17 @@ body {
 		justify-content: flex-end;
 		// margin-top: rem(30px); // MN101 확인
 		padding-bottom: rem(40px);
-		[class*="btn-"]:not(:first-of-type) {
+		[class*="btn-"][class*="-full"]:not(:first-of-type) {
 			margin-top: rem(10px);
+		}
+		.btn-container {
+			margin-top: 0;
+			&.align-end {
+				display: flex;
+				flex-flow: row wrap;
+				gap: rem(10px);
+				justify-content: end;
+			}
 		}
 	}
 }
@@ -162,6 +180,10 @@ body {
 	.title {
 		font-size: rem(21px);
 		font-weight: 600;
+		max-width: calc(100% - 120px);
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
 	}
 	.end-box,
 	.start-box {
@@ -283,6 +305,9 @@ body {
 	}
 	@at-root .app-body.bg-gray & {
 		background-color: #f3f4f6;
+	}
+	&.before-gnb {
+		padding-bottom: 1em;
 	}
 }
 
@@ -436,7 +461,7 @@ button[class^="btn-"] {
 .checkbox {
 	display: inline-block;
 	label {
-		display: flex;
+		display: inline-flex;
 		align-items: center;
 		gap: rem(8px);
 		font-size: rem(15px);
@@ -720,6 +745,7 @@ hr.divider {
 	}
 	&:disabled {
 		background-color: #dfdfdf !important;
+		cursor: default;
 		&::placeholder {
 			color: #a1a9b1;
 		}
@@ -907,6 +933,30 @@ hr.divider {
 		&.today {
 			border-color: $primary1;
 			box-shadow: inset rem(0 0 0 1px) $primary1;
+		}
+	}
+}
+.custom-timepicker {
+	width: auto;
+	.flatpickr-am-pm {
+		padding: rem(0 8px);
+		width: auto;
+	}
+}
+.dateTime-container {
+	.picker-group-label {
+		@include label-common;
+	}
+	.input-group {
+		display: flex;
+		flex-flow: row;
+		gap: rem(6px);
+		align-items: end;
+		.input-container {
+			flex: 3 1 20%;
+			&.inputTime {
+				flex-grow: 1;
+			}
 		}
 	}
 }
@@ -1169,6 +1219,9 @@ hr.divider {
 			color: $primary1;
 		}
 	}
+	.no-comment {
+		margin: 1em 0;
+	}
 	.comment-box {
 		$userImgSize: rem(36px);
 		$gap: rem(12px);
@@ -1189,7 +1242,7 @@ hr.divider {
 				border-radius: 50%;
 				background-repeat: no-repeat;
 				background-position: center center;
-				background-size: cover;
+				background-size: 60%;
 			}
 		}
 		.end-area {
@@ -1218,6 +1271,7 @@ hr.divider {
 			align-items: center;
 			justify-content: center;
 			margin-bottom: rem(10px);
+			gap: rem(10px);
 			.btn-reply-more {
 				font-size: rem(13px);
 				color: $primary1;
@@ -1244,7 +1298,7 @@ hr.divider {
 		border-radius: 50%;
 		background-repeat: no-repeat;
 		background-position: center center;
-		background-size: cover;
+		background-size: 60%;
 	}
 	.writing-comment {
 		flex: 1 0 calc(100% - $gap - $userImgSize);

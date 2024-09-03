@@ -157,3 +157,11 @@ h6 {
 dt {
 	font-weight: normal;
 }
+legend {
+	// float: none; // none값 처리시 flex-layout에서 legend 태그 확인 필요.
+	width: 100%;
+	margin: 0;
+}
+legend + * {
+	clear: none;
+}

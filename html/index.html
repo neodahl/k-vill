@@ -19,6 +19,10 @@
 			.site-body {
 				padding-top: 4em;
 			}
+			.app-body {
+				width: 800px;
+				max-width: none;
+			}
 			.ui-index {
 				margin: 0 auto 15em;
 			}
@@ -30,8 +34,11 @@
 			table th,
 			table td {
 				border: 1px solid #bbb;
-				padding: 0.2rem;
+				padding: 0.2rem 1rem;
 				font-weight: 400;
+			}
+			table th {
+				text-align: left;
 			}
 			table a {
 				color: darkblue;
@@ -57,9 +64,9 @@
 						<table>
 							<caption>Index</caption>
 							<colgroup>
-								<col style="text-align: center" />
-								<col style="text-align: center" />
-								<col style="text-align: center" />
+								<col style="text-align: left" />
+								<col style="text-align: center; width: 140px" />
+								<col style="text-align: center; width: 200px" />
 							</colgroup>
 							<thead>
 								<tr>
@@ -69,7 +76,7 @@
 								</tr>
 							</thead>
 							<tbody>
-								<tr>
+								<!-- <tr>
 									<th>퍼블리싱 UI Information Architecture</th>
 									<td>
 										<a
@@ -79,7 +86,7 @@
 										</a>
 									</td>
 									<td></td>
-								</tr>
+								</tr> -->
 								<tr></tr>
 								<tr>
 									<th>UI 가이드</th>
@@ -203,6 +210,21 @@
 									<td></td>
 								</tr>
 								<tr>
+									<th>공지사항 &gt; 우리건물 공지</th>
+									<td><a href="NF101.html">NF101.html</a></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>공지사항 &gt; 점검일지</th>
+									<td><a href="NF102.html">NF102.html</a></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>공지사항 &gt; 점검일지 &gt; 점검일지 상세</th>
+									<td><a href="NF103.html">NF103.html</a></td>
+									<td></td>
+								</tr>
+								<tr>
 									<th>관리비 &gt; 청구서</th>
 									<td><a href="MT101.html">MT101.html</a></td>
 									<td></td>
@@ -225,6 +247,93 @@
 								<tr>
 									<th>관리비 &gt; 정기 결제 등록 완료</th>
 									<td><a href="MT104.html">MT104.html</a></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>커뮤니티 &gt; 게시판</th>
+									<td><a href="CM101.html">CM101.html</a></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>커뮤니티 &gt; 민원접수</th>
+									<td><a href="CS101.html">CS101.html</a></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>커뮤니티 &gt; 민원접수 게시글</th>
+									<td><a href="CS102.html">CS102.html</a></td>
+									<td>게시글 공통 양식으로 사용함</td>
+								</tr>
+								<tr>
+									<th>커뮤니티 &gt; 민원접수 &gt; 민원접수 등록(입력 전)</th>
+									<td><a href="CS103.html">CS103.html</a></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>커뮤니티 &gt; 민원접수 &gt; 민원접수 등록(입력 완료)</th>
+									<td><a href="CS103a.html">CS103a.html</a></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>커뮤니티 &gt; 주민투표</th>
+									<td><a href="RP101.html">RP101.html</a></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>커뮤니티 &gt; 주민투표 &gt; 주민투표 만들기</th>
+									<td><a href="RP102.html">RP102.html</a></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>커뮤니티 &gt; 주민투표 &gt; 주민투표 게시물</th>
+									<td><a href="RP103.html">RP103.html</a></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>
+										커뮤니티 &gt; 주민투표 &gt; 주민투표 게시물 (복수형, 투표
+										전)
+									</th>
+									<td><a href="RP103a.html">RP103a.html</a></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>
+										커뮤니티 &gt; 주민투표 &gt; 주민투표 게시물 (복수형, 투표
+										후)
+									</th>
+									<td><a href="RP103b.html">RP103b.html</a></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>
+										커뮤니티 &gt; 주민투표 &gt; 주민투표 게시물 (단일형, 투표
+										전)
+									</th>
+									<td><a href="RP103c.html">RP103c.html</a></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>
+										커뮤니티 &gt; 주민투표 &gt; 주민투표 게시물 (단일형, 투표
+										종료)
+									</th>
+									<td><a href="RP103d.html">RP103d.html</a></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>커뮤니티 &gt; 방문차량</th>
+									<td><a href="VR101.html">VR101.html</a></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>커뮤니티 &gt; 방문차량 &gt; 방문차량등록</th>
+									<td><a href="VR102.html">VR102.html</a></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>커뮤니티 &gt; 방문차량 &gt; 방문차량등록(수정)</th>
+									<td><a href="VR102a.html">VR102a.html</a></td>
 									<td></td>
 								</tr>
 								<tr>
