@@ -152,7 +152,9 @@ body {
 		display: flex;
 		flex-flow: column wrap;
 		justify-content: flex-end;
-		// margin-top: rem(30px); // MN101 확인
+		margin-top: rem(
+			30px
+		); // .full-wrapper 내 컨텐츠 영역과 닿지 않게 처리시 필요.
 		padding-bottom: rem(40px);
 		[class*="btn-"][class*="-full"]:not(:first-of-type) {
 			margin-top: rem(10px);

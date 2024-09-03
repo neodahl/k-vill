@@ -397,6 +397,7 @@ body {
   display: flex;
   flex-flow: column wrap;
   justify-content: flex-end;
+  margin-top: 1.875rem;
   padding-bottom: 2.5rem;
 }
 .full-wrapper .full-bottom-container [class*=btn-][class*=-full]:not(:first-of-type) {

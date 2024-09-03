@@ -1,381 +1,359 @@
 <!DOCTYPE html>
 <html lang="ko-kr">
-	<head>
-		<title>index</title>
-		<meta charset="utf-8" />
-		<meta
-			name="viewport"
-			content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
-		/>
-		<meta
-			name="format-detection"
-			content="telephone=no, address=no, email=no"
-		/>
-		<link rel="stylesheet" href="../asset/css/lib/bootstrap.min.css" />
-		<link rel="stylesheet" href="../asset/css/lib/flatpickr.min.css" />
-		<link rel="stylesheet" href="../asset/css/common.css" />
-		<link rel="stylesheet" href="../asset/css/style.css" />
-		<style type="text/css">
-			.site-body {
-				padding-top: 4em;
-			}
-			.app-body {
-				width: 800px;
-				max-width: none;
-			}
-			.ui-index {
-				margin: 0 auto 15em;
-			}
-			table caption {
-				padding: 0.3em;
-				border: 1px solid #bbb;
-				font-size: 1.3em;
-			}
-			table th,
-			table td {
-				border: 1px solid #bbb;
-				padding: 0.2rem 1rem;
-				font-weight: 400;
-			}
-			table th {
-				text-align: left;
-			}
-			table a {
-				color: darkblue;
-			}
-			table a:hover {
-				text-decoration: underline;
-			}
-			tr td:nth-child(2) {
-				text-align: center;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="site-body">
-			<!-- [Start] App View-->
-			<div class="app-body bg-white">
-				<!-- [Start] App - Top-->
-				<div class="app-top"></div>
-				<!-- [End] App - Top-->
-				<!-- [Start] App - Contents-->
-				<div class="app-main">
-					<div class="ui-index">
-						<table>
-							<caption>Index</caption>
-							<colgroup>
-								<col style="text-align: left" />
-								<col style="text-align: center; width: 140px" />
-								<col style="text-align: center; width: 200px" />
-							</colgroup>
-							<thead>
-								<tr>
-									<th>구분</th>
-									<th>경로</th>
-									<th>-</th>
-								</tr>
-							</thead>
-							<tbody>
-								<!-- <tr>
-									<th>퍼블리싱 UI Information Architecture</th>
-									<td>
-										<a
-											href="https://docs.google.com/spreadsheets/d/1bq26a0_fXQitkg7wpF4QR4wf32R3YP5k0Jwplm9_Dc0/edit?gid=0#gid=0"
-										>
-											Information Architecture
-										</a>
-									</td>
-									<td></td>
-								</tr> -->
-								<tr></tr>
-								<tr>
-									<th>UI 가이드</th>
-									<td><a href="UI-guide.html">UI-guide.html</a></td>
-									<td></td>
-								</tr>
-								<tr>
-									<th style="text-align: center">-</th>
-									<td>-</td>
-									<td style="text-align: center">-</td>
-								</tr>
-								<tr>
-									<th style="text-align: center">-</th>
-									<td>-</td>
-									<td style="text-align: center">-</td>
-								</tr>
-								<tr>
-									<th>앱 시작화면</th>
-									<td><a href="ST101.html">ST101.html</a></td>
-									<td></td>
-								</tr>
-								<tr>
-									<th>로그인 1(카카오)</th>
-									<td><a href="ST102.html">ST102.html</a></td>
-									<td>카카오톡 로그인, 이메일 로그인</td>
-								</tr>
-								<tr>
-									<th>로그인 2(입주자 카드)</th>
-									<td><a href="ST103.html">ST103.html</a></td>
-									<td>로그인, 입주자 카드 작성</td>
-								</tr>
-								<tr>
-									<th>로그인(ID/PW)</th>
-									<td><a href="ST201.html">ST201.html</a></td>
-									<td>id, pswd 입력화면</td>
-								</tr>
-								<tr>
-									<th>회원가입</th>
-									<td><a href="ST202.html">ST202.html</a></td>
-									<td></td>
-								</tr>
-								<tr>
-									<th>아이디 찾기</th>
-									<td><a href="ST203.html">ST203.html</a></td>
-									<td></td>
-								</tr>
-								<tr>
-									<th>비밀번호 찾기</th>
-									<td><a href="ST204.html">ST204.html</a></td>
-									<td></td>
-								</tr>
-								<tr>
-									<th>비밀번호 재설정</th>
-									<td><a href="ST205.html">ST205.html</a></td>
-									<td></td>
-								</tr>
-								<tr>
-									<th>약관 동의(카카오계정 로그인)</th>
-									<td><a href="ST301.html">ST301.html</a></td>
-									<td></td>
-								</tr>
-								<tr>
-									<th>약관 동의(회원가입/정기결제)</th>
-									<td><a href="ST302.html">ST302.html</a></td>
-									<td></td>
-								</tr>
-								<tr>
-									<th>약관 동의(회원가입/선택약관)</th>
-									<td><a href="ST303.html">ST303.html</a></td>
-									<td></td>
-								</tr>
-								<tr>
-									<th>가입완료</th>
-									<td><a href="ST304.html">ST304.html</a></td>
-									<td></td>
-								</tr>
-								<tr>
-									<th>입주자 카드작성 Step01</th>
-									<td><a href="RD101.html">RD101.html</a></td>
-									<td></td>
-								</tr>
-								<tr>
-									<th style="text-decoration: line-through">
-										입주자 카드작성 Step02
-									</th>
-									<td>
-										<a href="#none" style="text-decoration: line-through">
-											RD102.html
-										</a>
-									</td>
-									<td>RD101과 중복으로 삭제 처리</td>
-								</tr>
-								<tr>
-									<th>입주자 카드작성 Step03(이미지 등록 1)</th>
-									<td><a href="RD103.html">RD103.html</a></td>
-									<td></td>
-								</tr>
-								<tr>
-									<th>입주자 카드작성 Step03(이미지 등록 후)</th>
-									<td><a href="RD103a.html">RD103a.html</a></td>
-									<td></td>
-								</tr>
-								<tr>
-									<th>입주자 카드작성 (신청완료)</th>
-									<td><a href="RD104.html">RD104.html</a></td>
-									<td></td>
-								</tr>
-								<tr>
-									<th>메인 홈</th>
-									<td><a href="HM100.html">HM100.html</a></td>
-									<td></td>
-								</tr>
-								<tr>
-									<th>메인 홈</th>
-									<td><a href="HM100a.html">HM100a.html</a></td>
-									<td>알림 상태</td>
-								</tr>
-								<tr>
-									<th>알림</th>
-									<td><a href="HM101.html">HM101.html</a></td>
-									<td></td>
-								</tr>
-								<tr>
-									<th>공지사항 &gt; 우리건물 공지</th>
-									<td><a href="NF101.html">NF101.html</a></td>
-									<td></td>
-								</tr>
-								<tr>
-									<th>공지사항 &gt; 점검일지</th>
-									<td><a href="NF102.html">NF102.html</a></td>
-									<td></td>
-								</tr>
-								<tr>
-									<th>공지사항 &gt; 점검일지 &gt; 점검일지 상세</th>
-									<td><a href="NF103.html">NF103.html</a></td>
-									<td></td>
-								</tr>
-								<tr>
-									<th>관리비 &gt; 청구서</th>
-									<td><a href="MT101.html">MT101.html</a></td>
-									<td></td>
-								</tr>
-								<tr>
-									<th>관리비 &gt; 월별청구내역</th>
-									<td><a href="MT102.html">MT102.html</a></td>
-									<td></td>
-								</tr>
-								<tr>
-									<th>관리비 &gt; 월별청구내역 &gt; 이전 관리비 고지서</th>
-									<td><a href="MT105.html">MT105.html</a></td>
-									<td></td>
-								</tr>
-								<tr>
-									<th>관리비 &gt; 정기 결제 선택</th>
-									<td><a href="MT103.html">MT103.html</a></td>
-									<td></td>
-								</tr>
-								<tr>
-									<th>관리비 &gt; 정기 결제 등록 완료</th>
-									<td><a href="MT104.html">MT104.html</a></td>
-									<td></td>
-								</tr>
-								<tr>
-									<th>커뮤니티 &gt; 게시판</th>
-									<td><a href="CM101.html">CM101.html</a></td>
-									<td></td>
-								</tr>
-								<tr>
-									<th>커뮤니티 &gt; 민원접수</th>
-									<td><a href="CS101.html">CS101.html</a></td>
-									<td></td>
-								</tr>
-								<tr>
-									<th>커뮤니티 &gt; 민원접수 게시글</th>
-									<td><a href="CS102.html">CS102.html</a></td>
-									<td>게시글 공통 양식으로 사용함</td>
-								</tr>
-								<tr>
-									<th>커뮤니티 &gt; 민원접수 &gt; 민원접수 등록(입력 전)</th>
-									<td><a href="CS103.html">CS103.html</a></td>
-									<td></td>
-								</tr>
-								<tr>
-									<th>커뮤니티 &gt; 민원접수 &gt; 민원접수 등록(입력 완료)</th>
-									<td><a href="CS103a.html">CS103a.html</a></td>
-									<td></td>
-								</tr>
-								<tr>
-									<th>커뮤니티 &gt; 주민투표</th>
-									<td><a href="RP101.html">RP101.html</a></td>
-									<td></td>
-								</tr>
-								<tr>
-									<th>커뮤니티 &gt; 주민투표 &gt; 주민투표 만들기</th>
-									<td><a href="RP102.html">RP102.html</a></td>
-									<td></td>
-								</tr>
-								<tr>
-									<th>커뮤니티 &gt; 주민투표 &gt; 주민투표 게시물</th>
-									<td><a href="RP103.html">RP103.html</a></td>
-									<td></td>
-								</tr>
-								<tr>
-									<th>
-										커뮤니티 &gt; 주민투표 &gt; 주민투표 게시물 (복수형, 투표
-										전)
-									</th>
-									<td><a href="RP103a.html">RP103a.html</a></td>
-									<td></td>
-								</tr>
-								<tr>
-									<th>
-										커뮤니티 &gt; 주민투표 &gt; 주민투표 게시물 (복수형, 투표
-										후)
-									</th>
-									<td><a href="RP103b.html">RP103b.html</a></td>
-									<td></td>
-								</tr>
-								<tr>
-									<th>
-										커뮤니티 &gt; 주민투표 &gt; 주민투표 게시물 (단일형, 투표
-										전)
-									</th>
-									<td><a href="RP103c.html">RP103c.html</a></td>
-									<td></td>
-								</tr>
-								<tr>
-									<th>
-										커뮤니티 &gt; 주민투표 &gt; 주민투표 게시물 (단일형, 투표
-										종료)
-									</th>
-									<td><a href="RP103d.html">RP103d.html</a></td>
-									<td></td>
-								</tr>
-								<tr>
-									<th>커뮤니티 &gt; 방문차량</th>
-									<td><a href="VR101.html">VR101.html</a></td>
-									<td></td>
-								</tr>
-								<tr>
-									<th>커뮤니티 &gt; 방문차량 &gt; 방문차량등록</th>
-									<td><a href="VR102.html">VR102.html</a></td>
-									<td></td>
-								</tr>
-								<tr>
-									<th>커뮤니티 &gt; 방문차량 &gt; 방문차량등록(수정)</th>
-									<td><a href="VR102a.html">VR102a.html</a></td>
-									<td></td>
-								</tr>
-								<tr>
-									<th>전체 메뉴</th>
-									<td><a href="MN100.html">MN100.html</a></td>
-									<td></td>
-								</tr>
-								<tr>
-									<th>개인 정보 수정</th>
-									<td><a href="MN101.html">MN101.html</a></td>
-									<td></td>
-								</tr>
-								<tr>
-									<th>전출신청</th>
-									<td><a href="MN102.html">MN102.html</a></td>
-									<td></td>
-								</tr>
-								<tr>
-									<th>회원탈퇴</th>
-									<td><a href="MN103.html">MN103.html</a></td>
-									<td></td>
-								</tr>
-								<tr>
-									<th>회원탈퇴 완료</th>
-									<td><a href="MN104.html">MN104.html</a></td>
-									<td></td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
-				<!-- [End] App - Contents-->
-				<!-- [Start] App - Bottom-->
-				<div class="app-bottom"></div>
-				<!-- [End] App - Bottom-->
-			</div>
-			<!-- [End] App View-->
-		</div>
-		<!-- Popup-->
-		<!-- Script-->
-		<script src="../asset/js/lib/bootstrap.bundle.min.js"></script>
-		<script src="../asset/js/lib/flatpickr.js"></script>
-		<script src="../asset/js/pub.js"></script>
-	</body>
+  <head>
+    <title>index</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no, address=no, email=no">
+    <link rel="stylesheet" href="../asset/css/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="../asset/css/lib/flatpickr.min.css">
+    <link rel="stylesheet" href="../asset/css/common.css">
+    <link rel="stylesheet" href="../asset/css/style.css">
+    <style type="text/css">
+      .site-body {
+      	padding-top: 4em;
+      }
+      .app-body {
+      	width: 800px;
+      	max-width: none;
+      }
+      @media (max-width:800px) {
+      	.app-body {
+      		width:100%;
+      	}
+      }
+      .ui-index {
+      	margin: 0 auto 15em;
+      }
+      table caption {
+      	padding: 0.3em;
+      	border: 1px solid #bbb;
+      	font-size: 1.3em;
+      }
+      table th,
+      table td {
+      	border: 1px solid #bbb;
+      	padding: 0.2rem 1rem;
+      	font-weight: 400;
+      }
+      table th {
+      	text-align: left;
+      }
+      table a {
+      	color: darkblue;
+      }
+      table a:hover {
+      	text-decoration: underline;
+      }
+      tr td:nth-child(2) {
+      	text-align: center;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="site-body">
+      <!-- [Start] App View-->
+      <div class="app-body bg-white">
+        <!-- [Start] App - Top-->
+        <div class="app-top">
+        </div>
+        <!-- [End] App - Top-->
+        <!-- [Start] App - Contents-->
+        <div class="app-main">
+          <div class="ui-index">
+            <table>
+              <caption>Index</caption>
+              <colgroup> 
+                <col style="text-align:left">
+                <col style="text-align:center;width:140px;">
+                <col style="text-align:center;width:200px;">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>구분</th>
+                  <th>경로</th>
+                  <th>-</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr></tr>
+                <tr>
+                  <th>UI 가이드</th>
+                  <td><a href="UI-guide.html">UI-guide.html</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="text-align:center">-</th>
+                  <td>-</td>
+                  <td style="text-align:center">-</td>
+                </tr>
+                <tr>
+                  <th style="text-align:center">-</th>
+                  <td>-</td>
+                  <td style="text-align:center">-</td>
+                </tr>
+                <tr>
+                  <th>앱 시작화면</th>
+                  <td><a href="ST101.html">ST101.html</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>로그인 1(카카오)</th>
+                  <td><a href="ST102.html">ST102.html</a></td>
+                  <td>카카오톡 로그인, 이메일 로그인</td>
+                </tr>
+                <tr>
+                  <th>로그인 2(입주자 카드)</th>
+                  <td><a href="ST103.html">ST103.html</a></td>
+                  <td>로그인, 입주자 카드 작성</td>
+                </tr>
+                <tr>
+                  <th>로그인(ID/PW)</th>
+                  <td><a href="ST201.html">ST201.html</a></td>
+                  <td>id, pswd 입력화면</td>
+                </tr>
+                <tr>
+                  <th>회원가입</th>
+                  <td><a href="ST202.html">ST202.html</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>아이디 찾기</th>
+                  <td><a href="ST203.html">ST203.html</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>비밀번호 찾기</th>
+                  <td><a href="ST204.html">ST204.html</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>비밀번호 재설정</th>
+                  <td><a href="ST205.html">ST205.html</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>약관 동의(카카오계정 로그인)</th>
+                  <td><a href="ST301.html">ST301.html</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>약관 동의(회원가입/정기결제)</th>
+                  <td><a href="ST302.html">ST302.html</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>약관 동의(회원가입/선택약관)</th>
+                  <td><a href="ST303.html">ST303.html</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>가입완료</th>
+                  <td><a href="ST304.html">ST304.html</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>입주자 카드작성 Step01</th>
+                  <td><a href="RD101.html">RD101.html</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="text-decoration:line-through;">입주자 카드작성 Step02</th>
+                  <td><a href="#none" style="text-decoration:line-through;">RD102.html</a></td>
+                  <td>RD101과 중복으로 삭제 처리</td>
+                </tr>
+                <tr>
+                  <th>입주자 카드작성 Step03(이미지 등록 1)</th>
+                  <td><a href="RD103.html">RD103.html</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>입주자 카드작성 Step03(이미지 등록 후)</th>
+                  <td><a href="RD103a.html">RD103a.html</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>입주자 카드작성 (신청완료)</th>
+                  <td><a href="RD104.html">RD104.html</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>메인 홈</th>
+                  <td><a href="HM100.html">HM100.html</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>메인 홈</th>
+                  <td><a href="HM100a.html">HM100a.html</a></td>
+                  <td>알림 상태</td>
+                </tr>
+                <tr>
+                  <th>알림</th>
+                  <td><a href="HM101.html">HM101.html</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>공지사항 &gt; 우리건물 공지</th>
+                  <td><a href="NF101.html">NF101.html</a></td>
+                  <td></td>
+                </tr>
+                <tr> 
+                  <th>공지사항 &gt; 점검일지</th>
+                  <td><a href="NF102.html">NF102.html</a></td>
+                  <td></td>
+                </tr>
+                <tr> 
+                  <th>공지사항 &gt; 점검일지 &gt; 점검일지 상세</th>
+                  <td><a href="NF103.html">NF103.html</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>관리비 &gt; 청구서</th>
+                  <td><a href="MT101.html">MT101.html</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>관리비 &gt; 월별청구내역</th>
+                  <td><a href="MT102.html">MT102.html</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>관리비 &gt; 월별청구내역 &gt; 이전 관리비 고지서</th>
+                  <td><a href="MT105.html">MT105.html</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>관리비 &gt; 정기 결제 선택</th>
+                  <td><a href="MT103.html">MT103.html</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>관리비 &gt; 정기 결제 등록 완료</th>
+                  <td><a href="MT104.html">MT104.html</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>커뮤니티 &gt; 게시판</th>
+                  <td><a href="CM101.html">CM101.html</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>커뮤니티 &gt; 게시판 &gt; 게시물 작성</th>
+                  <td><a href="CM102.html">CM102.html</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>커뮤니티 &gt; 민원접수 </th>
+                  <td><a href="CS101.html">CS101.html</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>커뮤니티 &gt; 민원접수 게시글</th>
+                  <td><a href="CS102.html">CS102.html</a></td>
+                  <td>게시글 공통 양식으로 사용함</td>
+                </tr>
+                <tr>
+                  <th>커뮤니티 &gt; 민원접수 &gt; 민원접수 등록(입력 전)</th>
+                  <td><a href="CS103.html">CS103.html</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>커뮤니티 &gt; 민원접수 &gt; 민원접수 등록(입력 완료)</th>
+                  <td><a href="CS103a.html">CS103a.html</a></td>
+                  <td></td>
+                </tr>
+                <tr> 
+                  <th>커뮤니티 &gt; 주민투표</th>
+                  <td><a href="RP101.html">RP101.html</a></td>
+                  <td></td>
+                </tr>
+                <tr> 
+                  <th>커뮤니티 &gt; 주민투표 &gt; 주민투표 만들기</th>
+                  <td><a href="RP102.html">RP102.html</a></td>
+                  <td></td>
+                </tr>
+                <tr> 
+                  <th>커뮤니티 &gt; 주민투표 &gt; 주민투표 게시물</th>
+                  <td><a href="RP103.html">RP103.html</a></td>
+                  <td></td>
+                </tr>
+                <tr> 
+                  <th>커뮤니티 &gt; 주민투표 &gt; 주민투표 게시물 (복수형, 투표 전)</th>
+                  <td><a href="RP103a.html">RP103a.html</a></td>
+                  <td></td>
+                </tr>
+                <tr> 
+                  <th>커뮤니티 &gt; 주민투표 &gt; 주민투표 게시물 (복수형, 투표 후)</th>
+                  <td><a href="RP103b.html">RP103b.html</a></td>
+                  <td></td>
+                </tr>
+                <tr> 
+                  <th>커뮤니티 &gt; 주민투표 &gt; 주민투표 게시물 (단일형, 투표 전)</th>
+                  <td><a href="RP103c.html">RP103c.html</a></td>
+                  <td></td>
+                </tr>
+                <tr> 
+                  <th>커뮤니티 &gt; 주민투표 &gt; 주민투표 게시물 (단일형, 투표 종료)</th>
+                  <td><a href="RP103d.html">RP103d.html</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>커뮤니티 &gt; 방문차량 </th>
+                  <td><a href="VR101.html">VR101.html</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>커뮤니티 &gt; 방문차량 &gt; 방문차량등록</th>
+                  <td><a href="VR102.html">VR102.html</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>커뮤니티 &gt; 방문차량 &gt; 방문차량등록(수정)</th>
+                  <td><a href="VR102a.html">VR102a.html</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>전체 메뉴</th>
+                  <td><a href="MN100.html">MN100.html</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>개인 정보 수정</th>
+                  <td><a href="MN101.html">MN101.html</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>전출신청</th>
+                  <td><a href="MN102.html">MN102.html</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>회원탈퇴</th>
+                  <td><a href="MN103.html">MN103.html</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>회원탈퇴 완료</th>
+                  <td><a href="MN104.html">MN104.html</a></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- [End] App - Contents-->
+        <!-- [Start] App - Bottom-->
+        <div class="app-bottom">
+        </div>
+        <!-- [End] App - Bottom-->
+      </div>
+      <!-- [End] App View-->
+    </div>
+    <!-- Popup-->
+    <!-- Script-->
+    <script src="../asset/js/lib/bootstrap.bundle.min.js"></script>
+    <script src="../asset/js/lib/flatpickr.js"></script>
+    <script src="../asset/js/pub.js"></script>
+  </body>
 </html>

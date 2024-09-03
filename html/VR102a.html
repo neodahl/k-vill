@@ -1,130 +1,223 @@
 <!DOCTYPE html>
 <html lang="ko-kr">
-  <head>
-    <title>VR102a. 방문차량등록(수정)</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
-    <meta name="format-detection" content="telephone=no, address=no, email=no">
-    <link rel="stylesheet" href="../asset/css/lib/bootstrap.min.css">
-    <link rel="stylesheet" href="../asset/css/lib/flatpickr.min.css">
-    <link rel="stylesheet" href="../asset/css/common.css">
-    <link rel="stylesheet" href="../asset/css/style.css">
-  </head>
-  <body>
-    <div class="site-body">
-      <!-- [Start] App View-->
-      <div class="app-body bg-white app-header-activated">
-        <!-- [Start] App - Top-->
-        <div class="app-top">
-          <!-- header-type1 사용시 .AppBody에 "app-header-activated" 클래스 적용 필요.-->
-          <header class="lnb-header">
-            <div class="start-box"><a class="btn-before" href="./VR101.html" aria-label="이전 페이지로"></a>
-            </div>
-            <h1 class="title">방문차량등록 수정</h1>
-            <div class="end-box">
-            </div>
-          </header>
-        </div>
-        <!-- [End] App - Top-->
-        <!-- [Start] App - Contents-->
-        <div class="app-main">
-          <div class="contents">
-            <div class="full-wrapper">
-              <div class="form-container">
-                <div class="input-container type2">
-                  <div class="input-box">
-                    <label for="placeToVisit">방문처</label>
-                    <input type="text" id="placeToVisit" placeholder="동/호" value="102동 504호">
-                  </div>
-                  <ul class="msg-box">
-                    <li>default: Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
-                    <li class="success">'success' Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
-                    <li class="danger">'danger' Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
-                    <li class="type2 danger">'type2' Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
-                  </ul>
-                </div>
-                <div class="input-container type2 inputDate">
-                  <div class="input-box">
-                    <label for="dateOfVisit">방문일시</label>
-                    <input type="text" id="dateOfVisit" placeholder="방문일시" value="2024-08-26">
-                  </div>
-                  <ul class="msg-box">
-                    <li class="danger">'danger' Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
-                  </ul>
-                </div>
-                <div class="input-container type2">
-                  <div class="input-box">
-                    <label for="userCarNum">차량번호</label>
-                    <input type="text" id="userCarNum" placeholder="차량번호를 입력해주세요." maxlength="8" value="123너 1234">
-                  </div>
-                </div>
-                <div class="input-container type2">
-                  <div class="input-box">
-                    <label for="visitorPhoneNum">연락처</label>
-                    <input type="tel" id="visitorPhoneNum" placeholder="연락처를 입력해주세요." maxlength="11" value="010123443421">
-                  </div>
-                </div>
-                <div class="input-container type2 inputDate">
-                  <div class="input-box">
-                    <label for="departureDate">출차일시</label>
-                    <input type="text" id="departureDate" placeholder="출차일시" value="2024-08-27">
-                  </div>
-                  <ul class="msg-box">
-                    <li class="danger">'danger' Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
-                  </ul>
-                </div>
-                <div class="guide-frame bg-gray">
-                  <h4>안내</h4>
-                  <p>주차공간이 부족하오니, 당일 출차 하시기 바랍니다.당일 출차가 어려울 경우 외부에 주차하시기 바랍니다.</p>
-                </div>
-                <div class="form-footer align-end items-type-block">
-                  <div class="checkbox has-link">
-                    <input class="a11y-hidden" type="checkbox" id="privacyInfoAgree" checked>
-                    <label for="privacyInfoAgree"> <span class="icon"></span>개인정보 활용 동의<a href="#" data-bs-toggle="modal" data-bs-target="#popPrivacy"></a></label>
-                  </div>
-                  <div class="checkbox has-link">
-                    <input class="a11y-hidden" type="checkbox" id="check1" checked>
-                    <label for="check1"> <span class="icon"></span>약관 2개 이상일 경우<a href="#none" aria-label="페이지 이동"> </a></label>
-                  </div>
-                </div>
-              </div>
-              <div class="full-bottom-container">
-                <div class="btn-container">
-                  <button class="btn-lg-line-primary-full" type="button">방문 취소</button>
-                  <button class="btn-lg-bg-primary-full" type="button">수정 완료</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- [End] App - Contents-->
-        <!-- [Start] App - Bottom-->
-        <div class="app-bottom">
-        </div>
-        <!-- [End] App - Bottom-->
-      </div>
-      <!-- [End] App View-->
-    </div>
-    <!-- Popup-->
-    <div class="modal fade" id="popPrivacy" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered pop-privacy">
-        <div class="modal-content">
-          <div class="modal-body">
-            <h6 class="pop-title">개인정보 활용 동의</h6>
-            <div class="info-txt">
-               Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-            <p class="info-txt">
-               Veritatis debitis odit id ex autem aperiam provident inventore voluptate laboriosam architecto, totam eligendi natus deleniti eum minus ipsam rerum officiis. Ratione.</p>
-          </div>
-          <div class="modal-footer">
-            <button class="btn-md-bg-primary" type="button" data-bs-dismiss="modal">확인</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Script-->
-    <script src="../asset/js/lib/bootstrap.bundle.min.js"></script>
-    <script src="../asset/js/lib/flatpickr.js"></script>
-    <script src="../asset/js/pub.js"></script>
-  </body>
+	<head>
+		<title>VR102a. 방문차량등록(수정)</title>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+		/>
+		<meta
+			name="format-detection"
+			content="telephone=no, address=no, email=no"
+		/>
+		<link rel="stylesheet" href="../asset/css/lib/bootstrap.min.css" />
+		<link rel="stylesheet" href="../asset/css/lib/flatpickr.min.css" />
+		<link rel="stylesheet" href="../asset/css/common.css" />
+		<link rel="stylesheet" href="../asset/css/style.css" />
+	</head>
+	<body>
+		<div class="site-body">
+			<!-- [Start] App View-->
+			<div class="app-body bg-white app-header-activated">
+				<!-- [Start] App - Top-->
+				<div class="app-top">
+					<!-- header-type1 사용시 .AppBody에 "app-header-activated" 클래스 적용 필요.-->
+					<header class="lnb-header">
+						<div class="start-box">
+							<a
+								class="btn-before"
+								href="./VR101.html"
+								aria-label="이전 페이지로"
+							></a>
+						</div>
+						<h1 class="title">방문차량등록 수정</h1>
+						<div class="end-box"></div>
+					</header>
+				</div>
+				<!-- [End] App - Top-->
+				<!-- [Start] App - Contents-->
+				<div class="app-main">
+					<div class="contents">
+						<div class="full-wrapper">
+							<div class="form-container">
+								<div class="input-container type2">
+									<div class="input-box">
+										<label for="placeToVisit">방문처</label>
+										<input
+											type="text"
+											id="placeToVisit"
+											placeholder="동/호"
+											value="102동 504호"
+										/>
+									</div>
+									<ul class="msg-box">
+										<li>
+											default: Lorem ipsum dolor sit, amet consectetur
+											adipisicing elit.
+										</li>
+										<li class="success">
+											'success' Lorem ipsum dolor sit, amet consectetur
+											adipisicing elit.
+										</li>
+										<li class="danger">
+											'danger' Lorem ipsum dolor sit, amet consectetur
+											adipisicing elit.
+										</li>
+										<li class="type2 danger">
+											'type2' Lorem ipsum dolor sit, amet consectetur
+											adipisicing elit.
+										</li>
+									</ul>
+								</div>
+								<div class="input-container type2 inputDate">
+									<div class="input-box">
+										<label for="dateOfVisit">방문일시</label>
+										<input
+											type="text"
+											id="dateOfVisit"
+											placeholder="방문일시"
+											value="2024-08-26"
+										/>
+									</div>
+									<ul class="msg-box">
+										<li class="danger">
+											'danger' Lorem ipsum dolor sit, amet consectetur
+											adipisicing elit.
+										</li>
+									</ul>
+								</div>
+								<div class="input-container type2">
+									<div class="input-box">
+										<label for="userCarNum">차량번호</label>
+										<input
+											type="text"
+											id="userCarNum"
+											placeholder="차량번호를 입력해주세요."
+											maxlength="8"
+											value="123너 1234"
+										/>
+									</div>
+								</div>
+								<div class="input-container type2">
+									<div class="input-box">
+										<label for="visitorPhoneNum">연락처</label>
+										<input
+											type="tel"
+											id="visitorPhoneNum"
+											placeholder="연락처를 입력해주세요."
+											maxlength="11"
+											value="010123443421"
+										/>
+									</div>
+								</div>
+								<div class="input-container type2 inputDate">
+									<div class="input-box">
+										<label for="departureDate">출차일시</label>
+										<input
+											type="text"
+											id="departureDate"
+											placeholder="출차일시"
+											value="2024-08-27"
+										/>
+									</div>
+									<ul class="msg-box">
+										<li class="danger">
+											'danger' Lorem ipsum dolor sit, amet consectetur
+											adipisicing elit.
+										</li>
+									</ul>
+								</div>
+								<div class="guide-frame bg-gray">
+									<h4>안내</h4>
+									<p>
+										주차공간이 부족하오니, 당일 출차 하시기 바랍니다.당일 출차가
+										어려울 경우 외부에 주차하시기 바랍니다.
+									</p>
+								</div>
+								<div class="form-footer align-end items-type-block">
+									<div class="checkbox has-link">
+										<input
+											class="a11y-hidden"
+											type="checkbox"
+											id="privacyInfoAgree"
+											checked
+										/>
+										<label for="privacyInfoAgree">
+											<span class="icon"></span>
+											개인정보 활용 동의
+											<a
+												href="#"
+												data-bs-toggle="modal"
+												data-bs-target="#popPrivacy"
+											></a>
+										</label>
+									</div>
+									<div class="checkbox has-link">
+										<input
+											class="a11y-hidden"
+											type="checkbox"
+											id="check1"
+											checked
+										/>
+										<label for="check1">
+											<span class="icon"></span>
+											약관 2개 이상일 경우
+											<a href="#none" aria-label="페이지 이동"></a>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="full-bottom-container">
+								<div class="btn-container">
+									<button class="btn-lg-line-primary-full" type="button">
+										방문 취소
+									</button>
+									<button class="btn-lg-bg-primary-full" type="button">
+										수정 완료
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- [End] App - Contents-->
+				<!-- [Start] App - Bottom-->
+				<div class="app-bottom"></div>
+				<!-- [End] App - Bottom-->
+			</div>
+			<!-- [End] App View-->
+		</div>
+		<!-- Popup-->
+		<div class="modal fade" id="popPrivacy" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered pop-privacy">
+				<div class="modal-content">
+					<div class="modal-body">
+						<h6 class="pop-title">개인정보 활용 동의</h6>
+						<div class="info-txt">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						</div>
+						<p class="info-txt">
+							Veritatis debitis odit id ex autem aperiam provident inventore
+							voluptate laboriosam architecto, totam eligendi natus deleniti eum
+							minus ipsam rerum officiis. Ratione.
+						</p>
+					</div>
+					<div class="modal-footer">
+						<button
+							class="btn-md-bg-primary"
+							type="button"
+							data-bs-dismiss="modal"
+						>
+							확인
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Script-->
+		<script src="../asset/js/lib/bootstrap.bundle.min.js"></script>
+		<script src="../asset/js/lib/flatpickr.js"></script>
+		<script src="../asset/js/pub.js"></script>
+	</body>
 </html>

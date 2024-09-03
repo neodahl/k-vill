@@ -1112,8 +1112,8 @@
 	gap: rem(12px);
 	margin-bottom: rem(24px);
 	.profile-img {
-		width: rem(100px);
-		height: rem(100px);
+		width: rem(60px);
+		height: rem(60px);
 		background-color: #d4e2f0;
 		border-radius: 50%;
 		background-repeat: no-repeat;
@@ -1122,15 +1122,15 @@
 	}
 	.name {
 		display: block;
-		font-size: rem(21px);
+		font-size: rem(18px);
 		em {
 			font-weight: 600;
 		}
 	}
 	.address {
-		margin-top: 0.4em;
+		// margin-top: 0.4em;
 		display: block;
-		font-size: rem(18px);
+		font-size: rem(16px);
 		color: $font2;
 	}
 	.signup-date {
@@ -1286,8 +1286,9 @@
 }
 
 /* 민원접수(Complaint Submission) - CS103 */
-.complaint-form {
+.form-complaint {
 	margin-top: rem(32px);
+	margin-bottom: rem(20px);
 	@at-root .guide-container + & {
 		margin-top: rem(46px);
 	}
@@ -1519,5 +1520,21 @@
 		.footer-container {
 			padding: $padding;
 		}
+	}
+}
+
+/* 게시판(Community) - CM102 */
+.form-post {
+	display: flex;
+	flex-flow: column wrap;
+	gap: rem(16px);
+	.title {
+		margin-bottom: rem(10px);
+		font-size: rem(16px);
+		color: $font1;
+	}
+	textarea {
+		resize: block;
+		height: rem(300px);
 	}
 }

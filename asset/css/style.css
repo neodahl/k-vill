@@ -1045,8 +1045,8 @@
   margin-bottom: 1.5rem;
 }
 .user-profile-info .profile-img {
-  width: 6.25rem;
-  height: 6.25rem;
+  width: 3.75rem;
+  height: 3.75rem;
   background-color: #d4e2f0;
   border-radius: 50%;
   background-repeat: no-repeat;
@@ -1055,15 +1055,14 @@
 }
 .user-profile-info .name {
   display: block;
-  font-size: 1.3125rem;
+  font-size: 1.125rem;
 }
 .user-profile-info .name em {
   font-weight: 600;
 }
 .user-profile-info .address {
-  margin-top: 0.4em;
   display: block;
-  font-size: 1.125rem;
+  font-size: 1rem;
   color: #6c7584;
 }
 .user-profile-info .signup-date {
@@ -1211,14 +1210,15 @@
 }
 
 /* 민원접수(Complaint Submission) - CS103 */
-.complaint-form {
+.form-complaint {
   margin-top: 2rem;
+  margin-bottom: 1.25rem;
 }
-.guide-container + .complaint-form {
+.guide-container + .form-complaint {
   margin-top: 2.875rem;
 }
 
-.complaint-form .title {
+.form-complaint .title {
   margin-bottom: 0.875rem;
   font-size: 1.125rem;
   color: #181f29;
@@ -1423,6 +1423,22 @@
 }
 .vote-post-container .vote-contents .footer-container {
   padding: 1.25rem;
+}
+
+/* 게시판(Community) - CM102 */
+.form-post {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1rem;
+}
+.form-post .title {
+  margin-bottom: 0.625rem;
+  font-size: 1rem;
+  color: #181f29;
+}
+.form-post textarea {
+  resize: block;
+  height: 18.75rem;
 }
 
 /*# sourceMappingURL=style.css.map */
