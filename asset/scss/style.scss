@@ -1434,13 +1434,17 @@
 		gap: rem(10px);
 		margin-bottom: rem(24px);
 		.user-img {
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			width: rem(40px);
 			height: rem(40px);
 			border-radius: 50%;
 			overflow: hidden;
 			background-color: #d4e2f0;
 			img {
-				object-fit: cover;
+				// object-fit: cover;
+				width: 60%;
 			}
 		}
 		.meta-info {

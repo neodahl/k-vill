@@ -1348,6 +1348,9 @@
   margin-bottom: 1.5rem;
 }
 .vote-post-container .vote-header .user-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
@@ -1355,7 +1358,7 @@
   background-color: #d4e2f0;
 }
 .vote-post-container .vote-header .user-img img {
-  object-fit: cover;
+  width: 60%;
 }
 .vote-post-container .vote-header .meta-info {
   color: #181f29;
