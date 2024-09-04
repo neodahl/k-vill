@@ -956,7 +956,7 @@ hr.divider {
 		display: flex;
 		flex-flow: row;
 		gap: rem(6px);
-		align-items: end;
+		align-items: start;
 		.input-container {
 			flex: 3 1 20%;
 			&.inputTime {
@@ -1204,11 +1204,13 @@ hr.divider {
 /* Post Contenst */
 .post-container {
 	.post-header {
+		position: relative;
 		margin-left: -$contentContainerPadding;
 		margin-right: -$contentContainerPadding;
 		padding: 0 $contentContainerPadding rem(20px);
 		border-bottom: rem(1px) solid #d9d9d9;
 		.title {
+			margin-bottom: rem(6px);
 			font-size: rem(18px);
 			font-weight: 500;
 			color: $font1;
@@ -1216,6 +1218,11 @@ hr.divider {
 		.meta-info {
 			font-size: rem(12px);
 			color: $font2;
+		}
+		.btn-edit {
+			position: absolute;
+			right: $contentContainerPadding;
+			bottom: rem(20px);
 		}
 	}
 	.post-contents {
@@ -1260,7 +1267,7 @@ hr.divider {
 				border-radius: 50%;
 				background-repeat: no-repeat;
 				background-position: center center;
-				background-size: 60%;
+				background-size: 100%;
 			}
 		}
 		.end-area {
@@ -1316,7 +1323,7 @@ hr.divider {
 		border-radius: 50%;
 		background-repeat: no-repeat;
 		background-position: center center;
-		background-size: 60%;
+		background-size: 100%;
 	}
 	.writing-comment {
 		flex: 1 0 calc(100% - $gap - $userImgSize);

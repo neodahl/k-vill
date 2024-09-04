@@ -1051,7 +1051,7 @@
   border-radius: 50%;
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 60%;
+  background-size: 100%;
 }
 .user-profile-info .name {
   display: block;

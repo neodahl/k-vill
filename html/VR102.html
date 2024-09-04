@@ -65,22 +65,42 @@
 										</li>
 									</ul>
 								</div>
-								<div class="input-container type2 inputDate">
-									<div class="input-box">
-										<label for="dateOfVisit">방문일시</label>
-										<input
-											type="text"
-											id="dateOfVisit"
-											placeholder="방문일시"
-										/>
+								<fieldset class="dateTime-container">
+									<legend class="picker-group-label">방문일시</legend>
+									<div class="input-group">
+										<div class="input-container type2 inputDate">
+											<div class="input-box">
+												<label class="a11y-hidden" for="dateOfVisit1">
+													방문일
+												</label>
+												<input
+													type="text"
+													id="dateOfVisit1"
+													placeholder="방문일시"
+													value="today"
+												/>
+											</div>
+											<ul class="msg-box">
+												<li class="danger">
+													'danger' Lorem ipsum dolor sit, amet consectetur
+													adipisicing elit.
+												</li>
+											</ul>
+										</div>
+										<div class="input-container type2 inputTime">
+											<div class="input-box">
+												<label class="a11y-hidden" for="timeOfVisit1">
+													방문 시간
+												</label>
+												<input
+													type="text"
+													id="timeOfVisit1"
+													value="오전 09:00"
+												/>
+											</div>
+										</div>
 									</div>
-									<ul class="msg-box">
-										<li class="danger">
-											'danger' Lorem ipsum dolor sit, amet consectetur
-											adipisicing elit.
-										</li>
-									</ul>
-								</div>
+								</fieldset>
 								<div class="input-container type2">
 									<div class="input-box">
 										<label for="userCarNum">차량번호</label>
@@ -103,22 +123,42 @@
 										/>
 									</div>
 								</div>
-								<div class="input-container type2 inputDate">
-									<div class="input-box">
-										<label for="departureDate">출차일시</label>
-										<input
-											type="text"
-											id="departureDate"
-											placeholder="출차일시"
-										/>
+								<fieldset class="dateTime-container">
+									<legend class="picker-group-label">출차일시</legend>
+									<div class="input-group">
+										<div class="input-container type2 inputDate">
+											<div class="input-box">
+												<label class="a11y-hidden" for="dateOfVisit2">
+													출차일
+												</label>
+												<input
+													type="text"
+													id="dateOfVisit2"
+													placeholder="출차일시"
+													value="today"
+												/>
+											</div>
+											<ul class="msg-box">
+												<li class="danger">
+													'danger' Lorem ipsum dolor sit, amet consectetur
+													adipisicing elit.
+												</li>
+											</ul>
+										</div>
+										<div class="input-container type2 inputTime">
+											<div class="input-box">
+												<label class="a11y-hidden" for="timeOfVisit2">
+													출차 시간
+												</label>
+												<input
+													type="text"
+													id="timeOfVisit2"
+													value="오전 10:00"
+												/>
+											</div>
+										</div>
 									</div>
-									<ul class="msg-box">
-										<li class="danger">
-											'danger' Lorem ipsum dolor sit, amet consectetur
-											adipisicing elit.
-										</li>
-									</ul>
-								</div>
+								</fieldset>
 								<div class="guide-frame bg-gray">
 									<h4>안내</h4>
 									<p>
