@@ -1355,14 +1355,14 @@
 				}
 			}
 			.end-box {
-				flex: 1 0 auto;
-				// max-width: $startMaxWidth;
+				flex: 0 0 auto;
 				display: inline-flex;
 				justify-content: flex-end;
+				max-width: $endMaxWidth;
 			}
 			.center-box {
 				flex: 1 0 auto;
-				max-width: calc(100% - $endMaxWidth - $startMaxWidth - 2 * $gap);
+				width: calc(100% - $endMaxWidth - $startMaxWidth - 2 * $gap);
 				.title {
 					display: block;
 					font-size: rem(18px);

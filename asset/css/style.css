@@ -1273,13 +1273,14 @@
   font-size: 0.75rem;
 }
 .board-container .post-list .post-item .end-box {
-  flex: 1 0 auto;
+  flex: 0 0 auto;
   display: inline-flex;
   justify-content: flex-end;
+  max-width: 3.75rem;
 }
 .board-container .post-list .post-item .center-box {
   flex: 1 0 auto;
-  max-width: calc(100% - 3.75rem - 4.125rem - 1.25rem);
+  width: calc(100% - 3.75rem - 4.125rem - 1.25rem);
 }
 .board-container .post-list .post-item .center-box .title {
   display: block;
